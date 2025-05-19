@@ -3,9 +3,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Banner from "../components/banner.astro";
+<<<<<<< HEAD
 import Form from "../components/Form.astro";
+=======
+import Timebanner from "../components/Timebanner.astro";
+>>>>>>> d0bc775af0f2043d18b752f58de4c1159e83e14f
 ---
 
 <MainLayout title="Nakkefestival">
@@ -30,7 +33,8 @@ import Form from "../components/Form.astro";
 
   <!-- Nedtæller sektion -->
   <section>
-    <h3>Nakkefestival starter om</h3>
+    <h3 class="text-center">Nakkefestival starter om</h3>
+    <Timebanner />
   </section>
 
   <!-- Fællesbus sektion -->
@@ -39,12 +43,19 @@ import Form from "../components/Form.astro";
   </section>
 
   <!-- banner sektion -->
-  <section>
-    <Banner />
-  </section>
-
+  <section></section>
   <!-- SoMe sektion -->
   <section>
     <h3>Se mere til Nakkefestival</h3>
   </section>
+
+  <script>
+    /* Import af Motion One bibliotek */
+    import { animate, stagger, inView, scroll } from "motion";
+
+    /* Parallax med tekstboks */
+    scroll(animate(".parallaxelement", { y: [50, 500] }), {
+      target: document.querySelector(".parallaxelement"),
+    });
+  </script>
 </MainLayout>

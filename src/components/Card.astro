@@ -1,0 +1,38 @@
+---
+const {
+    url = "#",
+    cardimage = "",
+    cardimagealt = "",
+    cardtitle = "",
+    cardtekst = "",
+} = Astro.props;
+import Link from "./Link.astro";
+// import Heading from "./Heading.astro";
+---
+
+<div class="relative w-full h-full max-w-xs mx-auto">
+    <!-- Tape ovenpå kortet -->
+    <img
+        src="tape.webp"
+        alt="Tape"
+        class="absolute -top-6 left-1/2 -translate-x-1/2 w-30 rotate-[340deg] z-10"
+    />
+
+    <!-- Kort med papirtekstur og kant -->
+    <div
+        class="card w-full max-w-xs bg-center border-2 border-darkblue p-4 @container"
+        style="background-image: url('paper.webp');"
+    >
+        <figure class="relative p-1 rounded-lg">
+            <img
+                src={cardimage}
+                alt={cardimagealt}
+                class="w-full h-60 object-cover rounded-lg border-2 border-darkblue"
+            />
+        </figure>
+        <div class="card-body items-center text-center">
+            <h2 class="card-title">{cardtitle}</h2>
+            <p>{cardtekst}</p>
+        </div>
+    </div>
+</div>

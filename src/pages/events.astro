@@ -4,6 +4,123 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import Card from "../components/Card.astro";
+import Filtrering from "../components/Filtrering.astro";
 ---
 
-<MainLayout title="" />
+<MainLayout>
+    <section class="text-center px-4">
+        <h1 class="mb-15">Se events for dagene her!</h1>
+        <div
+            class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+        >
+            <div>
+                <Filtrering variant="primary" size="large"
+                    >d. 23 juli</Filtrering
+                >
+            </div>
+            <div>
+                <Filtrering variant="primary" size="large"
+                    >d. 24 juli</Filtrering
+                >
+            </div>
+            <div>
+                <Filtrering variant="primary" size="large"
+                    >d. 25 juli</Filtrering
+                >
+            </div>
+            <div>
+                <Filtrering variant="primary" size="large"
+                    >d. 26 juli</Filtrering
+                >
+            </div>
+        </div>
+        <div
+            class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20"
+        >
+            <Card
+                url="/singleview"
+                cardimage="kridt.webp"
+                cardimagealt="Kridt"
+                cardtitle="Kridt maling"
+                cardtekst="kl. 09.00 // Krea"
+            />
+            <Card
+                url="/singleview"
+                cardimage="skum.webp"
+                cardimagealt="Skum"
+                cardtitle="Skum glidebane"
+                cardtekst="kl. 10.15 // Plænen"
+            />
+            <Card
+                url="/singleview"
+                cardimage="badning.webp"
+                cardimagealt="Nøgenbadning"
+                cardtitle="Nøgenbadning"
+                cardtekst="kl. 11.00 // Søen"
+            />
+            <Card
+                url="/singleview"
+                cardimage="øl.webp"
+                cardimagealt="Ølympiade"
+                cardtitle="Ølympiade"
+                cardtekst="kl. 12.30 // Plænen"
+            />
+            <Card
+                url="/singleview"
+                cardimage="mediter.webp"
+                cardimagealt="Glad pige"
+                cardtitle="Meditation"
+                cardtekst="kl. 14.00 // Tippien"
+            />
+            <Card
+                url="/singleview"
+                cardimage="tshirt.webp"
+                cardimagealt="Hjemmelavede tshirts"
+                cardtitle="Custom t-hsirts"
+                cardtekst="kl. 15.00 // Krea"
+            />
+            <Card
+                url="/singleview"
+                cardimage="dance.webp"
+                cardimagealt="En der danser"
+                cardtitle="Dancebattle"
+                cardtekst="kl. 17.00 // Plænen"
+            />
+            <Card
+                url="/singleview"
+                cardimage="bingo.webp"
+                cardimagealt="bingo"
+                cardtitle="Bingo"
+                cardtekst="kl. 19.00 // Plænen"
+            />
+            <Card
+                url="/singleview"
+                cardimage="gøgl.webp"
+                cardimagealt="gøgl"
+                cardtitle="Gøgl"
+                cardtekst="kl. 21.00 // Tippien"
+            />
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll("button[data-filter]");
+
+            buttons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    // Nulstil alle knapper
+                    buttons.forEach((b) => {
+                        b.classList.remove("bg-darkyellow", "text-darkblue");
+                        b.classList.add("bg-beige", "text-darkblue");
+                    });
+
+                    // Tilføj valgt styling til den klikkede knap
+                    btn.classList.remove("bg-beige", "text-darkblue");
+                    btn.classList.add("bg-darkyellow", "text-darkblue");
+                });
+            });
+        });
+    </script>
+</MainLayout>
