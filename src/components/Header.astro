@@ -1,5 +1,87 @@
 ---
+
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div class="navbar bg-beige">
+  <!-- Venstre side: Logo -->
+  <div class="navbar-start">
+    <a href="/" class="text-xl hover:bg-transparent">
+      <img src="/logo.svg" alt="Logo" class="h-15 w-auto" />
+    </a>
+  </div>
+</div>
+
+<!-- Højre side: Burger menu (små skærme) og vandret menu (store skærme) -->
+<div class="navbar-end">
+  <!-- Burger menu: kun synlig på små skærme -->
+  <div class="dropdown lg:hidden">
+    <div tabindex="0" role="button" class="hover:bg-transparent">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="orange"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h8m-8 6h16"></path>
+      </svg>
+    </div>
+    <ul
+      tabindex="0"
+      class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-beige rounded-box w-52 text-orange right-0"
+    >
+      <li>
+        <a href="/events" class="hover:bg-transparent hover:text-outline"
+          >Events</a
+        >
+      </li>
+
+      <li>
+        <a
+          href="/bliv frivillig"
+          class="hover:bg-transparent hover:text-outline">Bliv frivillig</a
+        >
+      </li>
+      <li>
+        <a href="/kunstnere" class="hover:bg-transparent hover:text-outline"
+          >kunstnere</a
+        >
+      </li>
+      <li>
+        <a href="/information" class="hover:bg-transparent hover:text-outline"
+          >Information</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Vandret menu: kun synlig på store skærme -->
+  <ul
+    class="menu menu-horizontal px-1 hidden lg:flex text-orange items-center space-x-4 hover:bg-transparent"
+  >
+    <li>
+      <a href="/events" class="hover:bg-transparent hover:text-outline"
+        >Events</a
+      >
+    </li>
+    <li>
+      <a href="/blivfrivillig" class="hover:bg-transparent hover:text-outline"
+        >Bliv frivillig</a
+      >
+    </li>
+    <li>
+      <a href="/Kunstnere" class="hover:bg-transparent hover:text-outline"
+        >Kunstnere</a
+      >
+    </li>
+    <li>
+      <a href="/information" class="hover:bg-transparent hover:text-outline"
+        >Information</a
+      >
+    </li>
+  </ul>
 </div>

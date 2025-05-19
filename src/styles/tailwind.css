@@ -1,18 +1,24 @@
+/* Import Tailwind */
 @import "tailwindcss";
 
+/* Import plugins */
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
+@plugin "daisyui";
 
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Lokale fonts – korrekt format */
 @font-face {
-  font-family: "Blue Ocean";
-  src: url("/Superfunky.ttf") format("ttf");
+  font-family: "Superfunky";
+  src: url("/Superfunky.ttf") format("truetype"); /* Fixet: 'truetype' i stedet for 'ttf' */
   font-weight: 400;
   font-style: normal;
 }
+
+/* Custom theme tokens */
 @theme {
-  /* Her tilføjes theme variable // tokens */
   --color-darkblue: #020551;
   --color-blue: #2c30a6;
   --color-darkyellow: #fdbe0f;
@@ -22,6 +28,7 @@
   --color-orange: #f2790a;
 }
 
+/* Base layer med typografi */
 @layer base {
   *,
   ::after,
@@ -30,77 +37,62 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  /* ANYBODY font */
+
+  /* Anybody utility-klasser */
   .anybody-regular {
     font-family: "Anybody", serif;
-    font-weight: 400;
-    font-style: normal;
   }
 
   .anybody-medium {
     font-family: "Anybody", serif;
-    font-weight: 500;
-    font-style: normal;
   }
 
   .anybody-semibold {
     font-family: "Anybody", serif;
-    font-weight: 600;
-    font-style: normal;
   }
 
   .anybody-bold {
     font-family: "Anybody", serif;
-    font-weight: 700;
-    font-style: normal;
   }
 
-  .anybody-italic {
-    font-family: "Anybody", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  .anybody-bolditalic {
-    font-family: "Anybody", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
+  /* Headings */
   h1 {
     @apply text-4xl;
-    font-family: "Superfunky", serif;
-    font-weight: 700;
+
+    font-family: "Superfunky";
   }
-  h2 {
-    @apply text-4xl;
+
+  h2,
+  h3,
+  h4,
+  p,
+  li {
     font-family: "Anybody", serif;
+  }
+
+  h2 {
+    @apply text-darkblue text-4xl;
     font-weight: 700;
   }
 
   h3 {
-    @apply text-3xl font-bold;
-    font-family: "Anybody", serif;
-    font-weight: 700;
+    @apply text-3xl text-darkblue font-bold;
   }
 
   h4 {
-    @apply text-xl  font-bold;
-    font-family: "Anybody", serif;
-    font-weight: 700;
+    @apply text-darkblue font-bold;
   }
-
-  p {
-    @apply text-xl;
-    font-family: "Anybody", serif;
+  h5 {
+    @apply text-darkblue font-bold;
   }
-
+  p,
   li {
-    @apply text-xl;
-    font-family: "Anybody", serif;
+    @apply text-darkblue;
   }
+}
 
-  @layer components {
-  }
-  @layer utilities {
-  }
+/* Tomme layers – du kan fjerne disse hvis du ikke bruger dem */
+@layer components {
+}
+@layer utilities {
 }
