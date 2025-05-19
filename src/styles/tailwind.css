@@ -21,11 +21,14 @@
 @theme {
   --color-darkblue: #020551;
   --color-blue: #2c30a6;
+  --color-lightblue: #8A8EF7;
   --color-darkyellow: #fdbe0f;
   --color-yellow: #ffd153;
   --color-pink: #ffe7e4;
   --color-beige: #fff8ee;
-  --color-orange: #f2790a;
+  --color-orange: #CD6200;
+  --color-brightorange:#F2790A;
+  --color-hoverorange:#D6904F;
 }
 
 /* Base layer med typografi */
@@ -34,9 +37,7 @@
   ::after,
   ::before,
   ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+  ::file-selector-button 
 
   /* Anybody utility-klasser */
   .anybody-regular {
@@ -66,8 +67,8 @@
   h3,
   h4,
   h5,
-  h6 p,
-  li {
+  h6, p,
+  li, a {
     @apply text-darkblue;
   }
 
