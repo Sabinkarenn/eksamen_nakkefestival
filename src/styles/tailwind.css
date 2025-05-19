@@ -57,7 +57,7 @@
 
   /* Headings */
   h1 {
-    @apply text-4xl;
+    @apply text-orange text-4xl;
 
     font-family: "Superfunky";
   }
