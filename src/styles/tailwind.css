@@ -58,6 +58,7 @@
   /* Headings */
   h1 {
     @apply text-4xl;
+
     font-family: "Superfunky";
   }
 
@@ -70,21 +71,23 @@
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-darkblue text-4xl;
     font-weight: 700;
   }
 
   h3 {
-    @apply text-3xl font-bold;
+    @apply text-3xl text-darkblue font-bold;
   }
 
   h4 {
-    @apply text-xl font-bold;
+    @apply text-darkblue font-bold;
   }
-
+  h5 {
+    @apply text-darkblue font-bold;
+  }
   p,
   li {
-    @apply text-xl;
+    @apply text-darkblue;
   }
 }
 
