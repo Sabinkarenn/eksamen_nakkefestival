@@ -21,14 +21,14 @@
 @theme {
   --color-darkblue: #020551;
   --color-blue: #2c30a6;
-  --color-lightblue: #8A8EF7;
+  --color-lightblue: #8a8ef7;
   --color-darkyellow: #fdbe0f;
   --color-yellow: #ffd153;
   --color-pink: #ffe7e4;
   --color-beige: #fff8ee;
-  --color-orange: #CD6200;
-  --color-brightorange:#F2790A;
-  --color-hoverorange:#D6904F;
+  --color-orange: #cd6200;
+  --color-brightorange: #f2790a;
+  --color-hoverorange: #d6904f;
 }
 
 /* Base layer med typografi */
@@ -41,19 +41,39 @@
 
   /* Anybody utility-klasser */
   .anybody-regular {
-    font-family: "Anybody", serif;
+    font-family: "Anybody", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .anybody-medium {
-    font-family: "Anybody", serif;
+    font-family: "Anybody", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 
   .anybody-semibold {
-    font-family: "Anybody", serif;
+    font-family: "Anybody", sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 
   .anybody-bold {
-    font-family: "Anybody", serif;
+    font-family: "Anybody", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .anybody-italic {
+    font-family: "Anybody", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .anybody-bolditalic {
+    font-family: "Anybody", sans-serif;
+    font-weight: 700;
+    font-style: italic;
   }
 
   /* Headings */
@@ -67,8 +87,10 @@
   h3,
   h4,
   h5,
-  h6, p,
-  li, a {
+  h6,
+  p,
+  li,
+  a {
     @apply text-darkblue;
   }
 
@@ -83,6 +105,7 @@
   h4 {
   }
   h5 {
+    @apply font-bold;
   }
 
   h6 {
