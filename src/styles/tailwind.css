@@ -3,6 +3,14 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Blue Ocean";
+  src: url("/Superfunky.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
 @theme {
   /* Her tilføjes theme variable // tokens */
   --color-darkblue: #020551;
@@ -14,14 +22,6 @@
   --color-orange: #f2790a;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
-
-@font-face {
-  font-family: "Blue Ocean";
-  src: url("/Superfunky.ttf") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
 @layer base {
   *,
   ::after,
@@ -30,73 +30,77 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-/* ANYBODY - Custom font classes */
-.anybody-regular {
-  font-family: "Anybody", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+  /* ANYBODY font */
+  .anybody-regular {
+    font-family: "Anybody", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.anybody-medium {
-  font-family: "Anybody", serif;
-  font-weight: 500;
-  font-style: normal;
-}
+  .anybody-medium {
+    font-family: "Anybody", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
 
-.anybody-semibold {
-  font-family: "Anybody", serif;
-  font-weight: 600;
-  font-style: normal;
-}
+  .anybody-semibold {
+    font-family: "Anybody", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
 
-.anybody-bold {
-  font-family: "Anybody", serif;
-  font-weight: 700;
-  font-style: normal;
-}
+  .anybody-bold {
+    font-family: "Anybody", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
-.anybody-italic {
-  font-family: "Anybody", serif;
-  font-weight: 400;
-  font-style: italic;
-}
+  .anybody-italic {
+    font-family: "Anybody", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
 
-.anybody-bolditalic {
-  font-family: "Anybody", serif;
-  font-weight: 700;
-  font-style: italic;
-}
+  .anybody-bolditalic {
+    font-family: "Anybody", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  h1 {
+    @apply text-4xl;
+    font-family: "Superfunky", serif;
+    font-weight: 700;
+  }
+  h2 {
+    @apply text-4xl;
+    font-family: "Anybody", serif;
+    font-weight: 700;
+  }
 
-h2 {
-  @apply  text-4xl;
-  font-family: "Anybody", serif;
-  font-weight: 700;
-}
+  h3 {
+    @apply text-3xl font-bold;
+    font-family: "Anybody", serif;
+    font-weight: 700;
+  }
 
-h3 {
-  @apply  text-3xl font-bold;
-  font-family: "Anybody", serif;
-  font-weight: 700;
-}
+  h4 {
+    @apply text-xl  font-bold;
+    font-family: "Anybody", serif;
+    font-weight: 700;
+  }
 
-h4 {
-  @apply text-xl  font-bold;
-  font-family: "Anybody", serif;
-  font-weight: 700;
-}
+  p {
+    @apply text-xl;
+    font-family: "Anybody", serif;
+  }
 
-p {
-  @apply text-xl ;
-  font-family: "Anybody", serif;
-}
+  li {
+    @apply text-xl;
+    font-family: "Anybody", serif;
+  }
 
-li {
-  @apply text-xl;
-  font-family: "Anybody", serif;
-}
-
-
-@layer components {
-}
-@layer utilities {
+  @layer components {
+  }
+  @layer utilities {
+  }
 }
