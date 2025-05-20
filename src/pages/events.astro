@@ -107,16 +107,18 @@ import Filtrering from "../components/Filtrering.astro";
         <div>
             <Button variant="secondary">TILMELD DIG</Button>
         </div>
+        <div class="p-4">
+            <Kunstnercard
+                cardimage="josie.png"
+                cardimagealt="Josie Amadonna"
+                cardtitle="JOSIE AMADONNA"
+                cardscene="DEN ENE SCENE"
+                cardkategori="RAP"
+                carddato="23. juli"
+                cardtidspunkt="10:00"
+            />
+        </div>
     </section>
-    <Kunstnercard
-        cardimage="josie.png"
-        cardimagealt="Josie Amadonna"
-        cardtitle="JOSIE AMADONNA"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="23. juli"
-        cardtidspunkt="10:00"
-    />
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const buttons = document.querySelectorAll("button[data-filter]");
