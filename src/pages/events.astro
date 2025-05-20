@@ -5,6 +5,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Card from "../components/Card.astro";
+import Kunstnercard from "../components/Kunstnercard.astro";
 import Filtrering from "../components/Filtrering.astro";
 ---
 
@@ -107,7 +108,15 @@ import Filtrering from "../components/Filtrering.astro";
             <Button variant="secondary">TILMELD DIG</Button>
         </div>
     </section>
-
+    <Kunstnercard
+        cardimage="josie.png"
+        cardimagealt="Josie Amadonna"
+        cardtitle="JOSIE AMADONNA"
+        cardscene="DEN ENE SCENE"
+        cardkategori="RAP"
+        carddato="23. juli"
+        cardtidspunkt="10:00"
+    />
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const buttons = document.querySelectorAll("button[data-filter]");
