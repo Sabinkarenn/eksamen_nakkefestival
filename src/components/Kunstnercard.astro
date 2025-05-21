@@ -12,52 +12,9 @@ const {
 import Link from "./Link.astro";
 ---
 
-<!-- <div
-    class="relative w-full max-w-6xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
-    style="background-image: url('paperlong.png');"
-> --><!-- Tape: Øverste venstre hjørne --><!-- <img
-        src="tape.webp"
-        alt="Tape"
-        class="absolute -top-2 -left-8 w-30 rotate-[324deg] z-20"
-    /> --><!-- Tape: Nederste højre hjørne --><!-- <img
-        src="tape.webp"
-        alt="Tape"
-        class="absolute -bottom-2 -right-8 w-30 rotate-[140deg] z-20"
-    /> --><!-- Billeddel --><!-- <div class="relative w-full md:w-1/3 p-4 flex justify-center">
-        <div
-            class="relative rounded-lg overflow-hidden border-2 border-darkblue aspect-[1/1] w-full max-w-sm"
-        >
-            <img
-                src={cardimage}
-                alt={cardimagealt}
-                class="w-full h-full object-cover rounded-lg"
-            />
-        </div>
-    </div> --><!-- Tekstdel --><!-- <div
-        class="flex-1 p-4 md:pt-6 md:pr-6 flex flex-col justify-start z-10 text-center md:text-left"
-    >
-        <h2 class="text-xl md:text-2xl font-bold text-darkblue">{cardtitle}</h2>
-        <p class="mt-2 text-darkblue uppercase text-sm md:text-base">
-            {cardscene}
-        </p>
-        <p class="text-darkblue text-sm md:text-base">
-            Kategori: {cardkategori}
-        </p>
-        <p class="mt-2 text-darkblue text-sm md:text-base">
-            {carddato} // KL {cardtidspunkt}
-        </p>
-    </div> --><!-- Vertikal årstal --><!-- <div
-        class="absolute md:static right-4 bottom-4 md:bottom-auto md:right-auto md:pl-2 md:pr-4 flex items-center justify-end md:justify-center z-10"
-    >
-        <p
-            class="text-darkblue text-lg md:text-xl font-bold rotate-90 md:rotate-90"
-        >
-            2025
-        </p>
-    </div>
-</div> --><!-- Outer container -->
+<!-- Outer container -->
 <div
-    class="relative w-full max-w-xs md:max-w-6xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
+    class="relative cursor-pointer p-4 w-full max-w-xs md:max-w-6xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
     style="background-image: url('paperlong.png');"
 >
     <!-- Tape: top-left -->
@@ -74,7 +31,7 @@ import Link from "./Link.astro";
     />
 
     <!-- Image section -->
-    <div class="relative w-full md:w-1/4 p-4 flex justify-center">
+    <div class="relative w-full max-w-sm p-4 flex justify-center">
         <div
             class="relative rounded-lg overflow-hidden border-2 border-darkblue w-full max-w-sm h-60 md:h-auto md:aspect-[1/1]"
         >
@@ -117,3 +74,31 @@ import Link from "./Link.astro";
         </p>
     </div>
 </div>
+<style>
+    .scale-up-center {
+        -webkit-animation: scale-up-center 0.4s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+
+    @-webkit-keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+</style>

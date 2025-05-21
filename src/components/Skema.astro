@@ -1,0 +1,41 @@
+---
+const { data } = Astro.props;
+
+// Tidspunkterne
+const tider = ["10", "12", "14", "16", "18", "21", "00", "01"];
+---
+
+<div class="overflow-hidden border-2 border-darkblue rounded-lg">
+    <table class="w-full">
+        <thead class="bg-darkyellow text-left text-darkblue">
+            <tr>
+                <th class="p-2 w-1/6 border-2 border-darkblue">Kl.</th>
+                <th class="p-2 w-1/2 border-2 border-darkblue">DEN ENE SCENE</th
+                >
+                <th class="p-2 w-1/2 border-2 border-darkblue"
+                    >DEN ANDEN SCENE</th
+                >
+            </tr>
+        </thead>
+        <tbody>
+            {
+                tider.map((tid) => (
+                    <tr>
+                        <td class="border p-2 border-darkblue text-darkblue">
+                            {tid}
+                        </td>
+                        <td class="border p-2 border-darkblue text-darkblue">
+                            {data[tid]?.scene1 || ""}
+                        </td>
+                        <td class="border p-2 border-darkblue text-darkblue">
+                            {data[tid]?.scene2 || ""}
+                        </td>
+                    </tr>
+                    //  ?. er optional chaining – hvis data[tid] er undefined, undgås fejl
+
+                    // || "" betyder: hvis der ikke står noget, vis en tom streng
+                ))
+            }
+        </tbody>
+    </table>
+</div>
