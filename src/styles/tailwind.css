@@ -29,6 +29,18 @@
   --color-orange: #cd6200;
   --color-brightorange: #f2790a;
   --color-hoverorange: #d6904f;
+
+  /*Infinite scroll animation*/
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 /* Base layer med typografi */
@@ -109,6 +121,9 @@
   }
 
   h6 {
+    @apply text-darkblue;
+
+    font-family: "Superfunky";
   }
   p,
   li {
