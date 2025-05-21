@@ -1,0 +1,15 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Billet from "../components/Billet.astro";
+---
+
+<MainLayout>
+  <section class="text-center px-4">
+    <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
+    <Billet />
+    <Button variant="secondary">TILMELD DIG SOM FRIVLLIG</Button>
+  </section>
+</MainLayout>

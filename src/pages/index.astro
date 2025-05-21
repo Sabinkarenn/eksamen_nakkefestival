@@ -9,42 +9,69 @@ import Form from "../components/Form.astro";
 
 import Timebanner from "../components/Timebanner.astro";
 import Galleri from "../components/Galleri.astro";
-// >>>>>>> d0bc775af0f2043d18b752f58de4c1159e83e14f
+import Kunstnercard from "../components/Kunstnercard.astro";
 ---
 
 <MainLayout title="Nakkefestival">
+  <!-- Hero section -->
+
+  <li>
+    <a href="/købbillet" class="underline hover:text-orange">Køb billet</a>
+  </li>
+
   <!-- Første sektion med logo -->
 
   <h1>Nakkefestival</h1>
-  <section>
+  <section class="mb-15">
     <div>
       <h2>Musik, kunst og kærlighed</h2>
       <p>
-        Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i den fantastiske stemning på Nakkefestival – en oplevelse, du ikke finder andre steder! Programmet bliver spækket med
-        lækkerier, og vi glæder os til at danse og feste med dig og dine venner til den lyse morgen. Så tag teltet og vennerne under armen, og oplev Danmarks hyggeligste festival.
+        Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i den
+        fantastiske stemning på Nakkefestival – en oplevelse, du ikke finder
+        andre steder! Programmet bliver spækket med lækkerier, og vi glæder os
+        til at danse og feste med dig og dine venner til den lyse morgen. Så tag
+        teltet og vennerne under armen, og oplev Danmarks hyggeligste festival.
       </p>
     </div>
-    <div></div>
+    <div><img src="logo" alt="" /></div>
   </section>
 
   <!-- Årets kunster sektion -->
-  <section>
+  <section class="mb-15">
     <h3>Årets kunstnere</h3>
   </section>
 
   <!-- Nedtæller sektion -->
-  <section>
+  <section class="mb-15">
     <h3 class="text-center">Nakkefestival starter om</h3>
     <Timebanner />
   </section>
 
   <!-- Fællesbus sektion -->
-  <section>
-    <h3>Tag fællesbus til Nakke</h3>
+  <section class="flex mb-15">
+    <div class="border-2 border-darkblue bg-pink p-5 rounded-lg">
+      <h3 class="mb-4">Tag fællesbus til Nakke</h3>
+      <p class="mb-4">
+        Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig og
+        dine venner med på Nakkefestival! I samarbejde med Solibus arrangerer vi
+        bustransport til og fra festivalen. Der er begrænsede pladser, så skynd
+        dig at få fat i en billet!
+      </p>
+      <Button variant="secondary">TILMELD BUSSEN </Button>
+    </div>
+    <div class="p-5">
+      <img src="bus.svg" alt="Bus" class="w-50 h-50" />
+      <p>
+        Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig og
+        dine venner med på Nakkefestival! I samarbejde med Solibus arrangerer vi
+        bustransport til og fra festivalen. Der er begrænsede pladser, så skynd
+        dig at få fat i en billet!
+      </p>
+    </div>
   </section>
 
   <!-- banner sektion -->
-  <section>
+  <section class="mb-15">
     <Banner />
   </section>
   <!-- SoMe sektion -->
@@ -55,5 +82,4 @@ import Galleri from "../components/Galleri.astro";
   <section>
     <Galleri />
   </section>
-  <!-- Galleri start -->
 </MainLayout>
