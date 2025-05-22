@@ -13,10 +13,37 @@ import thumbsup from "../assets/images/thumbsup.png";
     <p class="py-6">Her kan du se tidsplanen for festivalen.</p>
     <p class="py-6">Tryk på knapperne for at skifte mellem dagene.</p>
     <h2>Tidsplan</h2>
-    <button @click="dagaktiv = 'dag1'">d. 23 juli</button>
-    <button @click="dagaktiv = 'dag2'">d. 24 juli</button>
-    <button @click="dagaktiv = 'dag3'">d. 25 juli</button>
-    <button @click="dagaktiv = 'dag4'">d. 26 juli</button>
+    <button
+      @click="dagaktiv = 'dag1'"
+      class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+      :class="{ 'bg-darkyellow': dagaktiv === 'dag1' }"
+    >
+      d. 23 juli
+    </button>
+
+    <button
+      @click="dagaktiv = 'dag2'"
+      class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+      :class="{ 'bg-darkyellow': dagaktiv === 'dag2' }"
+    >
+      d. 24 juli
+    </button>
+
+    <button
+      @click="dagaktiv = 'dag3'"
+      class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+      :class="{ 'bg-darkyellow': dagaktiv === 'dag3' }"
+    >
+      d. 25 juli
+    </button>
+
+    <button
+      @click="dagaktiv = 'dag4'"
+      class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+      :class="{ 'bg-darkyellow': dagaktiv === 'dag4' }"
+    >
+      d. 26 juli
+    </button>
 
     <div class="grid grid-cols-3 max-w-xl gap-4" x-show="dagaktiv === 'dag1'">
       <!-- Kolonne 1: Tid -->
@@ -112,7 +139,7 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
 
       <div>
-        <div class="font-bold">Scene 1</div>
+        <div class="font-bold">DEN ENE SCENE</div>
         <div>ADAM</div>
         <div>-</div>
         <div>INDUKTRI</div>
@@ -124,7 +151,7 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
 
       <div>
-        <div class="font-bold">Scene 2</div>
+        <div class="font-bold">DEN ANDEN SCENE</div>
         <div>-</div>
         <div>TANAJAH</div>
         <div>-</div>
@@ -144,13 +171,13 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
 
       <div>
-        <div class="font-bold">Scene 1</div>
+        <div class="font-bold">DEN ENE SCENE</div>
         <div>BECCA</div>
         <div>-</div>
       </div>
 
       <div>
-        <div class="font-bold">Scene 2</div>
+        <div class="font-bold">DEN ANDEN SCENE</div>
         <div>-</div>
         <div>ADLYD</div>
       </div>
