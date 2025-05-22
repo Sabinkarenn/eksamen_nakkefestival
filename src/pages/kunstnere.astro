@@ -9,7 +9,124 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout>
   <div x-data="{ dagaktiv: 'dag1' }">
-    <h1>Se dette års kunstnere og program</h1>
+    <h1 class="text-center">Se dette års kunstnere og program</h1>
+    <div
+      class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+    >
+      <button
+        @click="dagaktiv = 'dag1'"
+        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+        :class="{ 'bg-darkyellow': dagaktiv === 'dag1' }"
+      >
+        d. 23 juli
+      </button>
+
+      <button
+        @click="dagaktiv = 'dag2'"
+        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+        :class="{ 'bg-darkyellow': dagaktiv === 'dag2' }"
+      >
+        d. 24 juli
+      </button>
+
+      <button
+        @click="dagaktiv = 'dag3'"
+        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+        :class="{ 'bg-darkyellow': dagaktiv === 'dag3' }"
+      >
+        d. 25 juli
+      </button>
+
+      <button
+        @click="dagaktiv = 'dag4'"
+        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
+        :class="{ 'bg-darkyellow': dagaktiv === 'dag4' }"
+      >
+        d. 26 juli
+      </button>
+    </div>
+    <div class="flex flex-col gap-20 p-4">
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="Josie Amadonna"
+        cardtitle="JOSIE AMADONNA"
+        cardscene="DEN ENE SCENE"
+        cardkategori="RAP"
+        carddato="23. juli"
+        cardtidspunkt="10:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="becca"
+        cardtitle="BECCA"
+        cardscene="DEN ANDEN SCENE"
+        cardkategori="POP"
+        carddato="23. juli"
+        cardtidspunkt="12:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="uma kabongo"
+        cardtitle="UMA KABONGO"
+        cardscene="DEN ENE SCENE"
+        cardkategori="RAP"
+        carddato="23. juli"
+        cardtidspunkt="14:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="adlyd"
+        cardtitle="ADLYD"
+        cardscene="DEN ANDEN SCENE"
+        cardkategori="PUNK"
+        carddato="23. juli"
+        cardtidspunkt="16:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="adam"
+        cardtitle="ADAM"
+        cardscene="DEN ENE SCENE"
+        cardkategori="RAP"
+        carddato="23. juli"
+        cardtidspunkt="18:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="yasmin"
+        cardtitle="YASMIN"
+        cardscene="DEN ANDEN SCENE"
+        cardkategori="INDIE"
+        carddato="23. juli"
+        cardtidspunkt="21:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="induktri"
+        cardtitle="INDUKTRI"
+        cardscene="DEN ENE SCENE"
+        cardkategori="ROCK"
+        carddato="23. juli"
+        cardtidspunkt="00:00"
+      />
+      <Kunstnercard
+        x-show="dagaktiv === 'dag1'"
+        cardimage="josie.png"
+        cardimagealt="tanjah"
+        cardtitle="TANAJAH"
+        cardscene="DEN ANDEN SCENE"
+        cardkategori="PSYCH"
+        carddato="23. juli"
+        cardtidspunkt="01:00"
+      />
+    </div>
 
     <h2 class="text-center mb-8">Tidsplan</h2>
     <div
