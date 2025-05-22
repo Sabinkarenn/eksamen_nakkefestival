@@ -9,10 +9,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout>
   <div x-data="{ dagaktiv: 'dag1' }">
-    <h1 class="text-3xl font-bold">Se dette års kunstnere og program</h1>
-    <p class="py-6">Her kan du se tidsplanen for festivalen.</p>
-    <p class="py-6">Tryk på knapperne for at skifte mellem dagene.</p>
-    <h2>Tidsplan</h2>
+    <h1>Se dette års kunstnere og program</h1>
+
+    <h2 class="text-center mb-8">Tidsplan</h2>
     <div
       class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
     >
@@ -48,196 +47,201 @@ import thumbsup from "../assets/images/thumbsup.png";
         d. 26 juli
       </button>
     </div>
-    <!-- dag 1 -->
-    <div
-      class="grid grid-cols-3 max-w-xl gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
-      x-show="dagaktiv === 'dag1'"
-    >
-      <!-- Tid kolonne -->
+    <!-- skema div -->
+    <div class="max-w-4xl mx-auto">
+      <!-- dag 1 -->
       <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag1'"
       >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          Tid
+        <!-- Tid kolonne -->
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div
+            class="p-2 col-span-1 font-bold bg-darkyellow border-b-2 border-darkblue"
+          >
+            Tid
+          </div>
+          <div class="p-2">10</div>
+          <div class="p-2">12</div>
+          <div class="p-2">14</div>
+          <div class="p-2">16</div>
+          <div class="p-2">18</div>
+          <div class="p-2">21</div>
+          <div class="p-2">00</div>
+          <div class="p-2">01</div>
         </div>
-        <div class="p-2">10</div>
-        <div class="p-2">12</div>
-        <div class="p-2">14</div>
-        <div class="p-2">16</div>
-        <div class="p-2">18</div>
-        <div class="p-2">21</div>
-        <div class="p-2">00</div>
-        <div class="p-2">01</div>
+
+        <!-- DEN ENE SCENE -->
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
+          <div class="p-2">JOSIE AMADONNA</div>
+          <div class="p-2">-</div>
+          <div class="p-2">UMA KABONGO</div>
+          <div class="p-2">-</div>
+          <div class="p-2">ADAM</div>
+          <div class="p-2">-</div>
+          <div class="p-2">INDUKTRI</div>
+          <div class="p-2">-</div>
+        </div>
+
+        <!-- DEN ANDEN SCENE -->
+        <div class="divide-y divide-darkblue text-darkblue">
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
+          <div class="p-2">-</div>
+          <div class="p-2">BECCA</div>
+          <div class="p-2">-</div>
+          <div class="p-2">ADLYD</div>
+          <div class="p-2">-</div>
+          <div class="p-2">YASMIN</div>
+          <div class="p-2">-</div>
+          <div class="p-2">TANAJAH</div>
+        </div>
       </div>
 
-      <!-- DEN ENE SCENE -->
+      <!-- dag 2 -->
       <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag2'"
       >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ENE SCENE
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Tid
+          </div>
+          <div class="p-2">10</div>
+          <div class="p-2">12</div>
+          <div class="p-2">14</div>
+          <div class="p-2">16</div>
+          <div class="p-2">18</div>
+          <div class="p-2">21</div>
+          <div class="p-2">00</div>
+          <div class="p-2">01</div>
         </div>
-        <div class="p-2">JOSIE AMADONNA</div>
-        <div class="p-2">-</div>
-        <div class="p-2">UMA KABONGO</div>
-        <div class="p-2">-</div>
-        <div class="p-2">ADAM</div>
-        <div class="p-2">-</div>
-        <div class="p-2">INDUKTRI</div>
-        <div class="p-2">-</div>
+
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+          <div class="p-2">JOSIE AMADONNA</div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+          <div class="p-2">ADAM</div>
+          <div class="p-2">UMA KABONGO</div>
+          <div class="p-2">INDUKTRI</div>
+        </div>
+
+        <div class="divide-y divide-darkblue text-darkblue">
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
+          <div class="p-2">ADLYD</div>
+          <div class="p-2">YASMIN</div>
+          <div class="p-2">-</div>
+          <div class="p-2">BECCA</div>
+          <div class="p-2">TANAJAH</div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+        </div>
       </div>
 
-      <!-- DEN ANDEN SCENE -->
-      <div class="divide-y divide-darkblue text-darkblue">
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ANDEN SCENE
-        </div>
-        <div class="p-2">-</div>
-        <div class="p-2">BECCA</div>
-        <div class="p-2">-</div>
-        <div class="p-2">ADLYD</div>
-        <div class="p-2">-</div>
-        <div class="p-2">YASMIN</div>
-        <div class="p-2">-</div>
-        <div class="p-2">TANAJAH</div>
-      </div>
-    </div>
-
-    <!-- dag 2 -->
-    <div
-      class="grid grid-cols-3 max-w-xl gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
-      x-show="dagaktiv === 'dag2'"
-    >
+      <!-- dag 3 -->
       <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag3'"
       >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          Tid
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Tid
+          </div>
+          <div class="p-2">10</div>
+          <div class="p-2">12</div>
+          <div class="p-2">14</div>
+          <div class="p-2">16</div>
+          <div class="p-2">18</div>
+          <div class="p-2">21</div>
+          <div class="p-2">00</div>
+          <div class="p-2">01</div>
         </div>
-        <div class="p-2">10</div>
-        <div class="p-2">12</div>
-        <div class="p-2">14</div>
-        <div class="p-2">16</div>
-        <div class="p-2">18</div>
-        <div class="p-2">21</div>
-        <div class="p-2">00</div>
-        <div class="p-2">01</div>
+
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
+          <div class="p-2">ADAM</div>
+          <div class="p-2">-</div>
+          <div class="p-2">INDUKTRI</div>
+          <div class="p-2">-</div>
+          <div class="p-2">UMA KABONGO</div>
+          <div class="p-2">JOSIE AMADONNA</div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+        </div>
+
+        <div class="divide-y divide-darkblue text-darkblue">
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
+          <div class="p-2">-</div>
+          <div class="p-2">TANAJAH</div>
+          <div class="p-2">-</div>
+          <div class="p-2">BECCA</div>
+          <div class="p-2">-</div>
+          <div class="p-2">-</div>
+          <div class="p-2">ADLYD</div>
+          <div class="p-2">YASMIN</div>
+        </div>
       </div>
 
+      <!-- dag 4 -->
       <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag4'"
       >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ENE SCENE
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Tid
+          </div>
+          <div class="p-2">10</div>
+          <div class="p-2">12</div>
         </div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-        <div class="p-2">JOSIE AMADONNA</div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-        <div class="p-2">ADAM</div>
-        <div class="p-2">UMA KABONGO</div>
-        <div class="p-2">INDUKTRI</div>
-      </div>
 
-      <div class="divide-y divide-darkblue text-darkblue">
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ANDEN SCENE
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
+          <div class="p-2">BECCA</div>
+          <div class="p-2">-</div>
         </div>
-        <div class="p-2">ADLYD</div>
-        <div class="p-2">YASMIN</div>
-        <div class="p-2">-</div>
-        <div class="p-2">BECCA</div>
-        <div class="p-2">TANAJAH</div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-      </div>
-    </div>
 
-    <!-- dag 3 -->
-    <div
-      class="grid grid-cols-3 max-w-xl gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
-      x-show="dagaktiv === 'dag3'"
-    >
-      <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
-      >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          Tid
+        <div class="divide-y divide-darkblue text-darkblue">
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
+          <div class="p-2">-</div>
+          <div class="p-2">ADLYD</div>
         </div>
-        <div class="p-2">10</div>
-        <div class="p-2">12</div>
-        <div class="p-2">14</div>
-        <div class="p-2">16</div>
-        <div class="p-2">18</div>
-        <div class="p-2">21</div>
-        <div class="p-2">00</div>
-        <div class="p-2">01</div>
-      </div>
-
-      <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
-      >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ENE SCENE
-        </div>
-        <div class="p-2">ADAM</div>
-        <div class="p-2">-</div>
-        <div class="p-2">INDUKTRI</div>
-        <div class="p-2">-</div>
-        <div class="p-2">UMA KABONGO</div>
-        <div class="p-2">JOSIE AMADONNA</div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-      </div>
-
-      <div class="divide-y divide-darkblue text-darkblue">
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ANDEN SCENE
-        </div>
-        <div class="p-2">-</div>
-        <div class="p-2">TANAJAH</div>
-        <div class="p-2">-</div>
-        <div class="p-2">BECCA</div>
-        <div class="p-2">-</div>
-        <div class="p-2">-</div>
-        <div class="p-2">ADLYD</div>
-        <div class="p-2">YASMIN</div>
-      </div>
-    </div>
-
-    <!-- dag 4 -->
-    <div
-      class="grid grid-cols-3 max-w-xl gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
-      x-show="dagaktiv === 'dag4'"
-    >
-      <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
-      >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          Tid
-        </div>
-        <div class="p-2">10</div>
-        <div class="p-2">12</div>
-      </div>
-
-      <div
-        class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
-      >
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ENE SCENE
-        </div>
-        <div class="p-2">BECCA</div>
-        <div class="p-2">-</div>
-      </div>
-
-      <div class="divide-y divide-darkblue text-darkblue">
-        <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
-          DEN ANDEN SCENE
-        </div>
-        <div class="p-2">-</div>
-        <div class="p-2">ADLYD</div>
       </div>
     </div>
   </div>
