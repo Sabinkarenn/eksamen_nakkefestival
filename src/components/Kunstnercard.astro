@@ -14,7 +14,7 @@ import Link from "./Link.astro";
 
 <!-- Outer container -->
 <div
-    class="relative cursor-pointer p-4 w-full max-w-xs md:max-w-6xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
+    class="relative cursor-pointer p-4 w-full max-w-xs md:max-w-3xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
     style="background-image: url('paperlong.png');"
 >
     <!-- Tape: top-left -->
@@ -74,31 +74,3 @@ import Link from "./Link.astro";
         </p>
     </div>
 </div>
-<style>
-    .scale-up-center {
-        -webkit-animation: scale-up-center 0.4s
-            cubic-bezier(0.39, 0.575, 0.565, 1) both;
-        animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    }
-
-    @-webkit-keyframes scale-up-center {
-        0% {
-            -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-        }
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-    @keyframes scale-up-center {
-        0% {
-            -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-        }
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-</style>
