@@ -91,7 +91,7 @@
   /* Headings */
   h1 {
     @apply text-orange text-4xl;
-
+    @apply mb-6;
     font-family: "Superfunky";
   }
 
@@ -107,11 +107,14 @@
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-3xl;
+    @apply font-bold
+     
   }
 
   h3 {
-    @apply text-3xl;
+    @apply text-2xl;
+    @apply mb-4;
   }
 
   h4 {
@@ -127,7 +130,16 @@
   }
   p,
   li {
+     
   }
+  p {
+  @apply mb-6;
+    font-family: "Anybody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 }
 
 /* Tomme layers – du kan fjerne disse hvis du ikke bruger dem */
