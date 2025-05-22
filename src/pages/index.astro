@@ -4,7 +4,6 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Banner from "../components/Banner.astro";
-
 import Hero from "../components/Hero.astro";
 import Form from "../components/Form.astro";
 import Timebanner from "../components/Timebanner.astro";
@@ -17,16 +16,18 @@ import Kunstnercard from "../components/Kunstnercard.astro";
 
   <Hero />
 
-  <li>
-    <a href="/købbillet" class="underline hover:text-orange">Køb billet</a>
-  </li>
-
   <!-- Første sektion med logo -->
 
-  <h1>Nakkefestival</h1>
   <section class="flex mb-15">
     <div>
       <h2>Musik, kunst og kærlighed</h2>
+      <p>
+        Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i den
+        fantastiske stemning på Nakkefestival – en oplevelse, du ikke finder
+        andre steder! Programmet bliver spækket med lækkerier, og vi glæder os
+        til at danse og feste med dig og dine venner til den lyse morgen. Så tag
+        teltet og vennerne under armen, og oplev Danmarks hyggeligste festival.
+      </p>
     </div>
     <div><img src="/logo.svg" alt="Logo" class="w-120 h-120" /></div>
   </section>
@@ -34,6 +35,7 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   <!-- Årets kunster sektion -->
   <section class="mb-15">
     <h3 class="text-center">Årets kunstnere</h3>
+    <Kunstnercard />
   </section>
 
   <!-- Nedtæller sektion -->
