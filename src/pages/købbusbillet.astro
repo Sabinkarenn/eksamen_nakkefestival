@@ -8,9 +8,23 @@ import Busbillet from "../components/Busbillet.astro";
 ---
 
 <MainLayout>
-  <section class="text-center px-4">
+  <section class="mb-15 text-center items-center px-4">
+    <div class="mb-4 flex justify-center items-center text-center gap-10 p-8">
+      <div
+        class="w-30 h-6 rounded-full border-2 border-darkblue bg-transparent"
+      >
+      </div>
+
+      <div class="w-30 h-6 rounded-full border-2 bg-darkblue border-darkblue">
+      </div>
+      <div
+        class="w-30 h-6 rounded-full border-2 border-darkblue bg-transparent"
+      >
+      </div>
+    </div>
+
     <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
     <Busbillet />
-    <Button variant="primary">Videre</Button>
+    <Button variant="primary">Videre til køb</Button>
   </section>
 </MainLayout>

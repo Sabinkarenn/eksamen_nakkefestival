@@ -4,10 +4,26 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Billet from "../components/Billet.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <MainLayout>
-  <section class="text-center px-4">
+  <Hero />
+  <section class="mb-15 text-center items-center px-4">
+    <div class="mb-4 flex justify-center items-center text-center gap-10 p-8">
+      <div class="w-30 h-6 rounded-full bg-darkblue border-2 border-darkblue">
+      </div>
+
+      <div
+        class="w-30 h-6 rounded-full border-2 border-darkblue bg-transparent"
+      >
+      </div>
+      <div
+        class="w-30 h-6 rounded-full border-2 border-darkblue bg-transparent"
+      >
+      </div>
+    </div>
+
     <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
     <Billet />
 

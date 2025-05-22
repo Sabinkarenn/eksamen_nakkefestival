@@ -14,30 +14,30 @@
 ---
 
 <!-- Ydre container for hele billettilvalg-komponenten -->
-<div class="mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg ">
+<div class="mb-10 max-w-md mx-auto p-5 border-2 border-darkblue rounded-lg ">
 
   <!-- Overskrift og info-tekst -->
-  <h2 class="text-lg font-bold text-[#00106b] mb-2">Vælg billet</h2>
-  <p class="text-sm  mb-4">
+  <h2 class="text-xl font-bold mb-3">Vælg billet</h2>
+  <p>
     Alle betalte billetter tillægges billetgebyr på 4,94 kr
   </p>
 
   <!-- Vi looper igennem hver billet og viser dem én for én -->
   {tickets.map(ticket => (
-    <div class="border-t-2  py-5 flex items-center justify-between" id={ticket.id}>
+    <div class="border-t-2 pt-3 pb-1 flex items-center justify-between" id={ticket.id}>
 
       <!-- Venstre side: navn, dato og pris -->
       <div>
-        <p class="font-bold  leading-tight">{ticket.name}</p>
+        <p class=" mt-2 font-bold  leading-tight">{ticket.name}</p>
         {ticket.date && <p class="text-sm ">{ticket.date}</p>}
-        <p class="text-sm  italic">{ticket.price} kr.</p>
+        <p >{ticket.price} kr.</p>
       </div>
 
       <!-- Højre side: minusknap, tæller og plusknap -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-3">
         <!-- Minus-knap -->
         <button 
-          class="bg-yellow-400 w-8 h-8 rounded-full text-[#00106b] font-bold"
+          class="bg-yellow w-8 h-8 rounded-full font-bold"
           onClick={`decrement('${ticket.id}')`}
         >−</button>
 
@@ -46,7 +46,7 @@
 
         <!-- Plus-knap -->
         <button 
-          class="bg-yellow-400 w-8 h-8 rounded-full text-[#00106b] font-bold"
+          class="bg-yellow w-8 h-8 rounded-full font-bold"
           onClick={`increment('${ticket.id}')`}
         >+</button>
       </div>
