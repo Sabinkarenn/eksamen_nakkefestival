@@ -5,32 +5,29 @@
  * Hver billet har et id, navn, evt. dato og pris.
  */
  const tickets = [
-  { id: 'partout', name: 'Partout billet', date: '', price: 800 },
-  { id: 'onsdag', name: 'Endags billet', date: 'onsdag 23/7', price: 360 },
-  { id: 'torsdag', name: 'Endags billet', date: 'torsdag 24/7', price: 360 },
-  { id: 'fredag', name: 'Endags billet', date: 'fredag 25/7', price: 360 },
-  { id: 'lordag', name: 'Endags billet', date: 'lørdag 26/7', price: 360 },
+  { id: 'Bus KBH-Nakke 23/7', name: 'Bus KBH-Nakke 23/7', date: 'Afgang kl. 12 fra DGI byen ' },
+  { id: 'Bus Nakke-KBH 26/7', name: 'Bus Nakke-KBH 26/7', date: 'Afgang kl. 14',  },
+  
 ];
 ---
 
 <!-- Ydre container for hele billettilvalg-komponenten -->
-<div class="mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg ">
+<div class=" bg-pink mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg ">
 
   <!-- Overskrift og info-tekst -->
-  <h2 class="text-lg font-bold text-[#00106b] mb-2">Vælg billet</h2>
-  <p class="text-sm  mb-4">
-    Alle betalte billetter tillægges billetgebyr på 4,94 kr
+  <h2 class="text-lg font-bold mb-2">Pssst... tilkøb busbillet her</h2>
+  <p class="text-sm mb-7">
+    170 kr. pr billet
   </p>
 
   <!-- Vi looper igennem hver billet og viser dem én for én -->
   {tickets.map(ticket => (
-    <div class="border-t-2  py-5 flex items-center justify-between" id={ticket.id}>
+    <div class="border-t-2  py-9 flex items-center justify-between" id={ticket.id}>
 
       <!-- Venstre side: navn, dato og pris -->
       <div>
         <p class="font-bold  leading-tight">{ticket.name}</p>
         {ticket.date && <p class="text-sm ">{ticket.date}</p>}
-        <p class="text-sm  italic">{ticket.price} kr.</p>
       </div>
 
       <!-- Højre side: minusknap, tæller og plusknap -->

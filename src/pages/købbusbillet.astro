@@ -4,13 +4,13 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Billet from "../components/Billet.astro";
+import Busbillet from "../components/Busbillet.astro";
 ---
 
 <MainLayout>
   <section class="text-center px-4">
     <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
-    <Billet />
-
-    <a href="/købbusbillet"><Button variant="primary">Videre</Button> </a>
+    <Busbillet />
+    <Button variant="primary">Videre</Button>
   </section>
 </MainLayout>
