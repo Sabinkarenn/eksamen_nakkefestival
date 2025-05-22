@@ -46,26 +46,30 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   </section>
 
   <!-- Fællesbus sektion -->
-  <section class="flex mb-15">
-    <div class="border-2 border-darkblue bg-pink rounded-lg">
-      <h3 class="mb-4 p-3">Tag fællesbus til Nakke</h3>
-      <p class="p-3">
+  <section class="flex flex-col lg:flex-row gap-6 mb-15">
+    <!-- Første boks -->
+    <div class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2">
+      <h3 class="mb-2">Tag fællesbus til Nakke</h3>
+      <p class="mb-6">
         Turen tager omkring en time og koster 170 kroner (Kbh) det er billigere
         end offentlig transport og bedre for miljøet end at køre selv. Det er
         oven i købet en fantastisk undskyldning for at tilbringe endnu mere tid
         sammen med dine søde og dejlige Nakkevenner! Busserne til festivalen
         kører fra DGI byen. Du skal være ved bussen en halv time før afgang, så
-        vi får alle tjekket ind og din bagage med
+        vi får alle tjekket ind og din bagage med.
       </p>
-      <Button variant="secondary">TILMELD BUSSEN </Button>
+      <Button variant="secondary">TILMELD BUSSEN</Button>
     </div>
-    <div class="p-5">
-      <img src="bus.svg" alt="Bus" class="w-70 h-70" />
-      <p class="p-2">
+
+    <!-- Anden boks -->
+    <div class="lg:w-1/2">
+      <img src="bus.svg" alt="Bus" class="w-150 h-50" />
+      <p class="">
         Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig og
         dine venner med på Nakkefestival! I samarbejde med Solibus arrangerer vi
-        bustransport til og fra festivalen. Der er begrænsede pladser, så skynd
-        dig at få fat i en billet!
+        bustransport til og fra festivalen. <br /><br /><strong
+          >Der er begrænsede pladser, så skynd dig at få fat i en billet!</strong
+        >
       </p>
     </div>
   </section>

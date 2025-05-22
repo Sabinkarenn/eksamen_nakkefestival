@@ -1,5 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 ---
 
 <div class="navbar bg-beige">
@@ -35,31 +38,23 @@ import MainLayout from "../layouts/MainLayout.astro";
         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-beige rounded-box w-52 text-orange right-0"
       >
         <li>
-          <a href="/events" class="hover:bg-transparent hover:text-outline"
-            >Events</a
-          >
+          <a href="/events" class="hover:bg-transparent">Events</a>
         </li>
-
         <li>
-          <a
-            href="/blivfrivillig"
-            class="hover:bg-transparent hover:text-outline">Bliv frivillig</a
+          <a href="/blivfrivillig" class="hover:bg-transparent"
+            >Bliv frivillig</a
           >
         </li>
         <li>
-          <a href="/kunstnere" class="hover:bg-transparent hover:text-outline"
-            >kunstnere</a
-          >
+          <a href="/kunstnere" class="hover:bg-transparent">Kunstnere</a>
         </li>
         <li>
-          <a href="/information" class="hover:bg-transparent hover:text-outline"
-            >Information</a
-          >
+          <a href="/information" class="hover:bg-transparent">Information</a>
         </li>
         <li>
-          <a href="/information" class="hover:bg-transparent hover:text-outline"
-            >Information</a
-          >
+          <a href="/købbusbillet" class="hover:bg-transparent">
+            <Button variant="primary" size="small">Køb billet</Button>
+          </a>
         </li>
       </ul>
     </div>
@@ -67,23 +62,28 @@ import MainLayout from "../layouts/MainLayout.astro";
     <!-- Vandret menu: kun synlig på store skærme -->
     <ul class="menu menu-horizontal hidden lg:flex space-x-2">
       <li>
-        <a href="/events" class="underline hover:text-orange-500">Events</a>
+        <a
+          href="/events"
+          class="hover:bg-transparent underline hover:text-orange">Events</a
+        >
       </li>
       <li>
-        <a href="/blivfrivillig" class="underline hover:text-orange"
+        <a
+          href="/blivfrivillig"
+          class="hover:bg-transparent underline hover:text-orange"
           >Bliv frivillig</a
         >
       </li>
       <li>
         <a
           href="/kunstnere"
-          class="underline hover:text-orange hover:bg-transparent"
+          class="underline hover:text-orange hover:bg-transparent">Kunstnere</a
         >
-          Kunstnere
-        </a>
       </li>
       <li>
-        <a href="/information" class="underline hover:text-orange"
+        <a
+          href="/information"
+          class="underline hover:bg-transparent hover:text-orange"
           >Information</a
         >
       </li>
