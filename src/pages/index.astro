@@ -18,7 +18,9 @@ import Kunstnercard from "../components/Kunstnercard.astro";
 
   <!-- Første sektion med logo -->
   <a href="/købbillet">købbillet</a>
-  <section class="flex items-center justify-between gap-8 mb-15 px-8">
+  <section
+    class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-15 px-8"
+  >
     <div class="max-w-xl">
       <h2 class="mb-4">Musik, kunst og kærlighed</h2>
       <p>
@@ -38,7 +40,6 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   <!-- Årets kunster sektion -->
   <section class="text-center mb-15">
     <h3 class="text-center">Årets kunstnere</h3>
-    <Kunstnercard />
     <div class="mb-10">
       <Button variant="secondary">Se hele programmet</Button>
     </div>
@@ -81,12 +82,10 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   <section class="mb-15">
     <Banner />
   </section>
-  <!-- SoMe sektion -->
-  <section class="mb-15">
-    <h3 class="text-center">Se mere til Nakkefestival</h3>
-  </section>
+
   <!-- Galleri start -->
-  <section>
+  <section class="mb-15">
+    <h3 class="text-center mb-4">Se mere til Nakkefestival</h3>
     <Galleri />
   </section>
 </MainLayout>

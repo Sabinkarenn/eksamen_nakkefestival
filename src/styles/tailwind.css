@@ -90,8 +90,7 @@
 
   /* Headings */
   h1 {
-    @apply text-orange text-4xl;
-    @apply mb-6;
+    @apply text-orange text-3xl sm:text-4xl lg:text-6xl mb-6;
     font-family: "Superfunky";
   }
 
@@ -107,39 +106,39 @@
   }
 
   h2 {
-    @apply text-3xl;
-    @apply font-bold
-     
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold;
   }
 
   h3 {
-    @apply text-2xl;
-    @apply mb-4;
+    @apply text-xl sm:text-2xl lg:text-3xl mb-4;
   }
 
   h4 {
+    @apply text-lg sm:text-xl lg:text-2xl;
   }
+
   h5 {
-    @apply font-bold;
+    @apply font-bold text-base sm:text-lg;
   }
 
   h6 {
-    @apply text-darkblue;
-
+    @apply text-base sm:text-lg;
     font-family: "Superfunky";
   }
+
+  /* Brødtekst og lister */
   p,
   li {
-     
-  }
-  p {
-  @apply mb-6;
+    @apply text-base sm:text-lg mb-6;
     font-family: "Anybody", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    font-weight: 400;
+    font-style: normal;
+  }
 
-
+  /* Links */
+  a {
+    @apply text-darkblue;
+  }
 }
 
 /* Tomme layers – du kan fjerne disse hvis du ikke bruger dem */
