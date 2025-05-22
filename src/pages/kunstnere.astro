@@ -10,40 +10,40 @@ import Skema from "../components/Skema.astro";
 
 // Fiktiv skema-data for hver dag
 const skemaer = {
-    "23 juli": {
-        "10": { scene1: "JOSIE AMADONNA" },
-        "12": { scene2: "BECCA" },
-        "14": { scene1: "UMA KABONGO" },
-        "16": { scene2: "ADLYD" },
-        "18": { scene1: "ADAM" },
-        "21": { scene2: "YASMIN" },
-        "00": { scene1: "INDUKTRI" },
-        "01": { scene2: "TANAJAH" },
-    },
-    "24 juli": {
-        "10": { scene2: "ADLYD" },
-        "12": { scene2: "YASMIN" },
-        "14": { scene1: "JOSIE AMADONNA" },
-        "16": { scene2: "BECCA" },
-        "18": { scene2: "TANAJAH" },
-        "21": { scene1: "ADAM" },
-        "00": { scene1: "UMA KABONGO" },
-        "01": { scene1: "INDUKTRI" },
-    },
-    "25 juli": {
-        "10": { scene1: "ADAM" },
-        "12": { scene2: "TANAJAH" },
-        "14": { scene1: "INDUKTRI" },
-        "16": { scene2: "BECCA" },
-        "18": { scene1: "UMA KABONGO" },
-        "21": { scene1: "JOSIE AMADONNA" },
-        "00": { scene2: "ADLYD" },
-        "01": { scene2: "YASMIN" },
-    },
-    "26 juli": {
-        "10": { scene1: "BECCA" },
-        "12": { scene2: "ADLYD" },
-    },
+  "23 juli": {
+    "10": { scene1: "JOSIE AMADONNA" },
+    "12": { scene2: "BECCA" },
+    "14": { scene1: "UMA KABONGO" },
+    "16": { scene2: "ADLYD" },
+    "18": { scene1: "ADAM" },
+    "21": { scene2: "YASMIN" },
+    "00": { scene1: "INDUKTRI" },
+    "01": { scene2: "TANAJAH" },
+  },
+  "24 juli": {
+    "10": { scene2: "ADLYD" },
+    "12": { scene2: "YASMIN" },
+    "14": { scene1: "JOSIE AMADONNA" },
+    "16": { scene2: "BECCA" },
+    "18": { scene2: "TANAJAH" },
+    "21": { scene1: "ADAM" },
+    "00": { scene1: "UMA KABONGO" },
+    "01": { scene1: "INDUKTRI" },
+  },
+  "25 juli": {
+    "10": { scene1: "ADAM" },
+    "12": { scene2: "TANAJAH" },
+    "14": { scene1: "INDUKTRI" },
+    "16": { scene2: "BECCA" },
+    "18": { scene1: "UMA KABONGO" },
+    "21": { scene1: "JOSIE AMADONNA" },
+    "00": { scene2: "ADLYD" },
+    "01": { scene2: "YASMIN" },
+  },
+  "26 juli": {
+    "10": { scene1: "BECCA" },
+    "12": { scene2: "ADLYD" },
+  },
 };
 
 let valgtDato = "23 juli";
@@ -51,118 +51,118 @@ let valgtSkema = skemaer[valgtDato];
 ---
 
 <MainLayout>
-    <div class="flex flex-col gap-20 p-4">
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="Josie Amadonna"
-            cardtitle="JOSIE AMADONNA"
-            cardscene="DEN ENE SCENE"
-            cardkategori="RAP"
-            carddato="23. juli"
-            cardtidspunkt="10:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="becca"
-            cardtitle="BECCA"
-            cardscene="DEN ANDEN SCENE"
-            cardkategori="POP"
-            carddato="23. juli"
-            cardtidspunkt="12:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="uma kabongo"
-            cardtitle="UMA KABONGO"
-            cardscene="DEN ENE SCENE"
-            cardkategori="RAP"
-            carddato="23. juli"
-            cardtidspunkt="14:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="adlyd"
-            cardtitle="ADLYD"
-            cardscene="DEN ANDEN SCENE"
-            cardkategori="PUNK"
-            carddato="23. juli"
-            cardtidspunkt="16:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="adam"
-            cardtitle="ADAM"
-            cardscene="DEN ENE SCENE"
-            cardkategori="RAP"
-            carddato="23. juli"
-            cardtidspunkt="18:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="yasmin"
-            cardtitle="YASMIN"
-            cardscene="DEN ANDEN SCENE"
-            cardkategori="INDIE"
-            carddato="23. juli"
-            cardtidspunkt="21:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="induktri"
-            cardtitle="INDUKTRI"
-            cardscene="DEN ENE SCENE"
-            cardkategori="ROCK"
-            carddato="23. juli"
-            cardtidspunkt="00:00"
-        />
-        <Kunstnercard
-            cardimage="josie.png"
-            cardimagealt="tanjah"
-            cardtitle="TANAJAH"
-            cardscene="DEN ANDEN SCENE"
-            cardkategori="PSYCH"
-            carddato="23. juli"
-            cardtidspunkt="01:00"
-        />
-    </div>
+  <div class="flex flex-col gap-20 p-4">
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="Josie Amadonna"
+      cardtitle="JOSIE AMADONNA"
+      cardscene="DEN ENE SCENE"
+      cardkategori="RAP"
+      carddato="23. juli"
+      cardtidspunkt="10:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="becca"
+      cardtitle="BECCA"
+      cardscene="DEN ANDEN SCENE"
+      cardkategori="POP"
+      carddato="23. juli"
+      cardtidspunkt="12:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="uma kabongo"
+      cardtitle="UMA KABONGO"
+      cardscene="DEN ENE SCENE"
+      cardkategori="RAP"
+      carddato="23. juli"
+      cardtidspunkt="14:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="adlyd"
+      cardtitle="ADLYD"
+      cardscene="DEN ANDEN SCENE"
+      cardkategori="PUNK"
+      carddato="23. juli"
+      cardtidspunkt="16:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="adam"
+      cardtitle="ADAM"
+      cardscene="DEN ENE SCENE"
+      cardkategori="RAP"
+      carddato="23. juli"
+      cardtidspunkt="18:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="yasmin"
+      cardtitle="YASMIN"
+      cardscene="DEN ANDEN SCENE"
+      cardkategori="INDIE"
+      carddato="23. juli"
+      cardtidspunkt="21:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="induktri"
+      cardtitle="INDUKTRI"
+      cardscene="DEN ENE SCENE"
+      cardkategori="ROCK"
+      carddato="23. juli"
+      cardtidspunkt="00:00"
+    />
+    <Kunstnercard
+      cardimage="josie.png"
+      cardimagealt="tanjah"
+      cardtitle="TANAJAH"
+      cardscene="DEN ANDEN SCENE"
+      cardkategori="PSYCH"
+      carddato="23. juli"
+      cardtidspunkt="01:00"
+    />
+  </div>
 
-    <div
-        class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+  <div
+    class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+  >
+    <Filtrering variant="primary" size="large" data-filter="23 juli"
+      >d. 23 juli</Filtrering
     >
-        <Filtrering variant="primary" size="large" data-filter="23 juli"
-            >d. 23 juli</Filtrering
-        >
-        <Filtrering variant="primary" size="large" data-filter="24 juli"
-            >d. 24 juli</Filtrering
-        >
-        <Filtrering variant="primary" size="large" data-filter="25 juli"
-            >d. 25 juli</Filtrering
-        >
-        <Filtrering variant="primary" size="large" data-filter="26 juli"
-            >d. 26 juli</Filtrering
-        >
-    </div>
+    <Filtrering variant="primary" size="large" data-filter="24 juli"
+      >d. 24 juli</Filtrering
+    >
+    <Filtrering variant="primary" size="large" data-filter="25 juli"
+      >d. 25 juli</Filtrering
+    >
+    <Filtrering variant="primary" size="large" data-filter="26 juli"
+      >d. 26 juli</Filtrering
+    >
+  </div>
 
-    <div id="skema">
-        <Skema data={valgtSkema} />
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const buttons = document.querySelectorAll("button[data-filter]");
+  <div id="skema">
+    <Skema data={valgtSkema} />
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll("button[data-filter]");
 
-            buttons.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    // Nulstil alle knapper
-                    buttons.forEach((b) => {
-                        b.classList.remove("bg-darkyellow", "text-darkblue");
-                        b.classList.add("bg-beige", "text-darkblue");
-                    });
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Nulstil alle knapper
+          buttons.forEach((b) => {
+            b.classList.remove("bg-darkyellow", "text-darkblue");
+            b.classList.add("bg-beige", "text-darkblue");
+          });
 
-                    // Tilføj valgt styling til den klikkede knap
-                    btn.classList.remove("bg-beige", "text-darkblue");
-                    btn.classList.add("bg-darkyellow", "text-darkblue");
-                });
-            });
+          // Tilføj valgt styling til den klikkede knap
+          btn.classList.remove("bg-beige", "text-darkblue");
+          btn.classList.add("bg-darkyellow", "text-darkblue");
         });
-    </script>
+      });
+    });
+  </script>
 </MainLayout>
