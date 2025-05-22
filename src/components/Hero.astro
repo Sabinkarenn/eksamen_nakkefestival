@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import hero from "../assets/images/heros.webp";
+import lillesol from "../assets/images/lillesol.webp";
+import storsol from "../assets/images/storsol.webp";
+---
+
+<section>
+  <Image src={storsol} alt="stor solsikke" class="place-self-center lg:-mt-150 -mt-70 rotate-animation lg:w-4xl w-xl" />
+  <div class="absolute inset-0 flex flex-col justify-center items-center">
+    <h1 class="lg:text-7xl text-4xl text-darkblue lg:text-center lg:-mt-70 -mt-70">NAKKEFESTIVAL</h1>
+    <h2 class="lg:text-center mt-10 lg:text-5xl text-orange">23-26. juli 2025</h2>
+  </div>
+  <div>
+    <div class="lg:mt-10">
+      <div class="flex justify-center">
+        <Button variant="primary" size="large" class="">Køb billet</Button>
+      </div>
+    </div>
+    <div class="lg:-mt-25">
+      <Image src={lillesol} alt="lille solsikke" class="absolute z-10 rotate-animation lg:left-27 lg:w-100 w-40" />
+      <Image src={hero} alt="hero billede" class="relative z-20" />
+    </div>
+  </div>
+</section>
+<style>
+  .rotate-animation {
+    animation: rotate 25s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .place-self-center {
+    animation: rotate-large 20s linear infinite;
+  }
+
+  @keyframes rotate-large {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
