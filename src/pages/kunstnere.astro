@@ -9,10 +9,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout>
   <div x-data="{ dagaktiv: 'dag1' }">
-    <h1 class="text-3xl font-bold">Tidsplan</h1>
+    <h1 class="text-3xl font-bold">Se dette års kunstnere og program</h1>
     <p class="py-6">Her kan du se tidsplanen for festivalen.</p>
     <p class="py-6">Tryk på knapperne for at skifte mellem dagene.</p>
-    <h2>tidsplan</h2>
+    <h2>Tidsplan</h2>
     <button @click="dagaktiv = 'dag1'">d. 23 juli</button>
     <button @click="dagaktiv = 'dag2'">d. 24 juli</button>
     <button @click="dagaktiv = 'dag3'">d. 25 juli</button>
@@ -58,23 +58,102 @@ import thumbsup from "../assets/images/thumbsup.png";
         <div>TANAJAH</div>
       </div>
     </div>
+    <!-- dag 2 -->
+    <div class="grid grid-cols-3 max-w-xl gap-4" x-show="dagaktiv === 'dag2'">
+      <div>
+        <div class="font-bold">Tid</div>
+        <div>10</div>
+        <div>12</div>
+        <div>14</div>
+        <div>16</div>
+        <div>18</div>
+        <div>21</div>
+        <div>00</div>
+        <div>01</div>
+      </div>
 
-    <div class="grid grid-cols-3 max-w-xl" x-show="dagaktiv === 'dag2'">
-      <div><div class="font-bold">tid</div><div>10</div><div>12</div></div>
-      <div><div>scene 1</div><div>band 1</div><div>band2</div></div>
-      <div><div>scene 2</div><div>-</div><div>band 3</div></div>
+      <div>
+        <div class="font-bold">DEN ENE SCENE</div>
+        <div>-</div>
+        <div>-</div>
+        <div>JOSIE AMADONNA</div>
+        <div>-</div>
+        <div>-</div>
+        <div>ADAM</div>
+        <div>UMA KABONGO</div>
+        <div>INDUKTRI</div>
+      </div>
+
+      <div>
+        <div class="font-bold">DEN ANDEN SCENE</div>
+        <div>ADLYD</div>
+        <div>YASMIN</div>
+        <div>-</div>
+        <div>BECCA</div>
+        <div>TANAJAH</div>
+        <div>-</div>
+        <div>-</div>
+        <div>-</div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-3 max-w-xl" x-show="dagaktiv === 'dag3'">
-      <div><div class="font-bold">tid</div><div>10</div><div>12</div></div>
-      <div><div>scene 1</div><div>band 6</div><div>band 9</div></div>
-      <div><div>scene 2</div><div>-</div><div>band 7</div></div>
-    </div>
+    <!-- dag  3 -->
+    <div class="grid grid-cols-3 max-w-xl gap-4" x-show="dagaktiv === 'dag3'">
+      <div>
+        <div class="font-bold">Tid</div>
+        <div>10</div>
+        <div>12</div>
+        <div>14</div>
+        <div>16</div>
+        <div>18</div>
+        <div>21</div>
+        <div>00</div>
+        <div>01</div>
+      </div>
 
-    <div class="grid grid-cols-3 max-w-xl" x-show="dagaktiv === 'dag4'">
-      <div><div>tid</div><div>10</div><div>12</div></div>
-      <div><div>scene 1</div><div>band 12</div><div>band223</div></div>
-      <div><div>scene 2</div><div>-</div><div>band 323</div></div>
+      <div>
+        <div class="font-bold">Scene 1</div>
+        <div>ADAM</div>
+        <div>-</div>
+        <div>INDUKTRI</div>
+        <div>-</div>
+        <div>UMA KABONGO</div>
+        <div>JOSIE AMADONNA</div>
+        <div>-</div>
+        <div>-</div>
+      </div>
+
+      <div>
+        <div class="font-bold">Scene 2</div>
+        <div>-</div>
+        <div>TANAJAH</div>
+        <div>-</div>
+        <div>BECCA</div>
+        <div>-</div>
+        <div>-</div>
+        <div>ADLYD</div>
+        <div>YASMIN</div>
+      </div>
+    </div>
+    <!-- dag 4 -->
+    <div class="grid grid-cols-3 max-w-xl gap-4" x-show="dagaktiv === 'dag4'">
+      <div>
+        <div class="font-bold">Tid</div>
+        <div>10</div>
+        <div>12</div>
+      </div>
+
+      <div>
+        <div class="font-bold">Scene 1</div>
+        <div>BECCA</div>
+        <div>-</div>
+      </div>
+
+      <div>
+        <div class="font-bold">Scene 2</div>
+        <div>-</div>
+        <div>ADLYD</div>
+      </div>
     </div>
   </div>
 </MainLayout>
