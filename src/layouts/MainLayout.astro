@@ -14,17 +14,82 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
   </head>
-  <body class="bg-beige">
+  <body class="relative min-h-screen bg-beige">
+    <section
+      class="absolute inset-0 w-full h-full grid grid-cols-24 grid-rows-24 gap-4 p-4 z-1"
+    >
+      <!-- Øverst venstre - rykket lidt ned -->
+      <div class="col-start-1 col-span-4 row-start-4 row-span-3">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-90 scale-125 rotate-center"
+        />
+      </div>
+
+      <!-- Øverst højre - rykket lidt ned -->
+      <div class="col-start-19 col-span-4 row-start-5 row-span-4">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-80 scale-210 -rotate-6 solsikke animate__animated animate__tada"
+        />
+      </div>
+
+      <!-- Midt venstre -->
+      <div class="col-start-2 col-span-3 row-start-10 row-span-3">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-70 scale-250 rotate-12 solsikke animate__animated animate__tada"
+        />
+      </div>
+
+      <!-- Midt højre -->
+      <div class="col-start-20 col-span-3 row-start-12 row-span-3">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-85 scale-200 rotate-center"
+        />
+      </div>
+
+      <!-- Nederst venstre - rykket op -->
+      <div class="col-start-3 col-span-4 row-start-18 row-span-3">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-75 scale-150 rotate-3 solsikke animate__animated animate__tada"
+        />
+      </div>
+
+      <!-- Nederst højre - rykket op -->
+      <div class="col-start-17 col-span-4 row-start-19 row-span-3">
+        <img
+          src="/solsikke.webp"
+          alt="Solsikke"
+          class="w-full h-auto opacity-80 scale-250 rotate-center"
+        />
+      </div>
+    </section>
     <header>
       <Header />
     </header>
 
     <main class="px-2 md:px-1">
-      <slot />
+      <div class="relative z-10">
+        <slot />
+      </div>
     </main>
 
     <footer>
       <Footer />
     </footer>
   </body>
+  <style>
+    .solsikke:hover {
+      animation: animate__tada;
+      animation-duration: 2s;
+    }
+  </style>
 </html>
