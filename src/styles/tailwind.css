@@ -109,7 +109,7 @@
   h2 {
     @apply text-3xl;
     @apply font-bold
-     
+    
   }
 
   h3 {
@@ -139,7 +139,9 @@
   font-style: normal;
 }
 
-
+span{
+  @apply text-darkblue
+}
 }
 
 /* Tomme layers – du kan fjerne disse hvis du ikke bruger dem */
