@@ -7,9 +7,13 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
+<!-- Alberte -->
 <MainLayout>
+  <!-- x data til kunstnerecards -->
   <div x-data="{ kunstneraktiv: 'kunstnerdag1' }">
     <h1 class="text-center">Se dette års kunstnere og program</h1>
+
+    <!-- knapper til kunstnerdagene -->
     <div
       class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
     >
@@ -330,8 +334,10 @@ import thumbsup from "../assets/images/thumbsup.png";
       />
     </div>
   </div>
+  <!-- skema -->
   <div x-data="{ dagaktiv: 'dag1' }">
     <h2 class="text-center mb-8">Tidsplan</h2>
+    <!-- knapper til skema -->
     <div
       class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
     >

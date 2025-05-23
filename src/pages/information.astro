@@ -2,19 +2,21 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
+<!-- Alberte -->
 <MainLayout>
+    <h1 class="text-center">Læs alt det vigtige her</h1>
     <section
-        class="flex flex-col items-center min-h-screen px-4"
+        class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4"
         x-data="{ info: 'info1' }"
     >
         <div
-            class="flex flex-col w-full max-w-sm border-2 border-darkblue rounded-lg"
+            class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg"
         >
             <div
-                class="bg-darkyellow items-center cursor-pointer border-2 border-darkblue p-4"
+                class="bg-darkyellow items-center cursor-pointer border-2 border-darkblue p-4 md:w-16"
                 @click="info = info === 'info1' ? null : 'info1'"
             >
-                <h2>Om Nakkefestival</h2>
+                <h2 class="md:rotate-90 text-nowrap">Om Nakkefestival</h2>
             </div>
             <div x-show="info === 'info1'" x-transition class="p-4">
                 <p>
@@ -61,10 +63,10 @@ import MainLayout from "../layouts/MainLayout.astro";
                 <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
             </div>
             <div
-                class="bg-yellow cursor-pointer border-2 border-darkblue p-4"
+                class="bg-yellow cursor-pointer border-2 border-darkblue p-4 md:w-16"
                 @click="info = info === 'info2' ? null : 'info2'"
             >
-                <h2>Praktisk info</h2>
+                <h2 class="md:rotate-90 text-nowrap">Praktisk info</h2>
             </div>
             <div x-show="info === 'info2'" x-transition class="p-4">
                 <p>
@@ -125,10 +127,10 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </p>
             </div>
             <div
-                class="bg-pink cursor-pointer border-2 border-darkblue p-4"
+                class="bg-pink cursor-pointer border-2 border-darkblue p-4 md:w-16"
                 @click="info = info === 'info3' ? null : 'info3'"
             >
-                <h2>Find vej</h2>
+                <h2 class="md:rotate-90 text-nowrap">Find vej</h2>
             </div>
             <div x-show="info === 'info3'" x-transition class="p-4">
                 <p class="italic">
@@ -169,37 +171,5 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </p>
             </div>
         </div>
-    </section>
-    <section
-        class="flex flex-col md:flex-row items-start min-h-screen p-4 gap-2"
-        x-data="{ info: null }"
-    >
-        <template
-            x-for="(item, index) in ['Om', 'Praktisk', 'Find vej']"
-            :key="index"
-        >
-            <div
-                class="flex flex-col border rounded overflow-hidden w-full md:w-1/3"
-            >
-                <div
-                    class="cursor-pointer p-4 border-b"
-                    @click="info = info === item ? null : item"
-                >
-                    <h2 x-text="item"></h2>
-                </div>
-                <div
-                    x-show="info === item"
-                    x-transition:enter="transition ease-out duration-300"
-                    x-transition:enter-start="transform -translate-x-full opacity-0"
-                    x-transition:enter-end="transform translate-x-0 opacity-100"
-                    x-transition:leave="transition ease-in duration-200"
-                    x-transition:leave-start="transform translate-x-0 opacity-100"
-                    x-transition:leave-end="transform translate-x-full opacity-0"
-                    class="p-4"
-                >
-                    <p>Indhold til <span x-text="item"></span> her.</p>
-                </div>
-            </div>
-        </template>
     </section>
 </MainLayout>
