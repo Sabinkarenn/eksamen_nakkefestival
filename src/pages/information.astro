@@ -2,4 +2,348 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+    <script>
+        function activateSlide(index) {
+            const slides = document.querySelectorAll(".slide");
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                slide.style.order = i === index ? "-1" : i + 1;
+            });
+
+            slides[index].classList.add("active");
+        }
+
+        if (typeof window !== "undefined") {
+            document.addEventListener("DOMContentLoaded", () => {
+                const slides = document.querySelectorAll(".slide");
+                slides.forEach((slide, index) => {
+                    slide.addEventListener("click", () => activateSlide(index));
+                });
+
+                // Start med første slide aktiv
+                activateSlide(0);
+            });
+        }
+    </script>
+    <section class="max-w-3xl mx-auto px-4">
+        <h1 class="text-center">Læs alt det vigtige her</h1>
+
+        <ul
+            class="flex flex-col md:flex-row w-90% h-auto md:h-[1200px] overflow-hidden rounded-lg"
+        >
+            <!-- Slide 1 -->
+            <li
+                class="slide order-1 flex-shrink-0 w-full h-[60px] md:w-[5%] relative bg-darkyellow cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue md:h-full"
+            >
+                <span
+                    class="block p-4 text-lg font-bold text-darkblue md:rotate-90 md:top-18 md:left-[-30%] md:whitespace-nowrap"
+                >
+                    Om Nakkefestival
+                </span>
+                <div
+                    class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+                >
+                    <h2 class="mb-4">Om Nakkefestival</h2>
+                    <p>
+                        Når man træder ind på Nakkefestivalen, så føler man sig
+                        velkommen. Vi er en stor lejr, hvor vi har fællestelte
+                        som tipien og plads til at hænge ud rundt omkring
+                        scenerne. Her er ikke tradition for små private lejre,
+                        fordi folk, som kommer på Nakke, er åbne for nye
+                        mennesker og fordi det netop er charmen ved Nakke.
+                        Rummet er fyldt med kreative indslag, som en invitation
+                        til smil og glæde, og næsten uden undtagelser kommer en
+                        stor del fra festivaldeltagerne selv.
+                    </p>
+                    <p class="italic">
+                        På Nakke kommer man ikke på festival, man er festival!
+                    </p>
+                    <p>
+                        Nakkefestival er en musikfestival, og på den front er
+                        festivalen også inkluderende. Der bookes med plads til
+                        mange forskellige genrer, og helt essentielt bookes der
+                        gerne nye udfordrende kunstnere, som ellers ikke falder
+                        under normale kategorier. Med to scener fyldes rummet
+                        med blandinger af alt fra historiefortællinger til at
+                        stå op på, henover kunstnere der synger på selvopfundne
+                        sprog, til up-coming bands med god lyd og slutter af med
+                        fede beats og dans på vores lukkede scene.
+                    </p>
+                    <p class="italic">På Nakke favner vi og udvider.</p>
+                    <p>
+                        Og barskabet kan folk godt lade stå derhjemme. Man må
+                        ikke tage glas med ind på festivalen, men det er blot
+                        fordi, at fodboldbanerne er lånt, og de skal være helt
+                        rene for alt, når de afleveres igen. Men der sørges for,
+                        at man ikke vil mangle noget til ganen, hverken fast
+                        eller flydende. Uanset om man er kødspiser eller
+                        veganer, så er der mad til så lave priser, og uanset om
+                        man er til øl, bitter eller drinks, så findes det, man
+                        mangler til festen.
+                    </p>
+                    <p>
+                        Nakke er et lille sted, hvor man ikke skal langt for den
+                        næste gode oplevelse. Nakkefestivalen er et åndehul,
+                        hvor du er velkommen til at slappe af i, blive udfordret
+                        i, blive nurset i og skabe den gode fest i.
+                    </p>
+                    <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
+                </div>
+            </li>
+
+            <!-- Slide 2 -->
+            <li
+                class="slide order-2 flex-shrink-0 w-full h-[60px] md:w-[5%] relative bg-yellow cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue md:h-full"
+            >
+                <span
+                    class="block p-4 text-lg font-bold text-darkblue md:rotate-90 md:top-13 md:left-[-55%] md:whitespace-nowrap"
+                >
+                    Praktisk info
+                </span>
+                <div
+                    class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+                >
+                    <h2 class="mb-4">Praktisk info</h2>
+                    <p>
+                        Modsat andre større festivaler er der nogle genstande vi
+                        desværre ikke kan tillade på vores lille søde
+                        festivalplads.
+                    </p>
+                    <h3>Derfor, ingen:</h3>
+                    <ul style="list-style-type: disc; margin-left: 1.5em;">
+                        <li>Pavilloner</li>
+                        <li>
+                            Store lydanlæg (med og uden hjul) / Dette gælder
+                            også store ghettoblastere eller lignende mobile
+                            anlæg
+                        </li>
+                        <li>
+                            Alt af glas er strengt forbudt på festivalpladsen –
+                            fra alkohol, øl, syltetøj osv. Skal du have noget
+                            ind, der er købt i en glasbeholder, må du hælde det
+                            over på noget andet først.
+                        </li>
+                        <li>
+                            Ingen vogne eller trækvogne; de må parkeres pænt ude
+                            foran pladsen. (Det samme gælder også cykler)
+                        </li>
+                        <li>
+                            Det er god stil at have sit eget bestik og tallerken
+                            med når man spiser i det veganske køkken, da vi så
+                            sparer en masse kedelig skrald (der vil være opvask
+                            stationer så du kan spise af en ren tallerken).
+                        </li>
+                    </ul>
+                    <h3>Telte:</h3>
+                    <p>
+                        Nakke er en lille festival med plads til små telte,
+                        derfor anbefaler vi alle vores gæster kun at have den
+                        størrelse telt, som man har brug for med. Der er ikke en
+                        kultur for camps eller for at hænge ud i teltområdet,
+                        men derimod foran scenerne, i baren eller i Kreas
+                        chillout områder. Slå gerne dit telt op så tæt på
+                        hinanden, så vi slipper for at flytte rundt på telte,
+                        når de er sat op. Det er vigtigt at teltene bliver sat
+                        op inden for det markerede område af hensyn til bare
+                        tæer og brandsikkerhed. Kort sagt, vær praktisk,
+                        effektiv, hensynsfuld og fornuftig når det gælder
+                        teltopsætning og bagage. &lt;3 &lt;3
+                    </p>
+                    <h3>Åben ild:</h3>
+                    <p>
+                        Kun tilladt på vores kogeøer, som findes på forpladsen.
+                    </p>
+                    <h3>Narkopolitik:</h3>
+                    <p>
+                        Nakkefestivalen støtter ikke indtagelse, anvendelse
+                        eller salg af euforiserende stoffer på festival- og
+                        campingområdet.
+                    </p>
+                    <p>
+                        Når alt dette er sagt er der kun tilbage at sige: Vi
+                        glæder os sindssygt meget til at feste med jer fra
+                        onsdag, og vi ved allerede nu, at det bliver en fest
+                        uden lige! &lt;3 &lt;3 &lt;3
+                    </p>
+                </div>
+            </li>
+
+            <!-- Slide 3 -->
+            <li
+                class="slide order-3 flex-shrink-0 w-full h-[60px] md:w-[5%] relative bg-pink cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue md:h-full"
+            >
+                <span
+                    class="block p-4 text-lg font-bold text-darkblue md:rotate-90 md:top-8 md:left-[-15%] md:whitespace-nowrap"
+                >
+                    Find vej
+                </span>
+                <div
+                    class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+                >
+                    <h2 class="mb-4">Find vej</h2>
+                    <p class="italic">
+                        Nakkefestival er en lille dansk non-profit musikfestival
+                        beliggende i Odsherred i det nordvestlige Sjælland.
+                        Endskønt festivalen strengt taget ligger indenfor
+                        Rørvigs grænser, er den opkaldt efter den lille landsby
+                        Nakke, der ligger tættere på festivalpladsen end selve
+                        Rørvig by. Nakkefestival afholdes på boldbanerne bag
+                        Rørvighallen med Rørvig Sognegård og Rørvig Friskole som
+                        naboer.
+                    </p>
+                    <h3>Transport</h3>
+                    <p>
+                        Vil man tage brug af den offentlige transport på sin
+                        rejse mod Nakkefestival, så er der fint med muligheder:
+                    </p>
+                    <p>
+                        Kommer man fra København af, kan man tage regionaltoget
+                        mod Kalundborg, stå af på Holbæk station for derefter at
+                        tage bus 560 mod Nykøbing Sj. st. Fra Nykøbing St. st.
+                        kan man derfra tage bus 562 mod Nykøbing Sj. st., for så
+                        at stå af ved stoppet Sognegården (Odsherred). Der efter
+                        mangler man blot at gå et kort stykke vej til indgangen
+                        af Nakkefestivalen.
+                    </p>
+                    <p>
+                        En anden mulighed er at tage S-toget, linje A til
+                        Hillerød st., skifte til Lokalbane 920R mod Hundested
+                        Havn St. og så tage færgen til Rørvig havn, hvorfra man
+                        enten kan gå, cykle eller tage en bus 562 mod Nykøbing
+                        Sj. st. og så endeligt stå af ved stoppestedet
+                        Sognegården (Odsherred).
+                    </p>
+                    <p>
+                        Kommer man fra Roskilde af, eller længere vest på, kan
+                        det igen bedst betale sig at tage til Holbæk station og
+                        derfra følge de ovenstående rejsebeskrivelser. Vi glæder
+                        os til at se jer! &lt;3 &lt;3 &lt;3
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+</MainLayout>
+
+<style>
+    @media (min-width: 768px) {
+        .slide.active {
+            width: 90% !important;
+        }
+    }
+
+    .slide.active .slide-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    @media (max-width: 767px) {
+        .slide.active {
+            height: auto !important;
+            width: 100% !important;
+        }
+    }
+</style>
+
+<!-- ---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+    <script>
+        function activateSlide(index) {
+            const slides = document.querySelectorAll(".slide");
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                slide.style.order = i === index ? "-1" : i + 1;
+            });
+
+            slides[index].classList.add("active");
+        }
+
+        if (typeof window !== "undefined") {
+            document.addEventListener("DOMContentLoaded", () => {
+                const slides = document.querySelectorAll(".slide");
+                slides.forEach((slide, index) => {
+                    slide.addEventListener("click", () => activateSlide(index));
+                });
+
+                // Start med første slide aktiv
+                activateSlide(0);
+            });
+        }
+    </script>
+
+    <ul class="flex w-full h-[700px] overflow-hidden p-0 m-0 rounded-lg">
+        <li
+            class="slide order-1 flex-shrink-0 w-[5%] relative bg-darkyellow cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue"
+        >
+            <span
+                class="absolute rotate-90 top-18 left-[-90%] text-lg font-bold text-darkblue whitespace-nowrap"
+            >
+                Om Nakkefestival
+            </span>
+            <div
+                class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+            >
+                <h2 class="text-2xl font-bold mb-4">Om Nakkefestival</h2>
+                <p>
+                    Nakkefestival er en uafhængig og non-profit festival med
+                    fokus på musik, fællesskab og bæredygtighed.
+                </p>
+            </div>
+        </li>
+
+        <li
+            class="slide order-2 flex-shrink-0 w-[5%] relative bg-yellow cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue"
+        >
+            <span
+                class="absolute rotate-90 top-13 left-[-55%] text-lg font-bold text-darkblue whitespace-nowrap"
+            >
+                Praktisk info
+            </span>
+            <div
+                class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+            >
+                <h2 class="text-2xl font-bold mb-4">Praktisk info</h2>
+                <p>
+                    Festivalen åbner torsdag kl. 12. Medbring billet, ID og eget
+                    krus. Der er gratis vandposter og madboder.
+                </p>
+            </div>
+        </li>
+
+        <li
+            class="slide order-3 flex-shrink-0 w-[5%] relative bg-pink cursor-pointer transition-all duration-500 ease-in-out border-2 border-darkblue"
+        >
+            <span
+                class="absolute rotate-90 top-8 left-[-15%] text-lg font-bold text-darkblue whitespace-nowrap"
+            >
+                Find vej
+            </span>
+            <div
+                class="slide-content opacity-0 invisible transition-opacity duration-500 max-w-[915px] p-10 text-darkblue"
+            >
+                <h2 class="text-2xl font-bold mb-4">Find vej</h2>
+                <p>
+                    Festivalen ligger på Nakke Hage. Tag tog til Nykøbing Sj. og
+                    derefter bus eller samkørsel.
+                </p>
+            </div>
+        </li>
+    </ul>
+</MainLayout>
+
+<style>
+    .slide.active {
+        width: 90% !important;
+    }
+
+    .slide.active .slide-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+</style> -->
