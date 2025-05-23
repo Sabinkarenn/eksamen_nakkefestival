@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <section class="flex items-center justify-center min-h-screen">
@@ -18,7 +19,7 @@ import MainLayout from "../layouts/MainLayout.astro";
               <span class="">Dit navn</span><br />
               <input
                 type="text"
-                class="border-2 border-darkblue rounded-lg"
+                class="border-2 border-darkblue rounded-lg focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50"
                 placeholder="Navn"
               />
             </label>
@@ -30,10 +31,10 @@ import MainLayout from "../layouts/MainLayout.astro";
         <section>
           <div>
             <label class="">
-              <span class="">Din email</span><br />
+              <span class="mb-2">Din email</span><br />
               <input
                 type="email"
-                class="mt-1 w-full rounded-lg border-2 border-darkblue shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                class="w-full rounded-lg border-2 border-darkblue focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50"
                 placeholder="Email"
               />
             </label>
@@ -45,9 +46,9 @@ import MainLayout from "../layouts/MainLayout.astro";
         <section>
           <div>
             <label class="">
-              <span class="">Udfyldningsblanket</span><br />
+              <span class="mb-2">Udfyldningsblanket</span><br />
               <textarea
-                class="mt-1 w-full rounded-lg border-2 border-darkblue shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                class="w-full rounded-lg border-2 border-darkblue focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50"
                 placeholder="Jeg onsker at blive frivillig fordi..."
                 rows="8"></textarea>
             </label>
@@ -68,6 +69,9 @@ import MainLayout from "../layouts/MainLayout.astro";
         </form>
         <!-- har du været på nakke før slut -->
       </div>
+    </div>
+    <div class="flex items-center justify-center m-4">
+      <Button variant="secondary">SEND TILMELDINGS MAIL</Button>
     </div>
   </div>
 </section>
