@@ -21,55 +21,52 @@ import Link from "./Link.astro";
     <img
         src="tape.webp"
         alt="Tape"
-        class="absolute -top-2 -left-8 w-30 rotate-[324deg] z-20"
+        class="absolute -top-2 -left-8 w-30 rotate-330 z-20"
     />
     <!-- Tape: bottom-right -->
     <img
         src="tape.webp"
         alt="Tape"
-        class="absolute -bottom-2 -right-8 w-30 rotate-[140deg] z-20"
+        class="absolute -bottom-2 -right-8 w-30 rotate-315 z-20"
     />
 
     <!-- Image section -->
-    <div class="relative w-full max-w-sm p-4 flex justify-center">
+
+    <div class="relative w-full max-w-sm p-8 flex justify-center">
         <div
-            class="relative rounded-lg overflow-hidden border-2 border-darkblue w-full max-w-sm h-60 md:h-auto md:aspect-[1/1]"
+            class="relative rounded-lg overflow-hidden border-2 border-darkblue w-full h-70"
         >
             <img
                 src={cardimage}
                 alt={cardimagealt}
-                class="w-full h-full object-cover rounded-lg"
+                class="w-full h-full object-cover"
             />
         </div>
     </div>
 
     <!-- Text section -->
     <div
-        class="flex-1 px-4 pb-4 md:pt-6 md:pr-6 flex flex-col justify-start text-center md:text-left"
+        class="flex-1 px-4 pb-4 md:pt-6 md:pr-4 flex flex-col justify-start text-center md:text-left"
     >
-        <h2 class="text-xl md:text-2xl lg:text-4xl font-bold text-darkblue">
+        <h2 class="font-bold text-darkblue">
             {cardtitle}
         </h2>
-        <p
-            class="mt-4 text-darkblue uppercase text-sm md:text-base lg:text-2xl"
-        >
+        <h3 class="text-darkblue uppercase mb-1">
             {cardscene}
-        </p>
-        <p class="text-darkblue text-sm md:text-base lg:text-2xl">
+        </h3>
+        <h3 class="text-darkblue md:mb-35">
             Kategori: {cardkategori}
-        </p>
-        <p class="mt-4 text-darkblue text-sm md:text-base lg:text-2xl md:mt-15">
+        </h3>
+        <h3 class="text-darkblue">
             {carddato} // KL {cardtidspunkt}
-        </p>
+        </h3>
     </div>
 
     <!-- Vertical year -->
     <div
-        class="absolute hidden md:static right-4 bottom-4 md:bottom-auto md:right-auto md:pl-2 md:pr-4 md:flex items-center justify-end md:justify-center z-10"
+        class="absolute hidden right-1 bottom-40 md:flex items-center justify-end md:justify-center z-10"
     >
-        <p
-            class="text-darkblue text-lg md:text-4xl lg:text-6xl font-bold rotate-90 md:rotate-90"
-        >
+        <p class="text-darkblue text-lg md:text-3xl font-bold md:rotate-90">
             2025
         </p>
     </div>
