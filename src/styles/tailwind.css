@@ -41,6 +41,7 @@
       transform: translateX(-100%);
     }
   }
+  --handcursor: url(/cursor.webp) 15 15, pointer;
 }
 
 /* Base layer med typografi */
@@ -87,6 +88,8 @@
     font-weight: 700;
     font-style: italic;
   }
+
+ 
 
   /* Headings */
   h1 {
