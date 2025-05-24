@@ -7,22 +7,36 @@ import MainLayout from "../layouts/MainLayout.astro";
     <!-- Kolonne 1: Logo + links -->
     <div class="flex-1">
       <a href="/index" class="text-xl mb-10 block">
-        <img src="/logo.svg" alt="Logo" class="mb-5 h-15 w-auto" />
+        <img src="/logo.svg" alt="Logo" class="h-30 w-auto" />
       </a>
-      <nav class="mt-4 flex flex-col gap-2">
-        <a class="underline hover:text-orange">Privatlivspolitik</a>
-        <a class="underline hover:text-orange">Vil du være musiker?</a>
-        <a class="underline hover:text-orange">Vil du være frivillig?</a>
+      <nav class="flex flex-col gap-2">
+        <a class="underline hover:text-orange py-1">Privatlivspolitik</a>
+        <a class="underline hover:text-orange py-1">Vil du være musiker?</a>
+        <a class="underline hover:text-orange py-1">Vil du være frivillig?</a>
       </nav>
     </div>
 
     <!-- Kolonne 2: Adresse -->
     <div class="flex-1">
       <h5 class="">Adresse</h5>
-      <p>Søndervangsvej 43<br />4581 Rørvig</p>
-      <div class="mt-3 flex gap-3">
-        <img src="/facebook.svg" alt="Facebook" class="h-6" />
-        <img src="/instagram.svg" alt="Instagram" class="h-6" />
+      <p class="mb-20">Søndervangsvej 43<br />4581 Rørvig</p>
+      <h5>Kontakt os på:</h5>
+      <p>Facebook eller instagram</p>
+      <div class="flex gap-3">
+        <a
+          href="https://www.facebook.com/OfficielNakkefestival/?locale=da_DK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/facebook.svg" alt="Facebook" class="h-10" />
+        </a>
+        <a
+          href="https://www.instagram.com/nakkefestival/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/instagram.svg" alt="Instagram" class="h-10" />
+        </a>
       </div>
     </div>
 
