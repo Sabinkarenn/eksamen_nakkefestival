@@ -10,334 +10,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 <!-- Alberte -->
 <MainLayout>
   <!-- x data til kunstnerecards -->
-  <div x-data="{ kunstneraktiv: 'kunstnerdag1' }">
+  <div x-data="{ dagaktiv: 'dag1' }">
     <h1 class="text-center">Se dette års kunstnere og program</h1>
 
     <!-- knapper til kunstnerdagene -->
-    <div
-      class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
-    >
-      <button
-        @click="kunstneraktiv = 'kunstnerdag1'"
-        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
-        :class="{ 'bg-darkyellow': kunstneraktiv === 'kunstnerdag1' }"
-      >
-        d. 23 juli
-      </button>
-
-      <button
-        @click="kunstneraktiv = 'kunstnerdag2'"
-        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
-        :class="{ 'bg-darkyellow': kunstneraktiv === 'kunstnerdag2' }"
-      >
-        d. 24 juli
-      </button>
-
-      <button
-        @click="kunstneraktiv = 'kunstnerdag3'"
-        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
-        :class="{ 'bg-darkyellow': kunstneraktiv === 'kunstnerdag3' }"
-      >
-        d. 25 juli
-      </button>
-
-      <button
-        @click="kunstneraktiv = 'kunstnerdag4'"
-        class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
-        :class="{ 'bg-darkyellow': kunstneraktiv === 'kunstnerdag4' }"
-      >
-        d. 26 juli
-      </button>
-    </div>
-    <!-- DAG 1 -->
-    <div
-      class="flex flex-col gap-20 p-4"
-      x-show="kunstneraktiv === 'kunstnerdag1'"
-    >
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="josie.webp"
-        cardimagealt="Josie Amadonna"
-        cardtitle="JOSIE AMADONNA"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="23. juli"
-        cardtidspunkt="10:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="becca.webp"
-        cardimagealt="becca"
-        cardtitle="BECCA"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="POP"
-        carddato="23. juli"
-        cardtidspunkt="12:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="uma.webp"
-        cardimagealt="uma kabongo"
-        cardtitle="UMA KABONGO"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="23. juli"
-        cardtidspunkt="14:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="adlyd.webp"
-        cardimagealt="adlyd"
-        cardtitle="ADLYD"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PUNK"
-        carddato="23. juli"
-        cardtidspunkt="16:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="adam.webp"
-        cardimagealt="adam"
-        cardtitle="ADAM"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="23. juli"
-        cardtidspunkt="18:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="yasmin.webp"
-        cardimagealt="yasmin"
-        cardtitle="YASMIN"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="INDIE"
-        carddato="23. juli"
-        cardtidspunkt="21:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="induktri.webp"
-        cardimagealt="induktri"
-        cardtitle="INDUKTRI"
-        cardscene="DEN ENE SCENE"
-        cardkategori="ROCK"
-        carddato="23. juli"
-        cardtidspunkt="00:00"
-      />
-      <Kunstnercard
-        x-show="kunstneraktiv === 'kunstnerdag1'"
-        cardimage="tanajah.webp"
-        cardimagealt="tanjah"
-        cardtitle="TANAJAH"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PSYCH"
-        carddato="23. juli"
-        cardtidspunkt="01:00"
-      />
-    </div>
-    <div
-      class="flex flex-col gap-20 p-4"
-      x-show="kunstneraktiv === 'kunstnerdag2'"
-    >
-      <!-- DAG 2 -->
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="adlyd.webp"
-        cardimagealt="adlyd"
-        cardtitle="ADLYD"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PUNK"
-        carddato="24. juli"
-        cardtidspunkt="10:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="yasmin.webp"
-        cardimagealt="yasmin"
-        cardtitle="YASMIN"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="INDIE"
-        carddato="24. juli"
-        cardtidspunkt="12:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="josie.webp"
-        cardimagealt="josie amadonna"
-        cardtitle="JOSIE AMADONNA"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="24. juli"
-        cardtidspunkt="14:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="becca.webp"
-        cardimagealt="becca"
-        cardtitle="BECCA"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="POP"
-        carddato="24. juli"
-        cardtidspunkt="16:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="tanajah.webp"
-        cardimagealt="tanajah"
-        cardtitle="TANAJAH"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PSYCH"
-        carddato="24. juli"
-        cardtidspunkt="18:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="adam.webp"
-        cardimagealt="adam"
-        cardtitle="ADAM"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="24. juli"
-        cardtidspunkt="21:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="uma.webp"
-        cardimagealt="uma kabongo"
-        cardtitle="UMA KABONGO"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="24. juli"
-        cardtidspunkt="00:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag2'"
-        cardimage="induktri.webp"
-        cardimagealt="induktri"
-        cardtitle="INDUKTRI"
-        cardscene="DEN ENE SCENE"
-        cardkategori="ROCK"
-        carddato="24. juli"
-        cardtidspunkt="01:00"
-      />
-    </div>
-    <div
-      class="flex flex-col gap-20 p-4"
-      x-show="kunstneraktiv === 'kunstnerdag3'"
-    >
-      <!-- DAG 3 -->
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="adam.webp"
-        cardimagealt="adam"
-        cardtitle="ADAM"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="25. juli"
-        cardtidspunkt="10:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="tanajah.webp"
-        cardimagealt="tanajah"
-        cardtitle="TANAJAH"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PSYCH"
-        carddato="25. juli"
-        cardtidspunkt="12:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="induktri.webp"
-        cardimagealt="induktri"
-        cardtitle="INDUKTRI"
-        cardscene="DEN ENE SCENE"
-        cardkategori="ROCK"
-        carddato="25. juli"
-        cardtidspunkt="14:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="becca.webp"
-        cardimagealt="becca"
-        cardtitle="BECCA"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="POP"
-        carddato="25. juli"
-        cardtidspunkt="16:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="uma.webp"
-        cardimagealt="uma kabongo"
-        cardtitle="UMA KABONGO"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="25. juli"
-        cardtidspunkt="18:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="josie.webp"
-        cardimagealt="josie amadonna"
-        cardtitle="JOSIE AMADONNA"
-        cardscene="DEN ENE SCENE"
-        cardkategori="RAP"
-        carddato="25. juli"
-        cardtidspunkt="21:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="adlyd.webp"
-        cardimagealt="adlyd"
-        cardtitle="ADLYD"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PUNK"
-        carddato="25. juli"
-        cardtidspunkt="00:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag3'"
-        cardimage="yasmin.webp"
-        cardimagealt="yasmin"
-        cardtitle="YASMIN"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="INDIE"
-        carddato="25. juli"
-        cardtidspunkt="01:00"
-      />
-    </div>
-    <div
-      class="flex flex-col gap-20 p-4"
-      x-show="kunstneraktiv === 'kunstnerdag4'"
-    >
-      <!-- DAG 4 -->
-      <Kunstnercard
-        x-show="dagaktiv === 'dag4'"
-        cardimage="becca.webp"
-        cardimagealt="becca"
-        cardtitle="BECCA"
-        cardscene="DEN ENE SCENE"
-        cardkategori="POP"
-        carddato="26. juli"
-        cardtidspunkt="10:00"
-      />
-      <Kunstnercard
-        x-show="dagaktiv === 'dag4'"
-        cardimage="adlyd.webp"
-        cardimagealt="adlyd"
-        cardtitle="ADLYD"
-        cardscene="DEN ANDEN SCENE"
-        cardkategori="PUNK"
-        carddato="26. juli"
-        cardtidspunkt="12:00"
-      />
-    </div>
-  </div>
-  <!-- skema -->
-  <div x-data="{ dagaktiv: 'dag1' }">
-    <h2 class="text-center mb-8">Tidsplan</h2>
-    <!-- knapper til skema -->
     <div
       class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
     >
@@ -373,7 +49,282 @@ import thumbsup from "../assets/images/thumbsup.png";
         d. 26 juli
       </button>
     </div>
-    <!-- skema div -->
+    <div class="mb-20">
+      <!-- DAG 1 -->
+      <div class="flex flex-col gap-20 p-4" x-show="dagaktiv === 'dag1'">
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="josie.webp"
+          cardimagealt="Josie Amadonna"
+          cardtitle="JOSIE AMADONNA"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="23. juli"
+          cardtidspunkt="10:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="becca.webp"
+          cardimagealt="becca"
+          cardtitle="BECCA"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="POP"
+          carddato="23. juli"
+          cardtidspunkt="12:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="uma.webp"
+          cardimagealt="uma kabongo"
+          cardtitle="UMA KABONGO"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="23. juli"
+          cardtidspunkt="14:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="adlyd.webp"
+          cardimagealt="adlyd"
+          cardtitle="ADLYD"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PUNK"
+          carddato="23. juli"
+          cardtidspunkt="16:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="adam.webp"
+          cardimagealt="adam"
+          cardtitle="ADAM"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="23. juli"
+          cardtidspunkt="18:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="yasmin.webp"
+          cardimagealt="yasmin"
+          cardtitle="YASMIN"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="INDIE"
+          carddato="23. juli"
+          cardtidspunkt="21:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="induktri.webp"
+          cardimagealt="induktri"
+          cardtitle="INDUKTRI"
+          cardscene="DEN ENE SCENE"
+          cardkategori="ROCK"
+          carddato="23. juli"
+          cardtidspunkt="00:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="tanajah.webp"
+          cardimagealt="tanjah"
+          cardtitle="TANAJAH"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PSYCH"
+          carddato="23. juli"
+          cardtidspunkt="01:00"
+        />
+      </div>
+      <div class="flex flex-col gap-20 p-4" x-show="dagaktiv === 'dag2'">
+        <!-- DAG 2 -->
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="adlyd.webp"
+          cardimagealt="adlyd"
+          cardtitle="ADLYD"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PUNK"
+          carddato="24. juli"
+          cardtidspunkt="10:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="yasmin.webp"
+          cardimagealt="yasmin"
+          cardtitle="YASMIN"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="INDIE"
+          carddato="24. juli"
+          cardtidspunkt="12:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="josie.webp"
+          cardimagealt="josie amadonna"
+          cardtitle="JOSIE AMADONNA"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="24. juli"
+          cardtidspunkt="14:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="becca.webp"
+          cardimagealt="becca"
+          cardtitle="BECCA"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="POP"
+          carddato="24. juli"
+          cardtidspunkt="16:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="tanajah.webp"
+          cardimagealt="tanajah"
+          cardtitle="TANAJAH"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PSYCH"
+          carddato="24. juli"
+          cardtidspunkt="18:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="adam.webp"
+          cardimagealt="adam"
+          cardtitle="ADAM"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="24. juli"
+          cardtidspunkt="21:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="uma.webp"
+          cardimagealt="uma kabongo"
+          cardtitle="UMA KABONGO"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="24. juli"
+          cardtidspunkt="00:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="induktri.webp"
+          cardimagealt="induktri"
+          cardtitle="INDUKTRI"
+          cardscene="DEN ENE SCENE"
+          cardkategori="ROCK"
+          carddato="24. juli"
+          cardtidspunkt="01:00"
+        />
+      </div>
+      <div class="flex flex-col gap-20 p-4" x-show="dagaktiv === 'dag3'">
+        <!-- DAG 3 -->
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="adam.webp"
+          cardimagealt="adam"
+          cardtitle="ADAM"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="25. juli"
+          cardtidspunkt="10:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="tanajah.webp"
+          cardimagealt="tanajah"
+          cardtitle="TANAJAH"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PSYCH"
+          carddato="25. juli"
+          cardtidspunkt="12:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="induktri.webp"
+          cardimagealt="induktri"
+          cardtitle="INDUKTRI"
+          cardscene="DEN ENE SCENE"
+          cardkategori="ROCK"
+          carddato="25. juli"
+          cardtidspunkt="14:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="becca.webp"
+          cardimagealt="becca"
+          cardtitle="BECCA"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="POP"
+          carddato="25. juli"
+          cardtidspunkt="16:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="uma.webp"
+          cardimagealt="uma kabongo"
+          cardtitle="UMA KABONGO"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="25. juli"
+          cardtidspunkt="18:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="josie.webp"
+          cardimagealt="josie amadonna"
+          cardtitle="JOSIE AMADONNA"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="25. juli"
+          cardtidspunkt="21:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="adlyd.webp"
+          cardimagealt="adlyd"
+          cardtitle="ADLYD"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PUNK"
+          carddato="25. juli"
+          cardtidspunkt="00:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="yasmin.webp"
+          cardimagealt="yasmin"
+          cardtitle="YASMIN"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="INDIE"
+          carddato="25. juli"
+          cardtidspunkt="01:00"
+        />
+      </div>
+      <div class="flex flex-col gap-20 p-4" x-show="dagaktiv === 'dag4'">
+        <!-- DAG 4 -->
+        <Kunstnercard
+          x-show="dagaktiv === 'dag4'"
+          cardimage="becca.webp"
+          cardimagealt="becca"
+          cardtitle="BECCA"
+          cardscene="DEN ENE SCENE"
+          cardkategori="POP"
+          carddato="26. juli"
+          cardtidspunkt="10:00"
+        />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag4'"
+          cardimage="adlyd.webp"
+          cardimagealt="adlyd"
+          cardtitle="ADLYD"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="PUNK"
+          carddato="26. juli"
+          cardtidspunkt="12:00"
+        />
+      </div>
+    </div>
+    <!-- skema -->
+    <h2 class="text-center mb-8">Tidsplan</h2>
     <div class="max-w-4xl mx-auto">
       <!-- dag 1 -->
       <div
