@@ -94,7 +94,7 @@
   /* Headings */
   h1 {
     @apply text-orange text-4xl;
-    @apply mb-6;
+    @apply mb-15;
     font-family: "Superfunky";
   }
 
@@ -112,10 +112,11 @@
   h2 {
     @apply text-3xl;
     @apply font-bold
-    
+    mb-10
   }
 
   h3 {
+     font-family: "Anybody", sans-serif;
     @apply text-2xl;
     @apply mb-4;
   }
@@ -131,12 +132,10 @@
 
     font-family: "Superfunky";
   }
-  p,
-  li {
-     
-  }
+ 
   p {
   @apply mb-6;
+  @apply text-lg;
     font-family: "Anybody", sans-serif;
   font-weight: 400;
   font-style: normal;

@@ -12,76 +12,119 @@ import Kunstnercard from "../components/Kunstnercard.astro";
 ---
 
 <MainLayout title="Nakkefestival">
-  <!-- Hero section -->
-
-  <Hero herotitel="NAKKEFESTIVAL" />
-
-  <!-- Første sektion med logo -->
-
-  <section class="flex mb-15">
-    <div>
-      <h2>Musik, kunst og kærlighed</h2>
-      <p>
-        Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i den
-        fantastiske stemning på Nakkefestival – en oplevelse, du ikke finder
-        andre steder! Programmet bliver spækket med lækkerier, og vi glæder os
-        til at danse og feste med dig og dine venner til den lyse morgen. Så tag
-        teltet og vennerne under armen, og oplev Danmarks hyggeligste festival.
-      </p>
-    </div>
-    <div><img src="/logo.svg" alt="Logo" class="w-120 h-120" /></div>
-  </section>
-
-  <!-- Årets kunster sektion -->
-  <section class="mb-15">
-    <h3 class="text-center">Årets kunstnere</h3>
-    <Kunstnercard />
-  </section>
-
-  <!-- Nedtæller sektion -->
-  <section class="mb-30">
-    <h3 class="text-center">Nakkefestival starter om</h3>
-    <Timebanner />
-  </section>
-  <!-- Fællesbus sektion -->
-  <section class="flex flex-col lg:flex-row gap-6 mb-15">
-    <!-- Første boks -->
-    <div class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2">
-      <h3 class="mb-2">Tag fællesbus til Nakke</h3>
-      <p class="mb-6">
-        Turen tager omkring en time og koster 170 kroner (Kbh) det er billigere
-        end offentlig transport og bedre for miljøet end at køre selv. Det er
-        oven i købet en fantastisk undskyldning for at tilbringe endnu mere tid
-        sammen med dine søde og dejlige Nakkevenner! Busserne til festivalen
-        kører fra DGI byen. Du skal være ved bussen en halv time før afgang, så
-        vi får alle tjekket ind og din bagage med.
-      </p>
-      <Button variant="secondary">TILMELD BUSSEN</Button>
-    </div>
-
-    <!-- Anden boks -->
-    <div class="lg:w-1/2">
-      <img src="bus.svg" alt="Bus" class="w-70 h-70" />
-      <p class="p-2">
-        Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig og
-        dine venner med på Nakkefestival! I samarbejde med Solibus arrangerer vi
-        bustransport til og fra festivalen. Der er begrænsede pladser, så skynd
-        dig at få fat i en billet!
-      </p>
-    </div>
-  </section>
-
-  <!-- banner sektion -->
-  <section class="mb-15">
-    <Banner />
-  </section>
-  <!-- SoMe sektion -->
-  <section class="mb-15">
-    <h3 class="text-center">Se mere til Nakkefestival</h3>
-  </section>
-  <!-- Galleri start -->
   <section>
-    <Galleri />
+    <div class="-mx-30 mb-20">
+      <Hero herotitel="NAKKEFESTIVAL" />
+    </div>
+    <!-- Første sektion med logo -->
+
+    <section class="flex flex-col lg:flex-row items-center gap-8 mb-15">
+      <div class="max-w-xl">
+        <h2>Musik, kunst og kærlighed</h2>
+        <p>
+          Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i
+          den fantastiske stemning på Nakkefestival – en oplevelse, du ikke
+          finder andre steder! Programmet bliver spækket med lækkerier, og vi
+          glæder os til at danse og feste med dig og dine venner til den lyse
+          morgen. Så tag teltet og vennerne under armen, og oplev Danmarks
+          hyggeligste festival.
+        </p>
+      </div>
+
+      <div class="flex-shrink-0">
+        <img src="/logo.svg" alt="Logo" class="w-64 h-auto lg:w-96" />
+      </div>
+    </section>
+
+    <!-- Årets kunster sektion -->
+    <section class="mb-15">
+      <h3 class="text-center">Årets kunstnere</h3>
+      <div class="flex flex-col gap-20 p-4 kunstnercards">
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="josie.webp"
+          cardimagealt="Josie Amadonna"
+          cardtitle="JOSIE AMADONNA"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="23. juli"
+          cardtidspunkt="10:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="becca.webp"
+          cardimagealt="becca"
+          cardtitle="BECCA"
+          cardscene="DEN ANDEN SCENE"
+          cardkategori="POP"
+          carddato="23. juli"
+          cardtidspunkt="12:00"
+        />
+        <Kunstnercard
+          x-show="kunstneraktiv === 'kunstnerdag1'"
+          cardimage="uma.webp"
+          cardimagealt="uma kabongo"
+          cardtitle="UMA KABONGO"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="23. juli"
+          cardtidspunkt="14:00"
+        />
+      </div>
+      <div class="flex items-center justify-center m-4">
+        <a href="/kunstnere">
+          <Button variant="secondary">Se hele programmet</Button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Nedtæller sektion -->
+    <section class="mb-50">
+      <h3 class="text-center">Nakkefestival starter om</h3>
+      <Timebanner />
+    </section>
+    <!-- Fællesbus sektion -->
+    <section class="flex flex-col lg:flex-row gap-6 mb-30">
+      <!-- Første boks -->
+      <div class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2">
+        <h3 class="mb-2">Tag fællesbus til Nakke</h3>
+        <p class="mb-6">
+          Turen tager omkring en time og koster 170 kroner (Kbh) det er
+          billigere end offentlig transport og bedre for miljøet end at køre
+          selv. Det er oven i købet en fantastisk undskyldning for at tilbringe
+          endnu mere tid sammen med dine søde og dejlige Nakkevenner!
+        </p>
+        <p>
+          Busserne til festivalen kører fra DGI byen. Du skal være ved bussen en
+          halv time før afgang, så vi får alle tjekket ind og din bagage med.
+        </p>
+        <Button variant="secondary">Tilmeld dig bussen</Button>
+      </div>
+
+      <!-- Anden boks -->
+      <div class="lg:w-1/2">
+        <img src="bus.svg" alt="Bus" class="w-full h-auto scale-150 bus" />
+        <p class="p-2">
+          Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig
+          og dine venner med på Nakkefestival! I samarbejde med Solibus
+          arrangerer vi bustransport til og fra festivalen. Der er begrænsede
+          pladser, så skynd dig at få fat i en billet!
+        </p>
+      </div>
+    </section>
+
+    <!-- banner sektion -->
+    <section class="mb-15">
+      <Banner />
+    </section>
+    <!-- SoMe sektion -->
+    <section class="mb-15">
+      <h3 class="text-center">Se mere til Nakkefestival</h3>
+    </section>
+    <!-- Galleri start -->
+    <section class="mb-15">
+      <Galleri />
+    </section>
   </section>
 </MainLayout>
 <style>
@@ -90,3 +133,14 @@ import Kunstnercard from "../components/Kunstnercard.astro";
     animation-duration: 2s;
   }
 </style>
+<script>
+  /* Import af Motion One bibliotek */
+  import { animate, inView } from "motion";
+  inView(".bus", () => {
+    animate(".bus", { x: [2000, 0] }, { duration: 2 });
+  });
+
+  inView(".kunstnercards", () => {
+    animate(".kunstnercards", { x: [-2000, 0] }, { duration: 2 });
+  });
+</script>
