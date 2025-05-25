@@ -5,7 +5,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 ---
 
-<div class="navbar bg-beige sticky top-0 z-50">
+<div class="navbar bg-beige">
   <!-- Venstre side: Logo -->
   <div class="navbar-start">
     <a href="/" class="text-xl hover:bg-transparent">
@@ -17,7 +17,7 @@ import { Image } from "astro:assets";
   <!-- Højre side: Burger menu (små skærme) og vandret menu (store skærme) -->
   <div class="navbar-end">
     <!-- Burger menu: kun synlig på små skærme -->
-    <div class="dropdown lg:hidden flex items-center space-x-2">
+    <div class="dropdown relative lg:hidden flex items-center space-x-2">
       <div class="mobileknap">
         <a href="/købbusbillet" class="hover:bg-transparent">
           <Button variant="primary" size="small">Køb billet</Button>
@@ -41,24 +41,34 @@ import { Image } from "astro:assets";
 
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-beige rounded-box w-52 text-orange right-0"
+        class="menu menu-sm dropdown-content absolute top-full z-1 px-6 bg-beige rounded-box w-screen text-orange right-0"
       >
         <li>
-          <a href="/events" class="hover:bg-transparent">Events</a>
-        </li>
-        <li>
-          <a href="/blivfrivillig" class="hover:bg-transparent"
-            >Bliv frivillig</a
+          <a href="/events" class="hover:bg-transparent hover:text-orange"
+            >Events</a
           >
         </li>
         <li>
-          <a href="/kunstnere" class="hover:bg-transparent">Kunstnere</a>
+          <a
+            href="/blivfrivillig"
+            class="hover:bg-transparent hover:text-orange">Bliv frivillig</a
+          >
         </li>
         <li>
-          <a href="/information" class="hover:bg-transparent">Information</a>
+          <a href="/kunstnere" class="hover:bg-transparent hover:text-orange"
+            >Kunstnere</a
+          >
         </li>
         <li>
-          <a href="/købbusbillet" class="hover:bg-transparent">
+          <a href="/information" class="hover:bg-transparent hover:text-orange"
+            >Information</a
+          >
+        </li>
+        <li>
+          <a
+            href="/købbusbillet"
+            class="hover:bg-transparent hover:text-orange"
+          >
             <Button variant="primary" size="small">Køb billet</Button>
           </a>
         </li>
