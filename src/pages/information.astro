@@ -1,238 +1,134 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+import Hero from "../components/Hero.astro";
 ---
 
 <!-- Alberte -->
 <MainLayout>
-    <section
-        class="absolute inset-0 w-full h-full grid grid-cols-24 grid-rows-24 gap-4 p-4 z-0"
-    >
-        <!-- Øverst venstre - rykket lidt ned -->
-        <div class="col-start-1 col-span-4 row-start-4 row-span-3">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-90 scale-125 rotate-center"
-            />
-        </div>
+  <section class="absolute inset-0 w-full h-full grid grid-cols-24 grid-rows-24 gap-4 p-4 z-0">
+    <div class="-mx-30 mb-20">
+      <Hero herotitel="INFORMATION" />
+    </div>
+    <!-- Øverst venstre - rykket lidt ned -->
+    <div class="col-start-1 col-span-4 row-start-4 row-span-3">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-90 scale-125 rotate-center" />
+    </div>
 
-        <!-- Øverst højre - rykket lidt ned -->
-        <div class="col-start-19 col-span-4 row-start-5 row-span-4">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-80 scale-210 -rotate-6 solsikke animate__animated animate__tada"
-            />
-        </div>
+    <!-- Øverst højre - rykket lidt ned -->
+    <div class="col-start-19 col-span-4 row-start-5 row-span-4">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-80 scale-210 -rotate-6 solsikke animate__animated animate__tada" />
+    </div>
 
-        <!-- Midt venstre -->
-        <div class="col-start-2 col-span-3 row-start-10 row-span-3">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-70 scale-250 rotate-12 solsikke animate__animated animate__tada"
-            />
-        </div>
+    <!-- Midt venstre -->
+    <div class="col-start-2 col-span-3 row-start-10 row-span-3">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-70 scale-250 rotate-12 solsikke animate__animated animate__tada" />
+    </div>
 
-        <!-- Midt højre -->
-        <div class="col-start-20 col-span-3 row-start-12 row-span-3">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-85 scale-200 rotate-center"
-            />
-        </div>
+    <!-- Midt højre -->
+    <div class="col-start-20 col-span-3 row-start-12 row-span-3">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-85 scale-200 rotate-center" />
+    </div>
 
-        <!-- Nederst venstre - rykket op -->
-        <div class="col-start-3 col-span-4 row-start-18 row-span-3">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-75 scale-150 rotate-3 solsikke animate__animated animate__tada"
-            />
-        </div>
+    <!-- Nederst venstre - rykket op -->
+    <div class="col-start-3 col-span-4 row-start-18 row-span-3">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-75 scale-150 rotate-3 solsikke animate__animated animate__tada" />
+    </div>
 
-        <!-- Nederst højre - rykket op -->
-        <div class="col-start-17 col-span-4 row-start-19 row-span-3">
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke"
-                class="w-full h-auto opacity-80 scale-250 rotate-center"
-            />
-        </div>
-    </section>
-    <h1 class="text-center">Læs alt det vigtige her</h1>
-    <section
-        class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4"
-        x-data="{ info: 'info1' }"
-    >
-        <div
-            class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg z-10"
-        >
-            <div
-                class="bg-darkyellow items-center cursor-pointer border-2 border-darkblue p-4 md:w-16"
-                @click="info = info === 'info1' ? null : 'info1'"
-            >
-                <h2 class="md:rotate-90 text-nowrap">Om Nakkefestival</h2>
-            </div>
-            <div x-show="info === 'info1'" x-transition class="p-4">
-                <p>
-                    Når man træder ind på Nakkefestivalen, så føler man sig
-                    velkommen. Vi er en stor lejr, hvor vi har fællestelte som
-                    tipien og plads til at hænge ud rundt omkring scenerne. Her
-                    er ikke tradition for små private lejre, fordi folk, som
-                    kommer på Nakke, er åbne for nye mennesker og fordi det
-                    netop er charmen ved Nakke. Rummet er fyldt med kreative
-                    indslag, som en invitation til smil og glæde, og næsten uden
-                    undtagelser kommer en stor del fra festivaldeltagerne selv.
-                </p>
-                <p class="italic">
-                    På Nakke kommer man ikke på festival, man er festival!
-                </p>
-                <p>
-                    Nakkefestival er en musikfestival, og på den front er
-                    festivalen også inkluderende. Der bookes med plads til mange
-                    forskellige genrer, og helt essentielt bookes der gerne nye
-                    udfordrende kunstnere, som ellers ikke falder under normale
-                    kategorier. Med to scener fyldes rummet med blandinger af
-                    alt fra historiefortællinger til at stå op på, henover
-                    kunstnere der synger på selvopfundne sprog, til up-coming
-                    bands med god lyd og slutter af med fede beats og dans på
-                    vores lukkede scene.
-                </p>
-                <p class="italic">På Nakke favner vi og udvider.</p>
-                <p>
-                    Og barskabet kan folk godt lade stå derhjemme. Man må ikke
-                    tage glas med ind på festivalen, men det er blot fordi, at
-                    fodboldbanerne er lånt, og de skal være helt rene for alt,
-                    når de afleveres igen. Men der sørges for, at man ikke vil
-                    mangle noget til ganen, hverken fast eller flydende. Uanset
-                    om man er kødspiser eller veganer, så er der mad til så lave
-                    priser, og uanset om man er til øl, bitter eller drinks, så
-                    findes det, man mangler til festen.
-                </p>
-                <p>
-                    Nakke er et lille sted, hvor man ikke skal langt for den
-                    næste gode oplevelse. Nakkefestivalen er et åndehul, hvor du
-                    er velkommen til at slappe af i, blive udfordret i, blive
-                    nurset i og skabe den gode fest i.
-                </p>
-                <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
-            </div>
-            <div
-                class="bg-yellow cursor-pointer border-2 border-darkblue p-4 md:w-16"
-                @click="info = info === 'info2' ? null : 'info2'"
-            >
-                <h2 class="md:rotate-90 text-nowrap">Praktisk info</h2>
-            </div>
-            <div x-show="info === 'info2'" x-transition class="p-4">
-                <p>
-                    Modsat andre større festivaler er der nogle genstande vi
-                    desværre ikke kan tillade på vores lille søde festivalplads.
-                </p>
-                <h3>Derfor, ingen:</h3>
-                <ul style="list-style-type: disc; margin-left: 1.5em;">
-                    <li>Pavilloner</li>
-                    <li>
-                        Store lydanlæg (med og uden hjul) / Dette gælder også
-                        store ghettoblastere eller lignende mobile anlæg
-                    </li>
-                    <li>
-                        Alt af glas er strengt forbudt på festivalpladsen – fra
-                        alkohol, øl, syltetøj osv. Skal du have noget ind, der
-                        er købt i en glasbeholder, må du hælde det over på noget
-                        andet først.
-                    </li>
-                    <li>
-                        Ingen vogne eller trækvogne; de må parkeres pænt ude
-                        foran pladsen. (Det samme gælder også cykler)
-                    </li>
-                    <li>
-                        Det er god stil at have sit eget bestik og tallerken med
-                        når man spiser i det veganske køkken, da vi så sparer en
-                        masse kedelig skrald (der vil være opvask stationer så
-                        du kan spise af en ren tallerken).
-                    </li>
-                </ul>
-                <h3>Telte:</h3>
-                <p>
-                    Nakke er en lille festival med plads til små telte, derfor
-                    anbefaler vi alle vores gæster kun at have den størrelse
-                    telt, som man har brug for med. Der er ikke en kultur for
-                    camps eller for at hænge ud i teltområdet, men derimod foran
-                    scenerne, i baren eller i Kreas chillout områder. Slå gerne
-                    dit telt op så tæt på hinanden, så vi slipper for at flytte
-                    rundt på telte, når de er sat op. Det er vigtigt at teltene
-                    bliver sat op inden for det markerede område af hensyn til
-                    bare tæer og brandsikkerhed. Kort sagt, vær praktisk,
-                    effektiv, hensynsfuld og fornuftig når det gælder
-                    teltopsætning og bagage. &lt;3 &lt;3
-                </p>
-                <h3>Åben ild:</h3>
-                <p>Kun tilladt på vores kogeøer, som findes på forpladsen.</p>
-                <h3>Narkopolitik:</h3>
-                <p>
-                    Nakkefestivalen støtter ikke indtagelse, anvendelse eller
-                    salg af euforiserende stoffer på festival- og
-                    campingområdet.
-                </p>
-                <p>
-                    Når alt dette er sagt er der kun tilbage at sige: Vi glæder
-                    os sindssygt meget til at feste med jer fra onsdag, og vi
-                    ved allerede nu, at det bliver en fest uden lige! &lt;3
-                    &lt;3 &lt;3
-                </p>
-            </div>
-            <div
-                class="bg-pink cursor-pointer border-2 border-darkblue p-4 md:w-16"
-                @click="info = info === 'info3' ? null : 'info3'"
-            >
-                <h2 class="md:rotate-90 text-nowrap">Find vej</h2>
-            </div>
-            <div x-show="info === 'info3'" x-transition class="p-4">
-                <p class="italic">
-                    Nakkefestival er en lille dansk non-profit musikfestival
-                    beliggende i Odsherred i det nordvestlige Sjælland. Endskønt
-                    festivalen strengt taget ligger indenfor Rørvigs grænser, er
-                    den opkaldt efter den lille landsby Nakke, der ligger
-                    tættere på festivalpladsen end selve Rørvig by.
-                    Nakkefestival afholdes på boldbanerne bag Rørvighallen med
-                    Rørvig Sognegård og Rørvig Friskole som naboer.
-                </p>
-                <h3>Transport</h3>
-                <p>
-                    Vil man tage brug af den offentlige transport på sin rejse
-                    mod Nakkefestival, så er der fint med muligheder:
-                </p>
-                <p>
-                    Kommer man fra København af, kan man tage regionaltoget mod
-                    Kalundborg, stå af på Holbæk station for derefter at tage
-                    bus 560 mod Nykøbing Sj. st. Fra Nykøbing St. st. kan man
-                    derfra tage bus 562 mod Nykøbing Sj. st., for så at stå af
-                    ved stoppet Sognegården (Odsherred). Der efter mangler man
-                    blot at gå et kort stykke vej til indgangen af
-                    Nakkefestivalen.
-                </p>
-                <p>
-                    En anden mulighed er at tage S-toget, linje A til Hillerød
-                    st., skifte til Lokalbane 920R mod Hundested Havn St. og så
-                    tage færgen til Rørvig havn, hvorfra man enten kan gå, cykle
-                    eller tage en bus 562 mod Nykøbing Sj. st. og så endeligt
-                    stå af ved stoppestedet Sognegården (Odsherred).
-                </p>
-                <p>
-                    Kommer man fra Roskilde af, eller længere vest på, kan det
-                    igen bedst betale sig at tage til Holbæk station og derfra
-                    følge de ovenstående rejsebeskrivelser. Vi glæder os til at
-                    se jer! &lt;3 &lt;3 &lt;3
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- Nederst højre - rykket op -->
+    <div class="col-start-17 col-span-4 row-start-19 row-span-3">
+      <img src="/solsikke.webp" alt="Solsikke" class="w-full h-auto opacity-80 scale-250 rotate-center" />
+    </div>
+  </section>
+  <h1 class="text-center">Læs alt det vigtige her</h1>
+  <section class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4" x-data="{ info: 'info1' }">
+    <div class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg z-10">
+      <div class="bg-darkyellow items-center cursor-pointer border-2 border-darkblue p-4 md:w-16" @click="info = info === 'info1' ? null : 'info1'">
+        <h2 class="md:rotate-90 text-nowrap">Om Nakkefestival</h2>
+      </div>
+      <div x-show="info === 'info1'" x-transition class="p-4">
+        <p>
+          Når man træder ind på Nakkefestivalen, så føler man sig velkommen. Vi er en stor lejr, hvor vi har fællestelte som tipien og plads til at hænge ud rundt omkring scenerne. Her er ikke
+          tradition for små private lejre, fordi folk, som kommer på Nakke, er åbne for nye mennesker og fordi det netop er charmen ved Nakke. Rummet er fyldt med kreative indslag, som en invitation
+          til smil og glæde, og næsten uden undtagelser kommer en stor del fra festivaldeltagerne selv.
+        </p>
+        <p class="italic">På Nakke kommer man ikke på festival, man er festival!</p>
+        <p>
+          Nakkefestival er en musikfestival, og på den front er festivalen også inkluderende. Der bookes med plads til mange forskellige genrer, og helt essentielt bookes der gerne nye udfordrende
+          kunstnere, som ellers ikke falder under normale kategorier. Med to scener fyldes rummet med blandinger af alt fra historiefortællinger til at stå op på, henover kunstnere der synger på
+          selvopfundne sprog, til up-coming bands med god lyd og slutter af med fede beats og dans på vores lukkede scene.
+        </p>
+        <p class="italic">På Nakke favner vi og udvider.</p>
+        <p>
+          Og barskabet kan folk godt lade stå derhjemme. Man må ikke tage glas med ind på festivalen, men det er blot fordi, at fodboldbanerne er lånt, og de skal være helt rene for alt, når de
+          afleveres igen. Men der sørges for, at man ikke vil mangle noget til ganen, hverken fast eller flydende. Uanset om man er kødspiser eller veganer, så er der mad til så lave priser, og uanset
+          om man er til øl, bitter eller drinks, så findes det, man mangler til festen.
+        </p>
+        <p>
+          Nakke er et lille sted, hvor man ikke skal langt for den næste gode oplevelse. Nakkefestivalen er et åndehul, hvor du er velkommen til at slappe af i, blive udfordret i, blive nurset i og
+          skabe den gode fest i.
+        </p>
+        <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
+      </div>
+      <div class="bg-yellow cursor-pointer border-2 border-darkblue p-4 md:w-16" @click="info = info === 'info2' ? null : 'info2'">
+        <h2 class="md:rotate-90 text-nowrap">Praktisk info</h2>
+      </div>
+      <div x-show="info === 'info2'" x-transition class="p-4">
+        <p>Modsat andre større festivaler er der nogle genstande vi desværre ikke kan tillade på vores lille søde festivalplads.</p>
+        <h3>Derfor, ingen:</h3>
+        <ul style="list-style-type: disc; margin-left: 1.5em;">
+          <li>Pavilloner</li>
+          <li>Store lydanlæg (med og uden hjul) / Dette gælder også store ghettoblastere eller lignende mobile anlæg</li>
+          <li>Alt af glas er strengt forbudt på festivalpladsen – fra alkohol, øl, syltetøj osv. Skal du have noget ind, der er købt i en glasbeholder, må du hælde det over på noget andet først.</li>
+          <li>Ingen vogne eller trækvogne; de må parkeres pænt ude foran pladsen. (Det samme gælder også cykler)</li>
+          <li>
+            Det er god stil at have sit eget bestik og tallerken med når man spiser i det veganske køkken, da vi så sparer en masse kedelig skrald (der vil være opvask stationer så du kan spise af en
+            ren tallerken).
+          </li>
+        </ul>
+        <h3>Telte:</h3>
+        <p>
+          Nakke er en lille festival med plads til små telte, derfor anbefaler vi alle vores gæster kun at have den størrelse telt, som man har brug for med. Der er ikke en kultur for camps eller for
+          at hænge ud i teltområdet, men derimod foran scenerne, i baren eller i Kreas chillout områder. Slå gerne dit telt op så tæt på hinanden, så vi slipper for at flytte rundt på telte, når de er
+          sat op. Det er vigtigt at teltene bliver sat op inden for det markerede område af hensyn til bare tæer og brandsikkerhed. Kort sagt, vær praktisk, effektiv, hensynsfuld og fornuftig når det
+          gælder teltopsætning og bagage. &lt;3 &lt;3
+        </p>
+        <h3>Åben ild:</h3>
+        <p>Kun tilladt på vores kogeøer, som findes på forpladsen.</p>
+        <h3>Narkopolitik:</h3>
+        <p>Nakkefestivalen støtter ikke indtagelse, anvendelse eller salg af euforiserende stoffer på festival- og campingområdet.</p>
+        <p>Når alt dette er sagt er der kun tilbage at sige: Vi glæder os sindssygt meget til at feste med jer fra onsdag, og vi ved allerede nu, at det bliver en fest uden lige! &lt;3 &lt;3 &lt;3</p>
+      </div>
+      <div class="bg-pink cursor-pointer border-2 border-darkblue p-4 md:w-16" @click="info = info === 'info3' ? null : 'info3'">
+        <h2 class="md:rotate-90 text-nowrap">Find vej</h2>
+      </div>
+      <div x-show="info === 'info3'" x-transition class="p-4">
+        <p class="italic">
+          Nakkefestival er en lille dansk non-profit musikfestival beliggende i Odsherred i det nordvestlige Sjælland. Endskønt festivalen strengt taget ligger indenfor Rørvigs grænser, er den opkaldt
+          efter den lille landsby Nakke, der ligger tættere på festivalpladsen end selve Rørvig by. Nakkefestival afholdes på boldbanerne bag Rørvighallen med Rørvig Sognegård og Rørvig Friskole som
+          naboer.
+        </p>
+        <h3>Transport</h3>
+        <p>Vil man tage brug af den offentlige transport på sin rejse mod Nakkefestival, så er der fint med muligheder:</p>
+        <p>
+          Kommer man fra København af, kan man tage regionaltoget mod Kalundborg, stå af på Holbæk station for derefter at tage bus 560 mod Nykøbing Sj. st. Fra Nykøbing St. st. kan man derfra tage
+          bus 562 mod Nykøbing Sj. st., for så at stå af ved stoppet Sognegården (Odsherred). Der efter mangler man blot at gå et kort stykke vej til indgangen af Nakkefestivalen.
+        </p>
+        <p>
+          En anden mulighed er at tage S-toget, linje A til Hillerød st., skifte til Lokalbane 920R mod Hundested Havn St. og så tage færgen til Rørvig havn, hvorfra man enten kan gå, cykle eller tage
+          en bus 562 mod Nykøbing Sj. st. og så endeligt stå af ved stoppestedet Sognegården (Odsherred).
+        </p>
+        <p>
+          Kommer man fra Roskilde af, eller længere vest på, kan det igen bedst betale sig at tage til Holbæk station og derfra følge de ovenstående rejsebeskrivelser. Vi glæder os til at se jer!
+          &lt;3 &lt;3 &lt;3
+        </p>
+      </div>
+    </div>
+  </section>
 </MainLayout>
 <style>
-    .solsikke:hover {
-        animation: animate__tada;
-        animation-duration: 2s;
-    }
+  .solsikke:hover {
+    animation: animate__tada;
+    animation-duration: 2s;
+  }
 </style>
