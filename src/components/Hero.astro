@@ -7,29 +7,25 @@ import storsol from "../assets/images/storsol.webp";
 const { herotitel = "Nakkefestival" } = Astro.props;
 ---
 
-<section>
-  <div class="grid grid-cols-100">
-    <div class="grid grid-cols-12">
-      <Image src={storsol} alt="stor solsikke" class="place-self-center lg:-mt-150 -mt-70 rotate-animation lg:w-4xl w-xl" />
-    </div>
-  </div>
-</section>
-
 <section class="relative z-0">
-  <Image src={storsol} alt="stor solsikke" class="place-self-center lg:-mt-150 -mt-70 rotate-animation lg:w-4xl w-xl" />
-  <div class="absolute inset-0 flex flex-col justify-center items-center">
-    <h1 class="lg:text-7xl text-4xl text-darkblue lg:text-center lg:-mt-70 -mt-70">{herotitel}</h1>
-    <h2 class="lg:text-center mt-10 lg:text-5xl text-orange">23-26. juli 2025</h2>
-  </div>
-  <div>
-    <div class="lg:mt-10">
-      <div class="flex justify-center">
-        <a href="/købbillet" class="underline hover:text-orange"><Button variant="primary" size="large" class="">Køb billet</Button></a>
-      </div>
+  <div class="grid grid-cols-100 grid-rows-50 max-h-[60vh] lg:max-h-screen">
+    <div class="col-start-1 col-span-35 row-start-13">
+      <Image src={lillesol} alt="lille solsikke" class="place-self-center" />
     </div>
-    <div class="lg:-mt-25">
-      <Image src={lillesol} alt="lille solsikke" class="absolute z-10 rotate-animation lg:left-16 lg:w-100 w-40" />
-      <Image src={hero} alt="hero billede" class="relative z-20" />
+    <div class="col-start-42 col-span-50 row-start-17 relative">
+      <a href="/købbillet" class="underline hover:text-orange"><Button variant="primary" size="large" class="">Køb billet</Button></a>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0">
+      <Image src={hero} alt="hero billede" class="" />
+    </div>
+
+    <div class="col-start-25 col-span-50 row-start-1 relative lg:top-[-450px]">
+      <Image src={storsol} alt="stor solsikke" class="w-full rotate-animation" />
+    </div>
+    <div class="col-start-25 col-span-50 row-start-1 text-center relative">
+      <h1 class="mt-15 lg:text-7xl text-4xl text-darkblue">{herotitel}</h1>
+      <h2 class="mt-10 lg:text-5xl text-orange">23-26. juli 2025</h2>
     </div>
   </div>
 </section>
