@@ -15,7 +15,9 @@ import Hero from "../components/Hero.astro";
     <h1 class="text-center">Se dette års kunstnere og program</h1>
 
     <!-- knapper til kunstnerdagene -->
-    <div class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10">
+    <div
+      class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+    >
       <button
         @click="dagaktiv = 'dag1'"
         class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
@@ -184,7 +186,16 @@ import Hero from "../components/Hero.astro";
           carddato="24. juli"
           cardtidspunkt="18:00"
         />
-        <Kunstnercard x-show="dagaktiv === 'dag2'" cardimage="adam.webp" cardimagealt="adam" cardtitle="ADAM" cardscene="DEN ENE SCENE" cardkategori="RAP" carddato="24. juli" cardtidspunkt="21:00" />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag2'"
+          cardimage="adam.webp"
+          cardimagealt="adam"
+          cardtitle="ADAM"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="24. juli"
+          cardtidspunkt="21:00"
+        />
         <Kunstnercard
           x-show="dagaktiv === 'dag2'"
           cardimage="uma.webp"
@@ -208,7 +219,16 @@ import Hero from "../components/Hero.astro";
       </div>
       <div class="flex flex-col gap-20 p-4" x-show="dagaktiv === 'dag3'">
         <!-- DAG 3 -->
-        <Kunstnercard x-show="dagaktiv === 'dag3'" cardimage="adam.webp" cardimagealt="adam" cardtitle="ADAM" cardscene="DEN ENE SCENE" cardkategori="RAP" carddato="25. juli" cardtidspunkt="10:00" />
+        <Kunstnercard
+          x-show="dagaktiv === 'dag3'"
+          cardimage="adam.webp"
+          cardimagealt="adam"
+          cardtitle="ADAM"
+          cardscene="DEN ENE SCENE"
+          cardkategori="RAP"
+          carddato="25. juli"
+          cardtidspunkt="10:00"
+        />
         <Kunstnercard
           x-show="dagaktiv === 'dag3'"
           cardimage="tanajah.webp"
@@ -308,10 +328,19 @@ import Hero from "../components/Hero.astro";
     <h2 class="text-center mb-8">Tidsplan</h2>
     <div class="max-w-4xl mx-auto">
       <!-- dag 1 -->
-      <div class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden" x-show="dagaktiv === 'dag1'">
+      <div
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag1'"
+      >
         <!-- Tid kolonne -->
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 col-span-1 font-bold bg-darkyellow border-b-2 border-darkblue">Kl.</div>
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div
+            class="p-2 col-span-1 font-bold bg-darkyellow border-b-2 border-darkblue"
+          >
+            Kl.
+          </div>
           <div class="p-2">10.00</div>
           <div class="p-2">12:00</div>
           <div class="p-2">14:00</div>
@@ -323,8 +352,12 @@ import Hero from "../components/Hero.astro";
         </div>
 
         <!-- DEN ENE SCENE -->
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ENE SCENE</div>
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
           <div class="p-2">JOSIE AMADONNA</div>
           <div class="p-2">-</div>
           <div class="p-2">UMA KABONGO</div>
@@ -337,7 +370,9 @@ import Hero from "../components/Hero.astro";
 
         <!-- DEN ANDEN SCENE -->
         <div class="divide-y divide-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ANDEN SCENE</div>
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
           <div class="p-2">-</div>
           <div class="p-2">BECCA</div>
           <div class="p-2">-</div>
@@ -350,9 +385,16 @@ import Hero from "../components/Hero.astro";
       </div>
 
       <!-- dag 2 -->
-      <div class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden" x-show="dagaktiv === 'dag2'">
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">Kl.</div>
+      <div
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag2'"
+      >
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Kl.
+          </div>
           <div class="p-2">10:00</div>
           <div class="p-2">12:00</div>
           <div class="p-2">14:00</div>
@@ -363,8 +405,12 @@ import Hero from "../components/Hero.astro";
           <div class="p-2">01:00</div>
         </div>
 
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ENE SCENE</div>
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
           <div class="p-2">-</div>
           <div class="p-2">-</div>
           <div class="p-2">JOSIE AMADONNA</div>
@@ -376,7 +422,9 @@ import Hero from "../components/Hero.astro";
         </div>
 
         <div class="divide-y divide-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ANDEN SCENE</div>
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
           <div class="p-2">ADLYD</div>
           <div class="p-2">YASMIN</div>
           <div class="p-2">-</div>
@@ -389,9 +437,16 @@ import Hero from "../components/Hero.astro";
       </div>
 
       <!-- dag 3 -->
-      <div class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden" x-show="dagaktiv === 'dag3'">
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">Kl.</div>
+      <div
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag3'"
+      >
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Kl.
+          </div>
           <div class="p-2">10:00</div>
           <div class="p-2">12:00</div>
           <div class="p-2">14:00</div>
@@ -402,8 +457,12 @@ import Hero from "../components/Hero.astro";
           <div class="p-2">01:00</div>
         </div>
 
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ENE SCENE</div>
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
           <div class="p-2">ADAM</div>
           <div class="p-2">-</div>
           <div class="p-2">INDUKTRI</div>
@@ -415,7 +474,9 @@ import Hero from "../components/Hero.astro";
         </div>
 
         <div class="divide-y divide-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ANDEN SCENE</div>
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
           <div class="p-2">-</div>
           <div class="p-2">TANAJAH</div>
           <div class="p-2">-</div>
@@ -428,21 +489,34 @@ import Hero from "../components/Hero.astro";
       </div>
 
       <!-- dag 4 -->
-      <div class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden" x-show="dagaktiv === 'dag4'">
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">Kl.</div>
+      <div
+        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        x-show="dagaktiv === 'dag4'"
+      >
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            Kl.
+          </div>
           <div class="p-2">10:00</div>
           <div class="p-2">12:00</div>
         </div>
 
-        <div class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ENE SCENE</div>
+        <div
+          class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
+        >
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ENE SCENE
+          </div>
           <div class="p-2">BECCA</div>
           <div class="p-2">-</div>
         </div>
 
         <div class="divide-y divide-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">DEN ANDEN SCENE</div>
+          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+            DEN ANDEN SCENE
+          </div>
           <div class="p-2">-</div>
           <div class="p-2">ADLYD</div>
         </div>
