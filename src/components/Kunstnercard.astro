@@ -14,7 +14,7 @@ import Link from "./Link.astro";
 
 <!-- Outer container -->
 <div
-    class="relative cursor-pointer p-4 w-full max-w-xs md:max-w-3xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
+    class="relative p-4 w-full max-w-xs md:max-w-3xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
     style="background-image: url('paperlong.webp');"
 >
     <!-- Tape: top-left -->
@@ -37,7 +37,7 @@ import Link from "./Link.astro";
             class="relative rounded-lg overflow-hidden border-2 border-darkblue w-full h-70"
         >
             <img
-                src={cardimage}
+                src={`/${cardimage}`}
                 alt={cardimagealt}
                 class="w-full h-full object-cover"
             />

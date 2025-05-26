@@ -90,7 +90,13 @@
   }
 
  
-
+/* body {
+ 
+  background-image: url("solsikke.webp");
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+} */
   /* Headings */
   h1 {
     @apply text-orange text-4xl;

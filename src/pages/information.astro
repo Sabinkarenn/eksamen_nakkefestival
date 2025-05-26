@@ -1,79 +1,102 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <!-- Alberte -->
 <MainLayout>
+    <div class="-mx-30 mb-20">
+        <Hero herotitel="INFORMATION" class="relative z-10" />
+    </div>
     <section
         class="absolute inset-0 w-full h-full grid grid-cols-24 grid-rows-24 gap-4 p-4 z-0"
     >
-        <!-- Øverst venstre - rykket lidt ned -->
-        <div class="col-start-1 col-span-4 row-start-4 row-span-3">
+        <!-- Solsikke 1 - venstre -->
+        <div
+            id="solsikke1-venstre"
+            class="col-start-2 col-span-4 row-start-10 row-span-3"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 1 venstre"
                 class="w-full h-auto opacity-90 scale-125 rotate-center"
             />
         </div>
 
-        <!-- Øverst højre - rykket lidt ned -->
-        <div class="col-start-19 col-span-4 row-start-5 row-span-4">
+        <!-- Solsikke 2 - højre -->
+        <div
+            id="solsikke2-højre"
+            class="col-start-19 col-span-4 row-start-11 row-span-4"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 2 højre"
                 class="w-full h-auto opacity-80 scale-210 -rotate-6 solsikke animate__animated animate__tada"
             />
         </div>
 
-        <!-- Midt venstre -->
-        <div class="col-start-2 col-span-3 row-start-10 row-span-3">
+        <!-- Solsikke 3 - venstre -->
+        <div
+            id="solsikke3-venstre"
+            class="col-start-3 col-span-3 row-start-14 row-span-3"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 3 venstre"
                 class="w-full h-auto opacity-70 scale-250 rotate-12 solsikke animate__animated animate__tada"
             />
         </div>
 
-        <!-- Midt højre -->
-        <div class="col-start-20 col-span-3 row-start-12 row-span-3">
+        <!-- Solsikke 4 - højre -->
+        <div
+            id="solsikke4-højre"
+            class="col-start-20 col-span-3 row-start-15 row-span-3"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 4 højre"
                 class="w-full h-auto opacity-85 scale-200 rotate-center"
             />
         </div>
 
-        <!-- Nederst venstre - rykket op -->
-        <div class="col-start-3 col-span-4 row-start-18 row-span-3">
+        <!-- Solsikke 5 - venstre -->
+        <div
+            id="solsikke5-venstre"
+            class="col-start-4 col-span-4 row-start-19 row-span-3"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 5 venstre"
                 class="w-full h-auto opacity-75 scale-150 rotate-3 solsikke animate__animated animate__tada"
             />
         </div>
 
-        <!-- Nederst højre - rykket op -->
-        <div class="col-start-17 col-span-4 row-start-19 row-span-3">
+        <!-- Solsikke 6 - højre -->
+        <div
+            id="solsikke6-højre"
+            class="col-start-17 col-span-4 row-start-20 row-span-3"
+        >
             <img
                 src="/solsikke.webp"
-                alt="Solsikke"
+                alt="Solsikke 6 højre"
                 class="w-full h-auto opacity-80 scale-250 rotate-center"
             />
         </div>
     </section>
+
     <h1 class="text-center">Læs alt det vigtige her</h1>
     <section
-        class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4"
+        class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4 mb-20"
         x-data="{ info: 'info1' }"
     >
         <div
             class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg z-10"
         >
             <div
-                class="bg-darkyellow items-center cursor-pointer border-2 border-darkblue p-4 md:w-16"
+                class="bg-darkyellow items-center text-center cursor-pointer border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info1'"
             >
-                <h2 class="md:rotate-90 text-nowrap">Om Nakkefestival</h2>
+                <h2 class="md:rotate-90 text-nowrap mb-0">Om Nakkefestival</h2>
             </div>
             <div x-show="info === 'info1'" x-transition class="p-4">
                 <p>
@@ -120,10 +143,10 @@ import MainLayout from "../layouts/MainLayout.astro";
                 <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
             </div>
             <div
-                class="bg-yellow cursor-pointer border-2 border-darkblue p-4 md:w-16"
+                class="bg-yellow cursor-pointer text-center border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info2'"
             >
-                <h2 class="md:rotate-90 text-nowrap">Praktisk info</h2>
+                <h2 class="md:rotate-90 text-nowrap mb-0">Praktisk info</h2>
             </div>
             <div x-show="info === 'info2'" x-transition class="p-4">
                 <p>
@@ -184,10 +207,10 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </p>
             </div>
             <div
-                class="bg-pink cursor-pointer border-2 border-darkblue p-4 md:w-16"
+                class="bg-pink cursor-pointer text-center border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info3'"
             >
-                <h2 class="md:rotate-90 text-nowrap">Find vej</h2>
+                <h2 class="md:rotate-90 text-nowrap mb-0">Find vej</h2>
             </div>
             <div x-show="info === 'info3'" x-transition class="p-4">
                 <p class="italic">
