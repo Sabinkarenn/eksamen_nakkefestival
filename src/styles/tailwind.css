@@ -49,116 +49,115 @@
   ::after,
   ::before,
   ::backdrop,
-  ::file-selector-button
+  ::file-selector-button {
+    /* Anybody utility-klasser */
+    .anybody-regular {
+      font-family: "Anybody", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-  /* Anybody utility-klasser */
-  .anybody-regular {
-    font-family: "Anybody", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+    .anybody-medium {
+      font-family: "Anybody", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
 
-  .anybody-medium {
-    font-family: "Anybody", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
+    .anybody-semibold {
+      font-family: "Anybody", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
 
-  .anybody-semibold {
-    font-family: "Anybody", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
+    .anybody-bold {
+      font-family: "Anybody", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
 
-  .anybody-bold {
-    font-family: "Anybody", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+    .anybody-italic {
+      font-family: "Anybody", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
 
-  .anybody-italic {
-    font-family: "Anybody", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
+    .anybody-bolditalic {
+      font-family: "Anybody", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
 
-  .anybody-bolditalic {
-    font-family: "Anybody", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  /* Headings */
-  h1 {
-    @apply text-orange  sm:text-xl lg:text-4xl;
-    @apply mb-15;
-    font-family: "Superfunky";
-  }
-
-  @screen sm {
+    /* Headings */
     h1 {
-      @apply text-xl;
+      @apply text-orange  sm:text-xl lg:text-4xl;
+      @apply mb-15;
+      font-family: "Superfunky";
     }
-  }
 
-  @screen lg {
-    h1 {
-      @apply text-4xl;
+    @screen sm {
+      h1 {
+        @apply text-xl;
+      }
     }
-  }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
-  a {
-    @apply text-lg text-darkblue;
-    font-family: "Anybody", sans-serif;
-  }
+    @screen lg {
+      h1 {
+        @apply text-4xl;
+      }
+    }
 
-  h2 {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-bold;
-    @apply font-bold mb-10;
-  }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    a {
+      @apply text-lg text-darkblue;
+      font-family: "Anybody", sans-serif;
+    }
 
-  @screen sm {
     h2 {
-      @apply text-3xl;
+      @apply text-2xl sm:text-3xl lg:text-4xl font-bold;
+      @apply font-bold mb-10;
     }
-  }
 
-  @screen lg {
-    h2 {
-      @apply text-4xl;
+    @screen sm {
+      h2 {
+        @apply text-3xl;
+      }
     }
-  }
 
-  h3 {
-    @apply text-xl mb-4;
-  }
+    @screen lg {
+      h2 {
+        @apply text-4xl;
+      }
+    }
 
-  h4 {
-    @apply text-lg;
-    @apply font-bold;
-  }
+    h3 {
+      @apply text-xl mb-4;
+    }
 
-  p {
-    @apply mb-6;
-    @apply text-lg;
-  }
-  div {
-    font-family: "Anybody", sans-serif;
-  }
-  button {
-    font-family: "Anybody", sans-serif;
-  }
+    h4 {
+      @apply text-lg;
+      @apply font-bold;
+    }
 
-  span {
-    @apply text-beige;
-  }
+    p {
+      @apply mb-6;
+      @apply text-lg;
+    }
+    div {
+      font-family: "Anybody", sans-serif;
+    }
+    button {
+      font-family: "Anybody", sans-serif;
+    }
+
+    span {
+      @apply text-beige;
+    }
     @apply text-darkblue;
     font-family: "Superfunky";
   }
