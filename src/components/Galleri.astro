@@ -8,97 +8,93 @@ import galle5 from "../assets/images/galle5.webp";
 import galle6 from "../assets/images/galle6.webp";
 ---
 
-<section>
+<section class="mb-15">
   <div>
-    <div class="mb-10 grid lg:grid-cols-3 gap-10">
-      <div>
+    <div
+      class="mt-4 lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-7 px-2 sm:px-4 justify-center"
+    >
+      <div class="relative flex lg:col-start-2 items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 left-65"
+          class="absolute top-[20px] rotate-4 left-1/2 -translate-x-1/2 w-24 z-10"
         />
         <Image
           src={galle1}
           alt="galleri 1"
-          class="justify-end w-60 border-2 border-darkblue rounded-2xl place-self-center"
+          class="grid grid-cols- w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
-      <div>
+
+      <div class="relative col-start-3 flex items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 lg:left-180 left-65"
+          class="absolute top-[20px] rotate-6 left-1/2 -translate-x-1/2 w-24 z-10"
         />
         <Image
           src={galle2}
           alt="galleri 2"
-          class="lg:w-60 w-100 border-2 border-darkblue rounded-2xl place-self-center"
+          class="w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
-      <div>
+
+      <div class="relative flex col-start-4 items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 lg:left-290 left-65"
+          class="absolute top-[20px] rotate-6 left-1/2 -translate-x-1/2 w-24 z-10"
         />
         <Image
           src={galle3}
           alt="galleri 3"
-          class="w-border-2 w-60 border-darkblue rounded-2xl place-self-center"
+          class="w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
-      <div>
+
+      <div class="relative flex col-start-2 Row-start-2 items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 left-65"
+          class="absolute top-[20px] left-1/2 -translate-x-1/2 w-24 rotate-6 z-10"
         />
         <Image
           src={galle4}
           alt="galleri 4"
-          class="w-60 border-2 border-darkblue rounded-2xl place-self-center"
+          class="w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
-      <div>
+
+      <div class="relative flex flex-col items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 lg:left-180 left-65"
+          class="absolute top-[20px] left-1/2 -translate-x-1/2 w-24 rotate-6 z-10"
         />
         <Image
           src={galle5}
           alt="galleri 5"
-          class="lg:w-67 w-60 border-2 border-darkblue rounded-2xl place-self-center"
+          class="w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
-      <div>
+
+      <div class="relative flex flex-col items-center pt-10">
         <img
           src="tape.webp"
           alt="Tape"
-          class="absolute -mt-6 -translate-x-1/2 w-40 rotate-[352deg] z-10 lg:left-290 left-65"
+          class="absolute top-[20px] left-1/2 -translate-x-1/2 w-24 rotate-6 z-10"
         />
         <Image
           src={galle6}
           alt="galleri 6"
-          class="lg:w-68 w-60 border-2 border-darkblue rounded-2xl place-self-center"
+          class="w-60 h-72 object-cover border-2 border-darkblue rounded-2xl"
         />
       </div>
     </div>
-    <div class="mb-4 justify-center flex gap-3">
-      <a
-        href="https://www.facebook.com/OfficielNakkefestival/?locale=da_DK"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="/facebook.svg" alt="Facebook" class="h-10" />
-      </a>
-      <a
-        href="https://www.instagram.com/nakkefestival/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="/instagram.svg" alt="Instagram" class="h-10" />
-      </a>
+
+    <div class="mt-10 justify-center flex gap-3">
+      <img src="/facebook.svg" alt="Facebook" class="h-10" />
+      <img src="/instagram.svg" alt="Instagram" class="h-10" />
     </div>
   </div>
 </section>
