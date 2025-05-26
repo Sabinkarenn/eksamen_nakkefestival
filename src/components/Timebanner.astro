@@ -1,14 +1,4 @@
----
 
----
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamisk Countdown</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -20,45 +10,50 @@
         },
       };
     </script>
-  </head>
-  <body class="text-darkblue">
-    <div
-      id="countdown"
-      class="grid grid-flow-col gap-7 text-center auto-cols-max mt-15 justify-center"
-    >
-      <div
-        class="flex flex-col p-6 border-2 border-darkblue rounded-box text-darkblue"
-      >
-        <span class="countdown text-darkblue font-bold text-5xl">
-          <span class="text-darkblue" id="days" style="--value:0"></span>
-        </span>
-        dage
-      </div>
-      <div
-        class="flex flex-col p-6 border-2 border-darkblue rounded-box text-darkblue"
-      >
-        <span class="countdown text-darkblue font-bold text-5xl">
-          <span class="text-darkblue" id="hours" style="--value:0"></span>
-        </span>
-        timer
-      </div>
-      <div
-        class="flex flex-col p-6 border-2 border-darkblue rounded-box text-darkblue"
-      >
-        <span class="countdown text-darkblue font-bold text-5xl">
-          <span class="text-darkblue" id="minutes" style="--value:0"></span>
-        </span>
-        min
-      </div>
-      <div
-        class="flex flex-col p-6 border-2 border-darkblue rounded-box text-darkblue"
-      >
-        <span class="countdown text-darkblue font-bold text-5xl">
-          <span class="text-darkblue" id="seconds" style="--value:0"></span>
-        </span>
-        sek
-      </div>
-    </div>
+  
+ 
+  <div
+  id="countdown"
+  class="flex flex-col sm:grid sm:grid-flow-col gap-7 text-center auto-cols-max mt-15 justify-center"
+>
+  <div
+    class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
+  >
+    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+      <span class="text-darkblue" id="days" style="--value:0"></span>
+    </span>
+    <div class="text-xl font-medium mt-1">dage</div>
+  </div>
+
+  <div
+    class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
+  >
+    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+      <span class="text-darkblue" id="hours" style="--value:0"></span>
+    </span>
+    <div class="text-xl font-medium mt-1">timer</div>
+  </div>
+
+  <div
+    class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
+  >
+    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+      <span class="text-darkblue" id="minutes" style="--value:0"></span>
+    </span>
+    <div class="text-xl font-medium mt-1">min</div>
+  </div>
+
+  <div
+    class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
+  >
+    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+      <span class="text-darkblue" id="seconds" style="--value:0"></span>
+    </span>
+    <div class="text-xl font-medium mt-1">sek</div>
+  </div>
+</div>
+
+
 
     <script>
       const targetDate = new Date("2025-07-23T00:00:00").getTime();
@@ -83,7 +78,6 @@
       }
 
       updateCountdown(); // initial call
-      setInterval(updateCountdown, 1000); // updatere sekunder
+      setInterval(updateCountdown, 1000); // opdatér hvert sekund
     </script>
-  </body>
 </html>
