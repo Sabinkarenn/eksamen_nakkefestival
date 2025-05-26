@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Arrow from "../components/Arrow.astro";
 import Hero from "../components/Hero.astro";
 
 import Form from "../components/Form.astro";
@@ -29,9 +29,14 @@ import Form from "../components/Form.astro";
 
       <!-- Solsikke-billede -->
       <div class="flex justify-center md:justify-end">
-        <img src="solsikke.webp" alt="solsikke" class="max-w-md h-auto" />
+        <img
+          src="solsikke.webp"
+          alt="solsikke"
+          class="max-w-md h-auto rotate-center"
+        />
       </div>
     </div>
     <Form />
   </section>
+  <Arrow />
 </MainLayout>

@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Arrow from "../components/Arrow.astro";
 import Hero from "../components/Hero.astro";
 
 import Card from "../components/Card.astro";
@@ -11,11 +11,14 @@ import Card from "../components/Card.astro";
   <div class="-mx-30 mb-20">
     <Hero herotitel="EVENTS" />
   </div>
+
   <section class="text-center px-4">
     <h1>Se events for dagene her!</h1>
     <div x-data="{ dagaktiv: 'dag1' }">
       <!-- Knapper til alle dage -->
-      <div class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10">
+      <div
+        class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"
+      >
         <button
           @click="dagaktiv = 'dag1'"
           class="filter-btn text-darkblue border-2 border-darkblue transition rounded-xl cursor-pointer px-12 p-4 bg-beige"
@@ -50,49 +53,242 @@ import Card from "../components/Card.astro";
       </div>
       <!-- dag 1 -->
       <!-- grid til cards -->
-      <div class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20 eventcards" x-show="dagaktiv === 'dag1'">
-        <Card url="/singleview" cardimage="kridt.webp" cardimagealt="Kridt" cardtitle="Kridtmaling" cardtekst="kl. 09.00 // Krea" />
-        <Card url="/singleview" cardimage="skum.webp" cardimagealt="Skum" cardtitle="Skum glidebane" cardtekst="kl. 10.15 // Plænen" />
-        <Card url="/singleview" cardimage="badning.webp" cardimagealt="Nøgenbadning" cardtitle="Nøgenbadning" cardtekst="kl. 11.00 // Søen" />
-        <Card url="/singleview" cardimage="øl.webp" cardimagealt="Ølympiade" cardtitle="Ølympiade" cardtekst="kl. 12.30 // Plænen" />
-        <Card url="/singleview" cardimage="mediter.webp" cardimagealt="Glad pige" cardtitle="Meditation" cardtekst="kl. 14.00 // Tippien" />
-        <Card url="/singleview" cardimage="tshirt.webp" cardimagealt="Hjemmelavede tshirts" cardtitle="Custom t-hsirts" cardtekst="kl. 15.00 // Krea" />
-        <Card url="/singleview" cardimage="dance.webp" cardimagealt="En der danser" cardtitle="Dancebattle" cardtekst="kl. 17.00 // Plænen" />
-        <Card url="/singleview" cardimage="bingo.webp" cardimagealt="bingo" cardtitle="Bingo" cardtekst="kl. 19.00 // Plænen" />
-        <Card url="/singleview" cardimage="gøgl.webp" cardimagealt="gøgl" cardtitle="Gøgl" cardtekst="kl. 21.00 // Tippien" />
+      <div
+        class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20 eventcards"
+        x-show="dagaktiv === 'dag1'"
+      >
+        <Card
+          url="/singleview"
+          cardimage="kridt.webp"
+          cardimagealt="Kridt"
+          cardtitle="Kridtmaling"
+          cardtekst="kl. 09.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="skum.webp"
+          cardimagealt="Skum"
+          cardtitle="Skum glidebane"
+          cardtekst="kl. 10.15 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="badning.webp"
+          cardimagealt="Nøgenbadning"
+          cardtitle="Nøgenbadning"
+          cardtekst="kl. 11.00 // Søen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="øl.webp"
+          cardimagealt="Ølympiade"
+          cardtitle="Ølympiade"
+          cardtekst="kl. 12.30 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="mediter.webp"
+          cardimagealt="Glad pige"
+          cardtitle="Meditation"
+          cardtekst="kl. 14.00 // Tippien"
+        />
+        <Card
+          url="/singleview"
+          cardimage="tshirt.webp"
+          cardimagealt="Hjemmelavede tshirts"
+          cardtitle="Custom t-hsirts"
+          cardtekst="kl. 15.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="dance.webp"
+          cardimagealt="En der danser"
+          cardtitle="Dancebattle"
+          cardtekst="kl. 17.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="bingo.webp"
+          cardimagealt="bingo"
+          cardtitle="Bingo"
+          cardtekst="kl. 19.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="gøgl.webp"
+          cardimagealt="gøgl"
+          cardtitle="Gøgl"
+          cardtekst="kl. 21.00 // Tippien"
+        />
       </div>
       <!-- dag 2 -->
-      <div class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20" x-show="dagaktiv === 'dag2'">
-        <Card url="/singleview" cardimage="strik.webp" cardimagealt="Strikket solsikke" cardtitle="Strik" cardtekst="kl. 09.00 // Krea" />
-        <Card url="/singleview" cardimage="trille.webp" cardimagealt="Trillebør ræs" cardtitle="Trillebør ræs" cardtekst="kl. 10.15 // Plænen" />
-        <Card url="/singleview" cardimage="båd.webp" cardimagealt="Båd i havn" cardtitle="Båd ræs" cardtekst="kl. 11.00 // Søen" />
-        <Card url="/singleview" cardimage="kævle.webp" cardimagealt="Folk der drikker" cardtitle="Kævle" cardtekst="kl. 12.30 // Plænen" />
-        <Card url="/singleview" cardimage="yoga.webp" cardimagealt="folk der strækker ud" cardtitle="Yoga" cardtekst="kl. 14.00 // Tippien" />
-        <Card url="/singleview" cardimage="tusch.webp" cardimagealt="Mand der tegner" cardtitle="Tusch tegn" cardtekst="kl. 15.00 // Krea" />
-        <Card url="/singleview" cardimage="limbo.webp" cardimagealt="En der er faldet" cardtitle="Limbo" cardtekst="kl. 17.00 // Plænen" />
-        <Card url="/singleview" cardimage="gæt.webp" cardimagealt="Folk der gætter" cardtitle="Gæt og grimasser" cardtekst="kl. 19.00 // Plænen" />
-        <Card url="/singleview" cardimage="fællessanf.webp" cardimagealt="Gut med en guitar" cardtitle="Fællessang" cardtekst="kl. 21.00 // Tippien" />
+      <div
+        class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20"
+        x-show="dagaktiv === 'dag2'"
+      >
+        <Card
+          url="/singleview"
+          cardimage="strik.webp"
+          cardimagealt="Strikket solsikke"
+          cardtitle="Strik"
+          cardtekst="kl. 09.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="trille.webp"
+          cardimagealt="Trillebør ræs"
+          cardtitle="Trillebør ræs"
+          cardtekst="kl. 10.15 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="båd.webp"
+          cardimagealt="Båd i havn"
+          cardtitle="Båd ræs"
+          cardtekst="kl. 11.00 // Søen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="kævle.webp"
+          cardimagealt="Folk der drikker"
+          cardtitle="Kævle"
+          cardtekst="kl. 12.30 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="yoga.webp"
+          cardimagealt="folk der strækker ud"
+          cardtitle="Yoga"
+          cardtekst="kl. 14.00 // Tippien"
+        />
+        <Card
+          url="/singleview"
+          cardimage="tusch.webp"
+          cardimagealt="Mand der tegner"
+          cardtitle="Tusch tegn"
+          cardtekst="kl. 15.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="limbo.webp"
+          cardimagealt="En der er faldet"
+          cardtitle="Limbo"
+          cardtekst="kl. 17.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="gæt.webp"
+          cardimagealt="Folk der gætter"
+          cardtitle="Gæt og grimasser"
+          cardtekst="kl. 19.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="fællessanf.webp"
+          cardimagealt="Gut med en guitar"
+          cardtitle="Fællessang"
+          cardtekst="kl. 21.00 // Tippien"
+        />
       </div>
       <!-- dag 3 -->
-      <div class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20" x-show="dagaktiv === 'dag3'">
-        <Card url="/singleview" cardimage="armbånd.webp" cardimagealt="Armbånd" cardtitle="Lav et armbånd" cardtekst="kl. 09.00 // Krea" />
-        <Card url="/singleview" cardimage="gemme.webp" cardimagealt="gemmeleg" cardtitle="Gemmeleg" cardtekst="kl. 10.15 // Plænen" />
-        <Card url="/singleview" cardimage="brunch.webp" cardimagealt="Mænd der spiser" cardtitle="Brunch" cardtekst="kl. 11.00 // Søen" />
-        <Card url="/singleview" cardimage="maling.webp" cardimagealt="Folk der males i ansigtet" cardtitle="Ansigtsmaling" cardtekst="kl. 12.30 // Plænen" />
-        <Card url="/singleview" cardimage="spil.webp" cardimagealt="baggammon" cardtitle="Brætspil" cardtekst="kl. 14.00 // Tippien" />
-        <Card url="/singleview" cardimage="værksted.webp" cardimagealt="Mand der saver" cardtitle="Værksted" cardtekst="kl. 15.00 // Krea" />
-        <Card url="/singleview" cardimage="bål.webp" cardimagealt="folk der sidder omkring bål" cardtitle="Fælles bål" cardtekst="kl. 17.00 // Plænen" />
-        <Card url="/singleview" cardimage="comedy.webp" cardimagealt="Pige på en scene" cardtitle="Comedy" cardtekst="kl. 19.00 // Plænen" />
-        <Card url="/singleview" cardimage="rom.webp" cardimagealt="Rom flasker" cardtitle="Rom smagning" cardtekst="kl. 21.00 // Tippien" />
+      <div
+        class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20"
+        x-show="dagaktiv === 'dag3'"
+      >
+        <Card
+          url="/singleview"
+          cardimage="armbånd.webp"
+          cardimagealt="Armbånd"
+          cardtitle="Lav et armbånd"
+          cardtekst="kl. 09.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="gemme.webp"
+          cardimagealt="gemmeleg"
+          cardtitle="Gemmeleg"
+          cardtekst="kl. 10.15 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="brunch.webp"
+          cardimagealt="Mænd der spiser"
+          cardtitle="Brunch"
+          cardtekst="kl. 11.00 // Søen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="maling.webp"
+          cardimagealt="Folk der males i ansigtet"
+          cardtitle="Ansigtsmaling"
+          cardtekst="kl. 12.30 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="spil.webp"
+          cardimagealt="baggammon"
+          cardtitle="Brætspil"
+          cardtekst="kl. 14.00 // Tippien"
+        />
+        <Card
+          url="/singleview"
+          cardimage="værksted.webp"
+          cardimagealt="Mand der saver"
+          cardtitle="Værksted"
+          cardtekst="kl. 15.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="bål.webp"
+          cardimagealt="folk der sidder omkring bål"
+          cardtitle="Fælles bål"
+          cardtekst="kl. 17.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="comedy.webp"
+          cardimagealt="Pige på en scene"
+          cardtitle="Comedy"
+          cardtekst="kl. 19.00 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="rom.webp"
+          cardimagealt="Rom flasker"
+          cardtitle="Rom smagning"
+          cardtekst="kl. 21.00 // Tippien"
+        />
       </div>
       <!-- dag 4 -->
-      <div class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20" x-show="dagaktiv === 'dag4'">
-        <Card url="/singleview" cardimage="skrald.webp" cardimagealt="Mænd med skraldeposer" cardtitle="Skralde patrulje" cardtekst="kl. 09.00 // Krea" />
-        <Card url="/singleview" cardimage="dans.webp" cardimagealt="folk der danser" cardtitle="Dans" cardtekst="kl. 10.15 // Plænen" />
-        <Card url="/singleview" cardimage="akrobatik.webp" cardimagealt="Mand der står på hænder" cardtitle="Akrobatik" cardtekst="kl. 11.00 // Søen" />
+      <div
+        class="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 p-4 max-w-5xl mx-auto mb-20"
+        x-show="dagaktiv === 'dag4'"
+      >
+        <Card
+          url="/singleview"
+          cardimage="skrald.webp"
+          cardimagealt="Mænd med skraldeposer"
+          cardtitle="Skralde patrulje"
+          cardtekst="kl. 09.00 // Krea"
+        />
+        <Card
+          url="/singleview"
+          cardimage="dans.webp"
+          cardimagealt="folk der danser"
+          cardtitle="Dans"
+          cardtekst="kl. 10.15 // Plænen"
+        />
+        <Card
+          url="/singleview"
+          cardimage="akrobatik.webp"
+          cardimagealt="Mand der står på hænder"
+          cardtitle="Akrobatik"
+          cardtekst="kl. 11.00 // Søen"
+        />
       </div>
     </div>
   </section>
+  <Arrow />
 </MainLayout>
 <style>
   .solsikke:hover {
