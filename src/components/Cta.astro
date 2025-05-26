@@ -1,0 +1,7 @@
+<script>
+  import { animate, inView } from "motion";
+  /* inView animation */
+  inView("#ctaknaptrigger", () => {
+    animate("#ctaknap", { opacity: [0, 1] }, { duration: 3 });
+  });
+</script>

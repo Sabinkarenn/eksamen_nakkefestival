@@ -6,21 +6,16 @@ const { variant = "primary", size = "large" } = Astro.props;
 const buttonStyling = "btn my-2  border-2 shadow-none rounded-xl";
 
 const variantClasses = {
-    primary:
-        "bg-orange text-beige hover:bg-brightorange  border-brightorange hover:border-orange",
-    secondary:
-        "bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue",
+  primary: "bg-orange text-beige hover:bg-brightorange  border-brightorange hover:border-orange",
+  secondary: "bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue",
+  teritary: "bg-orange text-beige hover:bg-brightorange  border-brightorange hover:border-orange",
 };
 const sizeClasses = {
-    large: "px-13 p-6",
-    medium: "p-4",
-    small: "p-2",
+  large: "px-13 p-6",
+  medium: "p-4",
+  small: "p-2",
 };
 ---
 
 <!-- Husk at importere CSS hvis nødvendigt -->
-<button
-    class="cursor cursor-(--handcursor)"
-    class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
-    ><slot /></button
->
+<button class="cursor cursor-(--handcursor)" class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
