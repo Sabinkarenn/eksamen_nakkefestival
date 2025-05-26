@@ -5,6 +5,7 @@ import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="da">
@@ -27,6 +28,14 @@ import Hero from "../components/Hero.astro";
     </header>
 
     <main class="px-10 md:px-30">
+      <!-- Køb billet sticky start -->
+      <div id="ctaknaptrigger"></div>
+      <div class="fixed top-120 -right-12 transform rotate-270 rounded-full z-50 opacity-0" id="ctaknap">
+        <a href="/kunstnere">
+          <Button variant="teritary">Køb billet</Button>
+        </a>
+      </div>
+      <!-- Køb billet sticky slut -->
       <div class="relative z-10">
         <slot />
       </div>
@@ -37,3 +46,14 @@ import Hero from "../components/Hero.astro";
     </footer>
   </body>
 </html>
+
+<script>
+  import { animate, inView } from "motion";
+  /* inView animation */
+  inView("#ctaknaptrigger", () => {
+    animate("#ctaknap", { opacity: [0, 0] }, { duration: 2 });
+    return () => {
+      animate("#ctaknap", { opacity: [0, 1] }, { duration: 2 });
+    };
+  });
+</script>
