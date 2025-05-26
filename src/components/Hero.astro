@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
+import Link from "./Link.astro";
 import hero from "../assets/images/heros.webp";
 import lillesol from "../assets/images/lillesol.webp";
 import storsol from "../assets/images/storsol.webp";
@@ -18,7 +18,11 @@ const { herotitel = "Nakkefestival" } = Astro.props;
     </div>
 
     <div class="col-start-25 col-span-50 row-start-1 relative lg:top-[-450px]">
-      <Image src={storsol} alt="stor solsikke" class="w-full rotate-animation" />
+      <Image
+        src={storsol}
+        alt="stor solsikke"
+        class="w-full rotate-animation"
+      />
     </div>
     <div class="col-start-25 col-span-50 row-start-1 text-center relative">
       <h1 class="mt-15 lg:text-7xl text-4xl text-darkblue">{herotitel}</h1>
@@ -26,7 +30,7 @@ const { herotitel = "Nakkefestival" } = Astro.props;
     </div>
 
     <div class="col-start-44 col-span-50 row-start-17 relative">
-      <a href="/købbillet" class="underline hover:text-orange"><Button variant="primary" size="large" class="">Køb billet</Button></a>
+      <Link href="/købbillet" variant="primary">Køb billet</Link>
     </div>
   </div>
 </section>

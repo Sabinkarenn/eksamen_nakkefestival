@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 
+import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Banner from "../components/Banner.astro";
 import Hero from "../components/Hero.astro";
@@ -22,8 +22,12 @@ import Kunstnercard from "../components/Kunstnercard.astro";
       <div class="max-w-xl">
         <h2>Musik, kunst og kærlighed</h2>
         <p>
-          Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i den fantastiske stemning på Nakkefestival – en oplevelse, du ikke finder andre steder! Programmet bliver spækket med
-          lækkerier, og vi glæder os til at danse og feste med dig og dine venner til den lyse morgen. Så tag teltet og vennerne under armen, og oplev Danmarks hyggeligste festival.
+          Kom og få det bedste ud af sommeren, når vi sammen drømmer os væk i
+          den fantastiske stemning på Nakkefestival – en oplevelse, du ikke
+          finder andre steder! Programmet bliver spækket med lækkerier, og vi
+          glæder os til at danse og feste med dig og dine venner til den lyse
+          morgen. Så tag teltet og vennerne under armen, og oplev Danmarks
+          hyggeligste festival.
         </p>
       </div>
 
@@ -68,9 +72,7 @@ import Kunstnercard from "../components/Kunstnercard.astro";
         />
       </div>
       <div class="flex items-center justify-center m-4">
-        <a href="/kunstnere">
-          <Button variant="secondary">Se hele programmet</Button>
-        </a>
+        <Link href="/kunstnere" variant="secondary">Se hele programmet</Link>
       </div>
     </section>
 
@@ -85,19 +87,26 @@ import Kunstnercard from "../components/Kunstnercard.astro";
       <div class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2">
         <h3 class="mb-2">Tag fællesbus til Nakke</h3>
         <p class="mb-6">
-          Turen tager omkring en time og koster 170 kroner (Kbh) det er billigere end offentlig transport og bedre for miljøet end at køre selv. Det er oven i købet en fantastisk undskyldning for at
-          tilbringe endnu mere tid sammen med dine søde og dejlige Nakkevenner!
+          Turen tager omkring en time og koster 170 kroner (Kbh) det er
+          billigere end offentlig transport og bedre for miljøet end at køre
+          selv. Det er oven i købet en fantastisk undskyldning for at tilbringe
+          endnu mere tid sammen med dine søde og dejlige Nakkevenner!
         </p>
-        <p>Busserne til festivalen kører fra DGI byen. Du skal være ved bussen en halv time før afgang, så vi får alle tjekket ind og din bagage med.</p>
-        <Button variant="secondary">Tilmeld dig bussen</Button>
+        <p>
+          Busserne til festivalen kører fra DGI byen. Du skal være ved bussen en
+          halv time før afgang, så vi får alle tjekket ind og din bagage med.
+        </p>
+        <Link href="/købbusbillet" variant="secondary">Tilmeld dig bussen</Link>
       </div>
 
       <!-- Anden boks -->
       <div class="lg:w-1/2">
         <img src="bus.svg" alt="Bus" class="w-full h-auto scale-150 bus" />
         <p class="p-2">
-          Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig og dine venner med på Nakkefestival! I samarbejde med Solibus arrangerer vi bustransport til og fra festivalen. Der er
-          begrænsede pladser, så skynd dig at få fat i en billet!
+          Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig
+          og dine venner med på Nakkefestival! I samarbejde med Solibus
+          arrangerer vi bustransport til og fra festivalen. Der er begrænsede
+          pladser, så skynd dig at få fat i en billet!
         </p>
       </div>
     </section>

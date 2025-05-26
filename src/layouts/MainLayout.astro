@@ -5,7 +5,7 @@ import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 import Hero from "../components/Hero.astro";
-import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
 
 <html lang="da">
@@ -30,10 +30,11 @@ import Button from "../components/Button.astro";
     <main class="px-10 md:px-30">
       <!-- Køb billet sticky start -->
       <div id="ctaknaptrigger"></div>
-      <div class="fixed top-120 -right-12 transform rotate-270 rounded-full z-50 opacity-0" id="ctaknap">
-        <a href="/kunstnere">
-          <Button variant="teritary">Køb billet</Button>
-        </a>
+      <div
+        class="fixed top-120 -right-12 transform rotate-270 rounded-full z-50 opacity-0"
+        id="ctaknap"
+      >
+        <Link href="/købbillet" variant="primary">Køb billet</Link>
       </div>
       <!-- Køb billet sticky slut -->
       <div class="relative z-10">

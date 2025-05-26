@@ -19,9 +19,7 @@ import { Image } from "astro:assets";
     <!-- Burger menu: kun synlig på små skærme -->
     <div class="dropdown relative lg:hidden flex items-center space-x-2">
       <div class="mobileknap">
-        <a href="/købbusbillet" class="hover:bg-transparent">
-          <Button variant="primary" size="small">Køb billet</Button>
-        </a>
+        <Link href="/købbillet" variant="primary" size="small">Køb billet</Link>
       </div>
       <div tabindex="0" role="button" class="hover:bg-transparent">
         <svg
@@ -65,12 +63,7 @@ import { Image } from "astro:assets";
           >
         </li>
         <li>
-          <a
-            href="/købbusbillet"
-            class="hover:bg-transparent hover:text-orange"
-          >
-            <Button variant="primary" size="small">Køb billet</Button>
-          </a>
+          <Link href="/købbillet" variant="small">Køb billet</Link>
         </li>
       </ul>
     </div>
