@@ -3,13 +3,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Kunstnercard from "../components/Kunstnercard.astro";
 
 import Hero from "../components/Hero.astro";
+import Arrow from "../components/Arrow.astro";
 ---
 
 <!-- Alberte -->
 <MainLayout>
   <div class="-mx-30 mb-20">
-    <Hero herotitel="KUNSTNERE" />
+    <Hero herotitel="KUNSTNERE" class="relative z-10" />
   </div>
+
   <!-- x data til kunstnerecards -->
   <div x-data="{ dagaktiv: 'dag1' }">
     <h1 class="text-center">Se dette års kunstnere og program</h1>
@@ -337,7 +339,7 @@ import Hero from "../components/Hero.astro";
           class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
         >
           <div
-            class="p-2 col-span-1 font-bold bg-darkyellow border-b-2 border-darkblue"
+            class="p-2 col-span-1 font-bold text-2xl bg-darkyellow border-b-2 border-darkblue"
           >
             Kl.
           </div>
@@ -355,7 +357,9 @@ import Hero from "../components/Hero.astro";
         <div
           class="divide-y divide-darkblue border-r-2 border-darkblue text-darkblue"
         >
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+          <div
+            class="p-2 font-bold text-2xl bg-darkyellow border-b-2 border-darkblue"
+          >
             DEN ENE SCENE
           </div>
           <div class="p-2">JOSIE AMADONNA</div>
@@ -370,7 +374,9 @@ import Hero from "../components/Hero.astro";
 
         <!-- DEN ANDEN SCENE -->
         <div class="divide-y divide-darkblue text-darkblue">
-          <div class="p-2 font-bold bg-darkyellow border-b-2 border-darkblue">
+          <div
+            class="p-2 font-bold text-2xl bg-darkyellow border-b-2 border-darkblue"
+          >
             DEN ANDEN SCENE
           </div>
           <div class="p-2">-</div>
@@ -523,6 +529,7 @@ import Hero from "../components/Hero.astro";
       </div>
     </div>
   </div>
+  <Arrow />
 </MainLayout>
 <style>
   .solsikke:hover {

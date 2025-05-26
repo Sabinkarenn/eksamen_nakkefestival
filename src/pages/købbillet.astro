@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
-
+import Arrow from "../components/Arrow.astro";
 import Billet from "../components/Billet.astro";
 import Hero from "../components/Hero.astro";
 ---
@@ -10,12 +10,14 @@ import Hero from "../components/Hero.astro";
   <div class="-mx-30 mb-20">
     <Hero herotitel="KØB BILLET" />
   </div>
+
   <section class="text-center px-4">
     <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
     <Billet />
 
     <Link href="/købbusbillet" variant="secondary">Videre</Link>
   </section>
+  <Arrow />
 </MainLayout>
 <style>
   .solsikke:hover {

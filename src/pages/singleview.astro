@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Arrow from "../components/Arrow.astro";
 import Hero from "../components/Hero.astro";
 ---
 
@@ -10,10 +10,8 @@ import Hero from "../components/Hero.astro";
   </div>
 
   <h1 class="text-center">kridtmaling</h1>
-  <section
-    class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6 mx-auto"
-  >
-    <div>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+    <div class="md:ml-20">
       <img
         class="w-90 h-auto object-cover rounded-lg border-2 border-darkblue"
         src="kridt.webp"
@@ -43,6 +41,7 @@ import Hero from "../components/Hero.astro";
       <h2>d. 23 juli // kl. 09.00 // KREA</h2>
     </div>
   </section>
+  <Arrow />
 </MainLayout>
 <style>
   .solsikke:hover {

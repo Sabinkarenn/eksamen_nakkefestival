@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Arrow from "../components/Arrow.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Banner from "../components/Banner.astro";
@@ -16,6 +16,7 @@ import Kunstnercard from "../components/Kunstnercard.astro";
     <div class="-mx-30 mb-20">
       <Hero herotitel="NAKKEFESTIVAL" />
     </div>
+
     <!-- Første sektion med logo -->
 
     <section class="flex flex-col lg:flex-row items-center gap-8 mb-15">
@@ -32,14 +33,18 @@ import Kunstnercard from "../components/Kunstnercard.astro";
       </div>
 
       <div class="flex-shrink-0">
-        <img src="/logo.svg" alt="Logo" class="w-64 h-auto lg:w-96" />
+        <img
+          src="/logo.svg"
+          alt="Logo"
+          class="w-64 h-auto lg:w-96 animate__animated animate__tada solsikkeguitar"
+        />
       </div>
     </section>
 
     <!-- Årets kunster sektion -->
     <section class="mb-15">
       <h3 class="text-center">Årets kunstnere</h3>
-      <div class="flex flex-col gap-20 p-4 kunstnercards">
+      <div class="flex flex-col gap-20 p-4 kunstnercards overflow-hidden">
         <Kunstnercard
           x-show="kunstneraktiv === 'kunstnerdag1'"
           cardimage="josie.webp"
@@ -84,7 +89,9 @@ import Kunstnercard from "../components/Kunstnercard.astro";
     <!-- Fællesbus sektion -->
     <section class="flex flex-col lg:flex-row gap-6 mb-30">
       <!-- Første boks -->
-      <div class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2">
+      <div
+        class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2 overflow-hidden"
+      >
         <h3 class="mb-2">Tag fællesbus til Nakke</h3>
         <p class="mb-6">
           Turen tager omkring en time og koster 170 kroner (Kbh) det er
@@ -100,7 +107,7 @@ import Kunstnercard from "../components/Kunstnercard.astro";
       </div>
 
       <!-- Anden boks -->
-      <div class="lg:w-1/2">
+      <div class="lg:w-1/2 overflow-hidden">
         <img src="bus.svg" alt="Bus" class="w-full h-auto scale-150 bus" />
         <p class="p-2">
           Fællesbussen til Nakke er den hyggeligste og grønneste måde at få dig
@@ -124,9 +131,10 @@ import Kunstnercard from "../components/Kunstnercard.astro";
       <Galleri />
     </section>
   </section>
+  <Arrow />
 </MainLayout>
 <style>
-  .solsikke:hover {
+  .solsikkeguitar:hover {
     animation: animate__tada;
     animation-duration: 2s;
   }

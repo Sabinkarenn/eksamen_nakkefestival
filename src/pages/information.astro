@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import Arrow from "../components/Arrow.astro";
 ---
 
 <!-- Alberte -->
@@ -8,81 +9,6 @@ import Hero from "../components/Hero.astro";
     <div class="-mx-30 mb-20">
         <Hero herotitel="INFORMATION" class="relative z-10" />
     </div>
-    <section
-        class="absolute inset-0 w-full h-full grid grid-cols-24 grid-rows-24 gap-4 p-4 z-0"
-    >
-        <!-- Solsikke 1 - venstre -->
-        <div
-            id="solsikke1-venstre"
-            class="col-start-2 col-span-4 row-start-10 row-span-3"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 1 venstre"
-                class="w-full h-auto opacity-90 scale-125 rotate-center"
-            />
-        </div>
-
-        <!-- Solsikke 2 - højre -->
-        <div
-            id="solsikke2-højre"
-            class="col-start-19 col-span-4 row-start-11 row-span-4"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 2 højre"
-                class="w-full h-auto opacity-80 scale-210 -rotate-6 solsikke animate__animated animate__tada"
-            />
-        </div>
-
-        <!-- Solsikke 3 - venstre -->
-        <div
-            id="solsikke3-venstre"
-            class="col-start-3 col-span-3 row-start-14 row-span-3"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 3 venstre"
-                class="w-full h-auto opacity-70 scale-250 rotate-12 solsikke animate__animated animate__tada"
-            />
-        </div>
-
-        <!-- Solsikke 4 - højre -->
-        <div
-            id="solsikke4-højre"
-            class="col-start-20 col-span-3 row-start-15 row-span-3"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 4 højre"
-                class="w-full h-auto opacity-85 scale-200 rotate-center"
-            />
-        </div>
-
-        <!-- Solsikke 5 - venstre -->
-        <div
-            id="solsikke5-venstre"
-            class="col-start-4 col-span-4 row-start-19 row-span-3"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 5 venstre"
-                class="w-full h-auto opacity-75 scale-150 rotate-3 solsikke animate__animated animate__tada"
-            />
-        </div>
-
-        <!-- Solsikke 6 - højre -->
-        <div
-            id="solsikke6-højre"
-            class="col-start-17 col-span-4 row-start-20 row-span-3"
-        >
-            <img
-                src="/solsikke.webp"
-                alt="Solsikke 6 højre"
-                class="w-full h-auto opacity-80 scale-250 rotate-center"
-            />
-        </div>
-    </section>
 
     <h1 class="text-center">Læs alt det vigtige her</h1>
     <section
@@ -252,6 +178,7 @@ import Hero from "../components/Hero.astro";
             </div>
         </div>
     </section>
+    <Arrow />
 </MainLayout>
 <style>
     .solsikke:hover {
