@@ -17,9 +17,9 @@
 <div class="mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg ">
 
   <!-- Overskrift og info-tekst -->
-  <h2 class="text-lg font-bold text-[#00106b] mb-2">Vælg billet</h2>
-  <p class="text-sm  mb-4">
-    Alle betalte billetter tillægges billetgebyr på 4,94 kr
+  <h2 class="text-lg font-bold text-darkblue text-start mb-1 ">Vælg billet</h2>
+  <p class="text-sm text-start mb-4">
+    Alle betalte billetter tillægges billetgebyr på <br> 4,94 kr
   </p>
 
   <!-- Vi looper igennem hver billet og viser dem én for én -->
@@ -37,16 +37,16 @@
       <div class="flex items-center gap-2">
         <!-- Minus-knap -->
         <button 
-          class="bg-yellow-400 w-8 h-8 rounded-full text-[#00106b] font-bold"
+          class="text-darkblue text-4xl font-bold"
           onClick={`decrement('${ticket.id}')`}
         >−</button>
 
         <!-- Visning af nuværende antal -->
-        <span id={`count-${ticket.id}`} class="w-4 text-center">0</span>
+        <span id={`count-${ticket.id}`} class="w-4 bg-yellow w-8 h-8 rounded-full  text-darkblue  text-center">0</span>
 
         <!-- Plus-knap -->
         <button 
-          class="bg-yellow-400 w-8 h-8 rounded-full text-[#00106b] font-bold"
+          class="text-4xl text-text-startfont-bold"
           onClick={`increment('${ticket.id}')`}
         >+</button>
       </div>
