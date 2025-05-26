@@ -2,32 +2,31 @@
 //Alberte//
 // Button.astro
 
-const {
-    href = "#",
-    target = "_self",
-    variant = "primary",
-    size = "large",
-} = Astro.props;
+const { href = "#", target = "_self", variant = "primary", size = "large" } = Astro.props;
 
 const linkStyling = "btn my-2  border-2 shadow-none rounded-xl";
 
 const variantClasses = {
-    primary:
-        "bg-orange text-beige hover:bg-brightorange  border-brightorange hover:border-orange",
-    secondary:
-        "bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue",
+  primary: "bg-orange text-beige hover:bg-brightorange  border-brightorange hover:border-orange",
+  secondary: "bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue",
 };
 const sizeClasses = {
-    large: "px-13 p-6",
-    medium: "p-4",
-    small: "p-2",
+  large: "px-13 p-6",
+  medium: "p-4",
+  small: "p-2",
 };
 ---
 
 <!-- Husk at importere CSS hvis nødvendigt -->
-<a
-    class="cursor cursor-(--handcursor)"
-    href={href}
-    class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}
-    ><slot /></a
->
+<a class="cursor cursor-(--handcursor)" href={href} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
+
+<script>
+  import { animate, inView } from "motion";
+  /* inView animation */
+  inView("#ctaknaptrigger", () => {
+    animate("#ctaknap", { opacity: [0, 0] }, { duration: 2 });
+    return () => {
+      animate("#ctaknap", { opacity: [0, 1] }, { duration: 2 });
+    };
+  });
+</script>

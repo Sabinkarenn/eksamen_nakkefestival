@@ -15,11 +15,7 @@ import Link from "../components/Link.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
-    <link
-      rel="icon"
-      type="../assets/images/guitar-favicon.png"
-      href="/logo.svg"
-    />
+    <link rel="icon" type="../assets/images/guitar-favicon.png" href="/logo.svg" />
   </head>
 
   <body class="relative min-h-screen bg-beige">
@@ -30,11 +26,8 @@ import Link from "../components/Link.astro";
     <main class="px-10 md:px-30">
       <!-- Køb billet sticky start -->
       <div id="ctaknaptrigger"></div>
-      <div
-        class="fixed top-120 -right-12 transform rotate-270 rounded-full z-50 opacity-0"
-        id="ctaknap"
-      >
-        <Link href="/købbillet" variant="primary">Køb billet</Link>
+      <div class="fixed top-70 -right-10 transform rotate-270 rounded-full z-50 opacity-0" id="ctaknap">
+        <Link href="/købbillet" size="large" variant="primary">Køb billet</Link>
       </div>
       <!-- Køb billet sticky slut -->
       <div class="relative z-10">
@@ -47,14 +40,3 @@ import Link from "../components/Link.astro";
     </footer>
   </body>
 </html>
-
-<script>
-  import { animate, inView } from "motion";
-  /* inView animation */
-  inView("#ctaknaptrigger", () => {
-    animate("#ctaknap", { opacity: [0, 0] }, { duration: 2 });
-    return () => {
-      animate("#ctaknap", { opacity: [0, 1] }, { duration: 2 });
-    };
-  });
-</script>
