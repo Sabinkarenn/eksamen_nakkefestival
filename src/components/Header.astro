@@ -6,13 +6,13 @@ import { Image } from "astro:assets";
 import Heading from "../components/Heading.astro";
 ---
 
-<div class="navbar relative z-45 bg-transparent">
+<div class="navbar relative z-45 bg-beige">
   <!-- Venstre side: Logo -->
   <div class="navbar-start">
     <a href="/" class="hover:bg-transparent">
       <img src="/logo.svg" alt="Logo" class="h-15 w-auto" />
     </a>
-    <Heading htmlheading="h1" size="small" stylingclasses="text-darkblue"
+    <Heading htmlheading="h1" size="xsmall" stylingclasses="text-darkblue "
       >Nakkefestival</Heading
     >
   </div>
@@ -45,31 +45,38 @@ import Heading from "../components/Heading.astro";
         class="menu menu-sm dropdown-content absolute top-full z-1 px-6 bg-beige rounded-box w-screen text-orange right-0"
       >
         <li>
-          <a href="/events" class="hover:bg-transparent hover:text-orange"
+          <a
+            href="/events"
+            class="hover:bg-transparent hover:text-orange text-base underline"
             >Events</a
           >
         </li>
         <li>
           <a
             href="/blivfrivillig"
-            class="hover:bg-transparent hover:text-orange">Bliv frivillig</a
+            class="hover:bg-transparent hover:text-orange text-base underline"
+            >Bliv frivillig</a
           >
         </li>
         <li>
-          <a href="/kunstnere" class="hover:bg-transparent hover:text-orange"
+          <a
+            href="/kunstnere"
+            class="hover:bg-transparent hover:text-orange text-base underline"
             >Kunstnere</a
           >
         </li>
         <li>
-          <a href="/information" class="hover:bg-transparent hover:text-orange"
+          <a
+            href="/information"
+            class="hover:bg-transparent hover:text-orange text-base underline"
             >Information</a
           >
         </li>
-        <li>
-          <Link href="/købbillet" variant="primary" size="small"
-            >Køb billet</Link
-          >
-        </li>
+        <div class="mobileknap flex items-center justify-start ml-2">
+          <Link href="/købbillet" variant="primary" size="small" class="w-auto">
+            Køb billet
+          </Link>
+        </div>
       </ul>
     </div>
 
