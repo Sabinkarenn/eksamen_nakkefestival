@@ -5,7 +5,6 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Banner from "../components/Banner.astro";
 import Hero from "../components/Hero.astro";
-
 import Timebanner from "../components/Timebanner.astro";
 import Galleri from "../components/Galleri.astro";
 import Kunstnercard from "../components/Kunstnercard.astro";
@@ -149,6 +148,44 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   inView(".kunstnercards", () => {
     animate(".kunstnercards", { x: [-2000, 0] }, { duration: 2 });
   });
-  
-  src="js/login.js"
+
+class Login extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({
+      mode: "open"
+    }); //apparently slots only work with the shadow dom?
+  }
+  connectedCallback() {
+    this.html = ;
+    this.render();
+
+    this.shadowRoot.querySelector("form").addEventListener("submit", e => {
+      e.preventDefault();
+      if (
+        this.shadowRoot.querySelector("input[name=pass]").value === "kea"
+      ) {
+        document.querySelector("#totally-delete-me").remove();
+        localStorage.setItem("iform-totally-logged-in", true);
+      }
+    });
+  }
+  render() {
+    this.shadowRoot.innerHTML = this.html;
+  }
+}
+customElements.define("iform-login", Login);
+window.addEventListener("load", () => {
+  if (!localStorage.getItem("iform-totally-logged-in")) {
+    const div = document.createElement("div");
+    div.id = "totally-delete-me";
+    div.style.width = "100vw";
+    div.style.height = "100vh";
+    div.style.position = "fixed";
+    div.style.zIndex = "9999";
+
+    div.innerHTML = "<iform-login />";
+    document.body.prepend(div);
+  }
+});
 </script>
