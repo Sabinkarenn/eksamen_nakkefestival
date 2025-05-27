@@ -24,6 +24,7 @@ import Link from "../components/Link.astro";
     </header>
 
     <main class="px-10 md:px-30">
+      <div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-yellow to-orange left-0 origin-top-left top-0 right-0 z-20"></div>
       <!-- Køb billet sticky start -->
       <div id="ctaknaptrigger"></div>
       <div class="fixed top-70 -right-10 transform rotate-270 rounded-full z-50 opacity-0" id="ctaknap">
@@ -40,3 +41,9 @@ import Link from "../components/Link.astro";
     </footer>
   </body>
 </html>
+
+<script>
+  /* Import af Motion One bibliotek */
+  import { animate, scroll } from "motion";
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+</script>
