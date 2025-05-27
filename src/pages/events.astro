@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Arrow from "../components/Arrow.astro";
 import Hero from "../components/Hero.astro";
-
+import Heading from "../components/Heading.astro";
 import Card from "../components/Card.astro";
 ---
 
@@ -13,7 +13,7 @@ import Card from "../components/Card.astro";
   </div>
 
   <section class="text-center px-4">
-    <h1>Se events for dagene her!</h1>
+    <Heading htmlheading="h2" size="large">Se events for dagene her!</Heading>
     <div x-data="{ dagaktiv: 'dag1' }">
       <!-- Knapper til alle dage -->
       <div

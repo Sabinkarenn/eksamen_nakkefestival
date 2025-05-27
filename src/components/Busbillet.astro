@@ -1,5 +1,5 @@
 ---
-
+import Heading from "../components/Heading.astro";
 /**
  * Billettyperne er defineret her som et array af objekter.
  * Hver billet har et id, navn, evt. dato og pris.
@@ -15,7 +15,8 @@
 <div class=" bg-pink mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg ">
 
   <!-- Overskrift og info-tekst -->
-  <h2 class="text-lg text-start font-bold mb-2">Pssst... tilkøb busbillet her</h2>
+    <Heading htmlheading="h2" size="medium" stylingclasses="text-start mb-1">Pssst... tilkøb busbillet her</Heading>
+
   <p class="text-sm text-start mb-7">
     170 kr. pr billet
   </p>

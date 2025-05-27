@@ -2,15 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Arrow from "../components/Arrow.astro";
 import Hero from "../components/Hero.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout>
   <div class="-mx-30 mb-20">
     <Hero herotitel="KRIDTMALING" />
   </div>
-
-  <h1 class="text-center">kridtmaling</h1>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+  <div class="text-center">
+    <Heading htmlheading="h2" size="large">Kridtmaling</Heading>
+  </div>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto mb-20">
     <div class="md:ml-20">
       <img
         class="w-90 h-auto object-cover rounded-lg border-2 border-darkblue"
@@ -38,7 +40,9 @@ import Hero from "../components/Hero.astro";
         Så find dine festivalvenner, tag et stykke kridt – og gør pladsen lidt
         smukkere sammen med os.
       </p>
-      <h2>d. 23 juli // kl. 09.00 // KREA</h2>
+      <Heading htmlheading="h3" size="large" stylingclasses="semibold"
+        >d. 23 juli // kl. 09.00 // KREA</Heading
+      >
     </div>
   </section>
   <Arrow />

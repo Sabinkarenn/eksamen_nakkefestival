@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "./Heading.astro";
 ---
 
 <footer class="bg-beige text-base-content p-10">
@@ -18,9 +19,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <!-- Kolonne 2: Adresse -->
     <div class="flex-1">
-      <h4 class="">Adresse</h4>
+      <Heading htmlheading="h2" size="small" stylingclasses=" mb-2"
+        >Adresse:</Heading
+      >
       <p class="mb-20">Søndervangsvej 43<br />4581 Rørvig</p>
-      <h4>Kontakt os på:</h4>
+      <Heading htmlheading="h2" size="small" stylingclasses=" mb-2"
+        >Kontakt os på:</Heading
+      >
       <p>Facebook eller instagram</p>
       <div class="flex gap-3">
         <a
@@ -42,7 +47,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <!-- Kolonne 3: Om festival -->
     <div class="flex-1">
-      <h4 class="">Kort om Nakkefestival</h4>
+      <Heading htmlheading="h2" size="small" stylingclasses=" mb-2"
+        >Kort om Nakkefestival</Heading
+      >
       <p>
         Festivalen er opbygget af frivillige, som elsker alternativ kultur og
         musik. Kunst hyldes i alle former på Nakke, og festivalen er fyldt til

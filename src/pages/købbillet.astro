@@ -4,19 +4,19 @@ import Link from "../components/Link.astro";
 import Arrow from "../components/Arrow.astro";
 import Billet from "../components/Billet.astro";
 import Hero from "../components/Hero.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout>
   <div class="-mx-30 mb-20">
     <Hero herotitel="KØB BILLET" />
   </div>
- 
-  
+
   <section class="text-center px-4">
-    
-    <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
-    <div class=" mb-6 flex justify-center gap-9 ">
-      <div class="w-28 h-6 border-2 border-darkblue rounded-full bg-darkblue"></div>
+    <Heading htmlheading="h2" size="large">Vælg billet og tilkøb her</Heading>
+    <div class="mb-6 flex justify-center gap-9">
+      <div class="w-28 h-6 border-2 border-darkblue rounded-full bg-darkblue">
+      </div>
       <div class="w-28 h-6 border-2 border-darkblue rounded-full"></div>
       <div class="w-28 h-6 border-2 border-darkblue rounded-full"></div>
     </div>

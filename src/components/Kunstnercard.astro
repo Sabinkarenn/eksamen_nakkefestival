@@ -10,6 +10,7 @@ const {
     carddato = "",
 } = Astro.props;
 import Link from "./Link.astro";
+import Heading from "./Heading.astro";
 ---
 
 <!-- Outer container -->
@@ -19,13 +20,13 @@ import Link from "./Link.astro";
 >
     <!-- Tape: top-left -->
     <img
-        src="tape.webp"
+        src="/tape.webp"
         alt="Tape"
         class="absolute -top-2 -left-8 w-30 rotate-330 z-20"
     />
     <!-- Tape: bottom-right -->
     <img
-        src="tape.webp"
+        src="/tape.webp"
         alt="Tape"
         class="absolute -bottom-2 -right-8 w-30 rotate-315 z-20"
     />
@@ -48,26 +49,25 @@ import Link from "./Link.astro";
     <div
         class="flex-1 px-4 pb-4 md:pt-6 md:pr-4 flex flex-col justify-start text-center md:text-left"
     >
-        <h2 class="font-bold text-darkblue">
-            {cardtitle}
-        </h2>
-        <h3 class="text-darkblue uppercase mb-1">
-            {cardscene}
-        </h3>
-        <h3 class="text-darkblue md:mb-25">
-            Kategori: {cardkategori}
-        </h3>
-        <h3 class="text-darkblue">
-            {carddato} // KL {cardtidspunkt}
-        </h3>
+        <Heading htmlheading="h2" size="large">{cardtitle}</Heading>
+
+        <Heading htmlheading="h3" size="small">{cardscene}</Heading>
+        <div class="md:mb-15">
+            <Heading htmlheading="h3" size="small"
+                >Kategori: {cardkategori}</Heading
+            >
+        </div>
+        <Heading htmlheading="h3" size="small"
+            >{carddato} // KL {cardtidspunkt}</Heading
+        >
     </div>
 
     <!-- Vertical year -->
     <div
         class="absolute hidden right-1 bottom-40 md:flex items-center justify-end md:justify-center z-10"
     >
-        <p class="text-darkblue text-lg md:text-3xl font-bold md:rotate-90">
-            2025
-        </p>
+        <Heading htmlheading="h3" size="medium" stylingclasses="md:rotate-90">
+            2025</Heading
+        >
     </div>
 </div>

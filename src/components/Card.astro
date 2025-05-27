@@ -8,6 +8,7 @@ const {
     cardtekst = "",
 } = Astro.props;
 import Link from "./Link.astro";
+import Heading from "./Heading.astro";
 ---
 
 <a href={url} class="block w-full no-underline text-inherit">
@@ -34,7 +35,10 @@ import Link from "./Link.astro";
                 />
             </figure>
             <div class="card-body items-center text-center">
-                <h3 class="card-title text-2xl">{cardtitle}</h3>
+                <div class="text-center">
+                    <Heading htmlheading="h3" size="small">{cardtitle}</Heading>
+                </div>
+
                 <p>{cardtekst}</p>
             </div>
         </div>
