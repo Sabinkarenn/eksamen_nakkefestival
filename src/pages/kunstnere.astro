@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Kunstnercard from "../components/Kunstnercard.astro";
-
+import Heading from "../components/Heading.astro";
 import Hero from "../components/Hero.astro";
 import Arrow from "../components/Arrow.astro";
 ---
@@ -14,8 +14,11 @@ import Arrow from "../components/Arrow.astro";
 
   <!-- x data til kunstnerecards -->
   <div x-data="{ dagaktiv: 'dag1' }">
-    <h1 class="text-center">Se dette års kunstnere og program</h1>
-
+    <div class="text-center">
+      <Heading htmlheading="h2" size="large"
+        >Se dette års kunstnere og program</Heading
+      >
+    </div>
     <!-- knapper til kunstnerdagene -->
     <div
       class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-13 mb-10"

@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Arrow from "../components/Arrow.astro";
 import Busbillet from "../components/Busbillet.astro";
-
+import Heading from "../components/Heading.astro";
 import Hero from "../components/Hero.astro";
 ---
 
@@ -12,10 +12,13 @@ import Hero from "../components/Hero.astro";
     <Hero herotitel="KØB BILLET" />
   </div>
   <section class="text-center px-4">
-    <h2 class="mb-15">Vælg billettype og tilkøb her</h2>
-    <div class=" mb-6 flex justify-center gap-9 ">
+    <Heading htmlheading="h2" size="large"
+      >Vil du køre med fællesbussen?</Heading
+    >
+    <div class="mb-6 flex justify-center gap-9">
       <div class="w-28 h-6 border-2 border-darkblue rounded-full"></div>
-      <div class="w-28 h-6 border-2 border-darkblue rounded-full bg-darkblue"></div>
+      <div class="w-28 h-6 border-2 border-darkblue rounded-full bg-darkblue">
+      </div>
       <div class="w-28 h-6 border-2 border-darkblue rounded-full"></div>
     </div>
     <Busbillet />

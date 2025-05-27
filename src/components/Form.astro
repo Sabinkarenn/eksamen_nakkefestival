@@ -1,11 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Heading from "./Heading.astro";
 ---
 
 <section class="flex items-center justify-center min-h-screen">
   <div class="">
-    <h2 class="text-center">Tilmeld dig her</h2>
+    <div class="text-center">
+      <Heading htmlheading="h3" size="medium">Tilmeld dig her</Heading>
+    </div>
     <p class="text-center md:w-[60ch]">
       Skriv lidt om dig selv og hvorfor du gerne vil være frivillig, så
       kontakter vi dig og finder den bedste frivillig mulighed for dig!

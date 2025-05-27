@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import Heading from "../components/Heading.astro";
 ---
 
 <div class="navbar relative z-45 bg-transparent">
@@ -11,7 +12,7 @@ import { Image } from "astro:assets";
     <a href="/" class="text-xl hover:bg-transparent">
       <img src="/logo.svg" alt="Logo" class="h-15 w-auto" />
     </a>
-    <h6>Nakkefestival</h6>
+    <Heading htmlheading="h1" size="small">Nakkefestival</Heading>
   </div>
 
   <!-- Højre side: Burger menu (små skærme) og vandret menu (store skærme) -->
