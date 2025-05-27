@@ -45,7 +45,10 @@ import Heading from "../components/Heading.astro";
 
     <!-- Årets kunster sektion -->
     <section class="mb-15">
-      <h3 class="text-center">Årets kunstnere</h3>
+      <div class="text-center">
+        <Heading htmlheading="h3" size="medium">Årets kunstnere</Heading>
+      </div>
+
       <div class="flex flex-col gap-20 p-4 kunstnercards overflow-hidden">
         <Kunstnercard
           x-show="kunstneraktiv === 'kunstnerdag1'"
@@ -85,7 +88,11 @@ import Heading from "../components/Heading.astro";
 
     <!-- Nedtæller sektion -->
     <section class="mb-50">
-      <h3 class="text-center">Nakkefestival starter om</h3>
+      <div class="text-center">
+        <Heading htmlheading="h3" size="medium"
+          >Nakkefestival starter om:</Heading
+        >
+      </div>
       <Timebanner />
     </section>
     <!-- Fællesbus sektion -->
@@ -94,7 +101,10 @@ import Heading from "../components/Heading.astro";
       <div
         class="border-2 border-darkblue bg-pink p-5 rounded-lg lg:w-1/2 overflow-hidden"
       >
-        <h3 class="mb-2">Tag fællesbus til Nakke</h3>
+        <Heading htmlheading="h3" size="medium" stylingclasses="mb-4"
+          >Tag fællesbus til Nakke</Heading
+        >
+
         <p class="mb-6">
           Turen tager omkring en time og koster 170 kroner (Kbh) det er
           billigere end offentlig transport og bedre for miljøet end at køre
@@ -126,7 +136,9 @@ import Heading from "../components/Heading.astro";
     </section>
     <!-- SoMe sektion -->
     <section class="mb-15">
-      <h3 class="text-center">Se mere til Nakkefestival</h3>
+      <div class="text-center">
+        <Heading htmlheading="h3" size="medium">Se mere til Nakke</Heading>
+      </div>
     </section>
     <!-- Galleri start -->
     <section class="mb-15">

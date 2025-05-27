@@ -17,7 +17,7 @@ import Heading from "./Heading.astro";
     >
         <!-- Tape ovenpå kortet -->
         <img
-            src="tape.webp"
+            src="/tape.webp"
             alt="Tape"
             class="absolute -top-6 left-1/2 -translate-x-1/2 w-30 rotate-6 z-10"
         />
@@ -29,7 +29,7 @@ import Heading from "./Heading.astro";
         >
             <figure class="relative p-1 rounded-lg">
                 <img
-                    src={cardimage}
+                    src={`/${cardimage}`}
                     alt={cardimagealt}
                     class="w-full h-60 object-cover rounded-lg border-2 border-darkblue"
                 />

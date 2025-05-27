@@ -5,6 +5,7 @@ import hero from "../assets/images/heros.webp";
 import lillesol from "../assets/images/lillesol.webp";
 import storsol from "../assets/images/storsol.webp";
 const { herotitel = "Nakkefestival" } = Astro.props;
+import Heading from "./Heading.astro";
 ---
 
 <section class="relative z-0">
@@ -18,12 +19,20 @@ const { herotitel = "Nakkefestival" } = Astro.props;
     </div>
 
     <div class="col-start-25 col-span-50 row-start-1 relative lg:top-[-450px]">
-      <Image src={storsol} alt="stor solsikke" class="w-full rotate-animation" />
+      <Image
+        src={storsol}
+        alt="stor solsikke"
+        class="w-full rotate-animation"
+      />
     </div>
     <div class="col-start-25 col-span-50 row-start-1 text-center relative">
-      <h1 class="mt-15 lg:text-7xl text-4xl text-darkblue">{herotitel}</h1>
-      <h2 class="-mt-10 lg:text-4xl text-orange">-Hvor Musik, kunst og kærlighed forenes</h2>
-      <h3 class="-mt-8 lg:text-3xl text-orange">23-26. juli 2025</h3>
+      <Heading htmlheading="h1" size="xlarge">{herotitel}</Heading>
+      <Heading htmlheading="h2" size="medium" stylingclasses="text-orange"
+        >-Hvor Musik, kunst og kærlighed forenes</Heading
+      >
+      <Heading htmlheading="h3" size="large" stylingclasses="text-orange"
+        >23-26. juli 2025</Heading
+      >
     </div>
 
     <div class="col-start-44 col-span-50 row-start-17 relative">
