@@ -50,13 +50,14 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-
-
-h1 { 
+    h1 { 
       font-family: "Superfunky";
     }
-    
-    h2,h3,
+   h2{
+    font-family: "Anybody", sans-serif;
+    @apply text-darkblue;
+   }
+    h3,
     h4,
     h5,
     h6,
@@ -66,16 +67,22 @@ h1 {
       @apply text-darkblue;
       font-family: "Anybody", sans-serif;
     }
-
+a{
+  @apply text-base;
+}
        p {
       @apply mb-6;
      
     }
     div {
       font-family: "Anybody", sans-serif;
+      @apply text-darkblue;
     }
     button {
       font-family: "Anybody", sans-serif;
+      @apply text-darkblue;
+      @apply text-lg;
+      @apply font-bold;
     }
 
     span {
@@ -83,19 +90,17 @@ h1 {
     }
    
    
+    div{
+      font-family: "Anybody", sans-serif;
+    }
+  
   }
 
 
 
 
-  div,
-  button {
-    font-family: "Anybody", sans-serif;
-  }
 
-  span {
-    @apply text-beige;
-  }
+ 
 }
 
 /* Components og utilities */
@@ -103,12 +108,9 @@ h1 {
 }
 
 @layer utilities {
-  .rotate-center {
-    animation: rotate-center 6s linear infinite both;
-  }
 
-  .rotate-center:hover {
-    animation: rotate-center 3s linear infinite both;
+  .rotate-center {
+    animation: rotate-center 10s linear infinite both;
   }
 
   @keyframes rotate-center {

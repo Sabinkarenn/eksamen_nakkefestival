@@ -8,14 +8,14 @@ import Arrow from "../components/Arrow.astro";
 
 <!-- Alberte -->
 <MainLayout>
-  <div class="-mx-30 mb-20">
+  <div class="-mx-10 md:-mx-30 mb-20">
     <Hero herotitel="KUNSTNERE" class="relative z-10" />
   </div>
 
   <!-- x data til kunstnerecards -->
   <div x-data="{ dagaktiv: 'dag1' }">
     <div class="text-center">
-      <Heading htmlheading="h2" size="large"
+      <Heading htmlheading="h2" size="large" stylingclasses="text-orange"
         >Se dette års kunstnere og program</Heading
       >
     </div>
@@ -330,7 +330,11 @@ import Arrow from "../components/Arrow.astro";
       </div>
     </div>
     <!-- skema -->
-    <h2 class="text-center mb-8">Tidsplan</h2>
+    <div class="text-center">
+      <Heading htmlheading="h3" size="medium" stylingclasses="mb-10"
+        >Program</Heading
+      >
+    </div>
     <div class="max-w-4xl mx-auto">
       <!-- dag 1 -->
       <div
