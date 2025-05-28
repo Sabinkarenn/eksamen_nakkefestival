@@ -67,9 +67,12 @@
       @apply text-darkblue;
       font-family: "Anybody", sans-serif;
     }
+
+    /* a til links i header */
 a{
   @apply text-base;
 }
+
        p {
       @apply mb-6;
      
@@ -90,10 +93,7 @@ a{
     }
    
    
-    div{
-      font-family: "Anybody", sans-serif;
-    }
-  
+    
   }
 
 

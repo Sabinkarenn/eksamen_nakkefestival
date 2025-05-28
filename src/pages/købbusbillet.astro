@@ -11,10 +11,20 @@ import Hero from "../components/Hero.astro";
   <div class="-mx-10 md:-mx-30 mb-20">
     <Hero herotitel="KØB BILLET" />
   </div>
-  <section class="text-center px-4">
-    <Heading htmlheading="h2" size="large"
+  <section class="relative text-center px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="text-orange"
       >Vil du køre med fællesbussen?</Heading
     >
+    <img
+      src="/solsikke.webp"
+      alt="solsikke"
+      class="hidden md:block absolute top-20 left-10 w-40 z-10 solsikke animate__animated animate__tada"
+    />
+    <img
+      src="/solsikke.webp"
+      alt="solsikke"
+      class="hidden md:block absolute -bottom-10 -right-5 w-80 z-10 solsikke animate__animated animate__tada"
+    />
     <div class="mb-6 flex justify-center gap-9">
       <div class="w-28 h-6 border-2 border-darkblue rounded-full"></div>
       <div class="w-28 h-6 border-2 border-darkblue rounded-full bg-darkblue">
@@ -26,3 +36,9 @@ import Hero from "../components/Hero.astro";
   </section>
   <Arrow />
 </MainLayout>
+<style>
+  .solsikke:hover {
+    animation: animate__tada;
+    animation-duration: 2s;
+  }
+</style>

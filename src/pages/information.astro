@@ -15,10 +15,21 @@ import Heading from "../components/Heading.astro";
             >Læs alt det vigtige her</Heading
         >
     </div>
+
     <section
-        class="flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4 mb-20"
+        class="relative flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4 mb-20"
         x-data="{ info: 'info1' }"
     >
+        <img
+            src="/solsikke.webp"
+            alt="solsikke"
+            class="hidden md:block absolute -top-10 -left-8 w-80 z-10 solsikke animate__animated animate__tada"
+        />
+        <img
+            src="/solsikke.webp"
+            alt="solsikke"
+            class="hidden md:block absolute -bottom-10 right-3 w-80 z-10 solsikke animate__animated animate__tada"
+        />
         <div
             class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg z-10"
         >
@@ -204,3 +215,10 @@ import Heading from "../components/Heading.astro";
     </section>
     <Arrow />
 </MainLayout>
+
+<style>
+    .solsikke:hover {
+        animation: animate__tada;
+        animation-duration: 2s;
+    }
+</style>

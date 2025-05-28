@@ -18,13 +18,23 @@ import Heading from "./Heading.astro";
       <Image src={hero} alt="hero billede" class="" />
     </div>
 
-    <div class="col-start-25 col-span-50 row-start-1 relative -translate-y-20 lg:-translate-y-90">
-      <Image src={storsol} alt="stor solsikke" class="w-full rotate-animation" />
+    <div
+      class="col-start-25 col-span-50 row-start-1 relative -translate-y-20 lg:-translate-y-100"
+    >
+      <Image
+        src={storsol}
+        alt="stor solsikke"
+        class="w-full rotate-animation"
+      />
     </div>
     <div class="col-start-25 col-span-50 row-start-4 text-center relative">
       <Heading htmlheading="h1" size="xlarge">{herotitel}</Heading>
-      <Heading htmlheading="h2" size="medium" stylingclasses="text-orange mb-6">-Hvor Musik, kunst og kærlighed forenes</Heading>
-      <Heading htmlheading="h3" size="large" stylingclasses="text-orange">23-26. juli 2025</Heading>
+      <Heading htmlheading="h2" size="medium" stylingclasses="text-orange mb-6"
+        >-Hvor Musik, kunst og kærlighed forenes</Heading
+      >
+      <Heading htmlheading="h3" size="large" stylingclasses="text-orange"
+        >23-26. juli 2025</Heading
+      >
     </div>
     <div class="lg:hidden col-start-44 col-span-50 row-start-30 relative">
       <Link href="/købbillet" variant="primary" size="small">Køb billet</Link>
