@@ -132,48 +132,9 @@ import Kunstnercard from "../components/Kunstnercard.astro";
   inView(".kunstnercards", () => {
     animate(".kunstnercards", { x: [-2000, 0] }, { duration: 2 });
   });
-class Login extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
-      <div class="fixed inset-0 bg-black/80 z-[9999] flex items-center justify-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
-          <h1 class="text-xl font-bold mb-2">Login</h1>
-          <p class="text-sm mb-1">This is a school project</p>
-          <p class="text-sm mb-4">The password is <code>kea</code></p>
-          <form>
-            <input type="password" name="pass" placeholder="Password"
-              class="w-full border border-gray-300 px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <input type="submit" value="Login"
-              class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 cursor-pointer transition" />
-          </form>
-        </div>
-      </div>
-    `;
+  
 
-    this.querySelector("form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const password = this.querySelector("input[name=pass]").value;
-      if (password === "kea") {
-        document.querySelector("#totally-delete-me")?.remove();
-        localStorage.setItem("iform-totally-logged-in", "true");
-      } else {
-        alert("Wrong password");
-      }
-    });
-  }
-}
-
-customElements.define("iform-login", Login);
-
-window.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("iform-totally-logged-in") !== "true") {
-    const div = document.createElement("div");
-    div.id = "totally-delete-me";
-    div.innerHTML = "<iform-login></iform-login>";
-    document.body.prepend(div);
-  }
-});
-
+ 
 
 
 </script>
