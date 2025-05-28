@@ -7,7 +7,7 @@ import Arrow from "../components/Arrow.astro";
 ---
 
 <!-- Alberte -->
-<MainLayout>
+<MainLayout title="Nakkefestival kunstnere">
   <div class="-mx-10 md:-mx-30 mb-20">
     <Hero herotitel="KUNSTNERE" class="relative z-10" />
   </div>
@@ -338,7 +338,7 @@ import Arrow from "../components/Arrow.astro";
     <div class="max-w-4xl mx-auto">
       <!-- dag 1 -->
       <div
-        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        class="grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden hidden md:grid"
         x-show="dagaktiv === 'dag1'"
       >
         <!-- Tid kolonne -->
@@ -399,7 +399,7 @@ import Arrow from "../components/Arrow.astro";
 
       <!-- dag 2 -->
       <div
-        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        class="grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden hidden md:grid"
         x-show="dagaktiv === 'dag2'"
       >
         <div
@@ -451,7 +451,7 @@ import Arrow from "../components/Arrow.astro";
 
       <!-- dag 3 -->
       <div
-        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        class="grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden hidden md:grid"
         x-show="dagaktiv === 'dag3'"
       >
         <div
@@ -503,7 +503,7 @@ import Arrow from "../components/Arrow.astro";
 
       <!-- dag 4 -->
       <div
-        class="grid grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden"
+        class="grid-cols-[1fr_2fr_2fr] gap-0 border-2 border-darkblue rounded-lg overflow-hidden hidden md:grid"
         x-show="dagaktiv === 'dag4'"
       >
         <div
@@ -535,15 +535,209 @@ import Arrow from "../components/Arrow.astro";
         </div>
       </div>
     </div>
+    <!-- MOBIL LAYOUT - DAG 1 -->
+    <div class="md:hidden space-y-4" x-show="dagaktiv === 'dag1'">
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">10:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">JOSIE AMADONNA</Heading>
+
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">12:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">BECCA</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">14:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">UMA KABONGO</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">16:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADLYD</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">18:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADAM</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">21:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">YASMIN</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">00:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">INDUKTRI</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">01:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">TANAJAH</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBIL LAYOUT - DAG 2 -->
+    <div class="md:hidden space-y-4" x-show="dagaktiv === 'dag2'">
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">10:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADLYD</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">12:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">YASMIN</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">14:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">JOSIE AMADONNA</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">16:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">BECCA</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">18:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">TANAJAH</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">21:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADAM</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">00:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">UMA KABONGO</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">01:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">INDUKTRI</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBIL LAYOUT - DAG 3 -->
+    <div class="md:hidden space-y-4" x-show="dagaktiv === 'dag3'">
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">10:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADAM</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">12:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">TANAJAH</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">14:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">INDUKTRI</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">16:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">BECCA</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">18:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">UMA KABONGO</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">21:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">JOSIE AMADONNA</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">00:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADLYD</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">01:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">YASMIN</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBIL LAYOUT - DAG 4 -->
+    <div class="md:hidden space-y-4" x-show="dagaktiv === 'dag4'">
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">10:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">BECCA</Heading>
+          <p class="text-darkblue opacity-70">DEN ENE SCENE</p>
+        </div>
+      </div>
+      <div class="border border-darkblue rounded-lg overflow-hidden">
+        <div class="bg-darkyellow p-2 font-bold text-darkblue">12:00</div>
+        <div class="p-2 border-t border-darkblue">
+          <Heading htmlheading="h4" size="small">ADLYD</Heading>
+          <p class="text-darkblue opacity-70">DEN ANDEN SCENE</p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <Arrow />
 </MainLayout>
-<style>
-  .solsikke:hover {
-    animation: animate__tada;
-    animation-duration: 2s;
-  }
-</style>
+
 <script>
   /* Import af Motion One bibliotek */
   import { animate, inView } from "motion";

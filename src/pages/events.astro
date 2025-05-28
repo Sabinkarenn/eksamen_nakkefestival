@@ -7,7 +7,7 @@ import Card from "../components/Card.astro";
 ---
 
 <!-- Alberte -->
-<MainLayout>
+<MainLayout title="Nakkefestival Events">
   <div class="-mx-10 md:-mx-30 mb-20">
     <Hero herotitel="EVENTS" />
   </div>
@@ -292,12 +292,7 @@ import Card from "../components/Card.astro";
   </section>
   <Arrow />
 </MainLayout>
-<style>
-  .solsikke:hover {
-    animation: animate__tada;
-    animation-duration: 2s;
-  }
-</style>
+
 <script>
   /* Import af Motion One bibliotek */
   import { animate, inView } from "motion";
