@@ -74,7 +74,46 @@ import Heading from "./Heading.astro";
       </div>
     </div>
     <div class="flex items-center justify-center m-4">
-      <Button variant="secondary">Send din tilmelding</Button>
+      <Button id="openPopup" variant="secondary">Send din tilmelding</Button>
     </div>
   </div>
 </section>
+
+<!-- Popup -->
+<div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
+  <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 max-w-xl w-full text-[#10005E] text-center shadow-xl">
+    <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
+    <p class="text-start">Vi er så glade for, at du vil være med til at skabe magien på <strong class="font-semibold">Nakkefestival.</strong></p>
+    <p class="text-start">Vi vender snart tilbage på mail med info om de forskellige muligheder for at blive frivillig</p>
+
+    <!-- Brug almindelig knap her i popup for at sikre det virker -->
+    <button id="closePopup" class="mt-6 bg-darkblue text-white px-6 py-2 rounded-full text-lg hover:bg-blue-900 transition">
+      Luk ned
+    </button>
+
+    <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 left-4 w-14 h-14" />
+    <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 right-4 w-30 h-30" />
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const openBtn = document.getElementById("openPopup");
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("closePopup");
+
+    if (openBtn && popup && closeBtn) {
+      openBtn.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        popup.classList.add("hidden");
+      });
+    } else {
+      console.warn("Popup-elementer ikke fundet!");
+    }
+  });
+</script>
+
+
