@@ -1,16 +1,5 @@
+<!-- Sabina -->
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              darkblue: "#1e3a8a",
-            },
-          },
-        },
-      };
-    </script>
-  
  
   <div
   id="countdown"
@@ -19,7 +8,8 @@
   <div
     class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
   >
-    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+    <span class="countdown text-darkblue font-bold text-7xl
+    leading-none">
       <span class="text-darkblue" id="days" style="--value:0"></span>
     </span>
     <div class="text-xl font-medium mt-1">dage</div>
@@ -28,7 +18,7 @@
   <div
     class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
   >
-    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+    <span class="countdown text-darkblue font-bold text-7xl leading-none">
       <span class="text-darkblue" id="hours" style="--value:0"></span>
     </span>
     <div class="text-xl font-medium mt-1">timer</div>
@@ -37,7 +27,7 @@
   <div
     class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
   >
-    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+    <span class="countdown text-darkblue font-bold text-7xl leading-none">
       <span class="text-darkblue" id="minutes" style="--value:0"></span>
     </span>
     <div class="text-xl font-medium mt-1">min</div>
@@ -46,7 +36,7 @@
   <div
     class="flex flex-col items-center justify-center p-4 border-2 border-darkblue rounded-box text-darkblue w-40 h-40 mx-auto"
   >
-    <span class="countdown text-darkblue font-bold text-[3.5rem] leading-none">
+    <span class="countdown text-darkblue font-bold text-7xl leading-none">
       <span class="text-darkblue" id="seconds" style="--value:0"></span>
     </span>
     <div class="text-xl font-medium mt-1">sek</div>
@@ -55,29 +45,36 @@
 
 
 
-    <script>
-      const targetDate = new Date("2025-07-23T00:00:00").getTime();
+<script>
 
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = Math.max(0, targetDate - now);
+  // Sæt mål-datoen (23. juli 2025 kl. 00:00) som nedtællingen tæller ned til
+  const targetDate = new Date("2025-07-23T00:00:00").getTime();
 
-        const seconds = Math.floor((distance / 1000) % 60);
-        const minutes = Math.floor((distance / 1000 / 60) % 60);
-        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  // Funktion der opdaterer nedtællingen hvert sekund
+  function updateCountdown() {
+    const now = new Date().getTime(); // Hent nuværende tidspunkt
+    const distance = Math.max(0, targetDate - now); // Beregn tid tilbage, men aldrig under 0
 
-        document.getElementById("days").style.setProperty("--value", days);
-        document.getElementById("hours").style.setProperty("--value", hours);
-        document
-          .getElementById("minutes")
-          .style.setProperty("--value", minutes);
-        document
-          .getElementById("seconds")
-          .style.setProperty("--value", seconds);
-      }
+    // Udregn hvor mange dage, timer, minutter og sekunder der er tilbage
+    const seconds = Math.floor((distance / 1000) % 60);
+    const minutes = Math.floor((distance / 1000 / 60) % 60);
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-      updateCountdown(); // initial call
-      setInterval(updateCountdown, 1000); // opdatér hvert sekund
-    </script>
+    // Sæt CSS variablen --value på hvert HTML-element med id (f.eks. #days)
+    // Dette bruges ofte sammen med fx DaisyUI eller anden styling
+    document.getElementById("days").style.setProperty("--value", days);
+    document.getElementById("hours").style.setProperty("--value", hours);
+    document
+      .getElementById("minutes")
+      .style.setProperty("--value", minutes);
+    document
+      .getElementById("seconds")
+      .style.setProperty("--value", seconds);
+  }
+
+  updateCountdown(); // Kør funktionen én gang med det samme
+  setInterval(updateCountdown, 1000); // Kør funktionen hvert sekund for at opdatere visningen løbende
+</script>
+
 </html>
