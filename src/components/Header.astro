@@ -12,9 +12,7 @@ import Heading from "../components/Heading.astro";
     <a href="/" class="hover:bg-transparent">
       <img src="/logo.svg" alt="Logo" class="h-15 w-auto" />
     </a>
-    <Heading htmlheading="h1" size="xsmall" stylingclasses="text-darkblue "
-      >Nakkefestival</Heading
-    >
+    <Heading htmlheading="h1" size="xsmall" stylingclasses="text-darkblue ">Nakkefestival</Heading>
   </div>
 
   <!-- Højre side: Burger menu (små skærme) og vandret menu (store skærme) -->
@@ -25,57 +23,26 @@ import Heading from "../components/Heading.astro";
         <Link href="/købbillet" variant="primary" size="small">Køb billet</Link>
       </div>
       <div tabindex="0" role="button" class="hover:bg-transparent">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="mr-4 h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="darkblue"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="darkblue">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
         </svg>
       </div>
 
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content absolute top-full z-1 px-6 bg-beige rounded-box w-screen text-orange right-0"
-      >
+      <ul tabindex="0" class="menu menu-sm dropdown-content absolute top-full z-1 px-6 bg-beige rounded-box w-screen text-orange right-0">
         <li>
-          <a
-            href="/events"
-            class="hover:bg-transparent hover:text-orange text-base underline"
-            >Events</a
-          >
+          <a href="/events" class="hover:bg-transparent hover:text-orange text-base underline">Events</a>
         </li>
         <li>
-          <a
-            href="/blivfrivillig"
-            class="hover:bg-transparent hover:text-orange text-base underline"
-            >Bliv frivillig</a
-          >
+          <a href="/blivfrivillig" class="hover:bg-transparent hover:text-orange text-base underline">Bliv frivillig</a>
         </li>
         <li>
-          <a
-            href="/kunstnere"
-            class="hover:bg-transparent hover:text-orange text-base underline"
-            >Kunstnere</a
-          >
+          <a href="/kunstnere" class="hover:bg-transparent hover:text-orange text-base underline">Kunstnere</a>
         </li>
         <li>
-          <a
-            href="/information"
-            class="hover:bg-transparent hover:text-orange text-base underline"
-            >Information</a
-          >
+          <a href="/information" class="hover:bg-transparent hover:text-orange text-base underline">Information</a>
         </li>
         <div class="mobileknap flex items-center justify-start ml-2">
-          <Link href="/købbillet" variant="primary" size="small" class="w-auto">
-            Køb billet
-          </Link>
+          <Link href="/købbillet" variant="primary" size="small" class="w-auto"> Køb billet </Link>
         </div>
       </ul>
     </div>
@@ -83,30 +50,16 @@ import Heading from "../components/Heading.astro";
     <!-- Vandret menu: kun synlig på store skærme -->
     <ul class="menu menu-horizontal hidden lg:flex space-x-2">
       <li>
-        <a
-          href="/events"
-          class="hover:bg-transparent underline hover:text-orange">Events</a
-        >
+        <a href="/events" class="hover:bg-transparent underline hover:text-orange">Events</a>
       </li>
       <li>
-        <a
-          href="/blivfrivillig"
-          class="hover:bg-transparent underline hover:text-orange"
-          >Bliv frivillig</a
-        >
+        <a href="/blivfrivillig" class="hover:bg-transparent underline hover:text-orange">Bliv frivillig</a>
       </li>
       <li>
-        <a
-          href="/kunstnere"
-          class="underline hover:text-orange hover:bg-transparent">Kunstnere</a
-        >
+        <a href="/kunstnere" class="underline hover:text-orange hover:bg-transparent">Kunstnere</a>
       </li>
       <li>
-        <a
-          href="/information"
-          class="underline hover:bg-transparent hover:text-orange"
-          >Information</a
-        >
+        <a href="/information" class="underline hover:bg-transparent hover:text-orange">Information</a>
       </li>
     </ul>
   </div>
