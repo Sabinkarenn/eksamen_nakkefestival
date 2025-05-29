@@ -70,24 +70,29 @@ import Heading from "./Heading.astro";
             >Nej, det bliver min første</label
           ><br />
         </form>
-        <!-- har du været på nakke før slut -->
-      </div>
-    </div>
-    <div class="flex items-center justify-center m-4">
-      <Button id="openPopup" variant="secondary">Send din tilmelding</Button>
-    </div>
+       <!-- har du været på nakke før slut -->
+<!-- HER starter formularen i stedet, og indeholder hele formen + knap -->
+<form id="volunteerForm">
+  <div class="flex items-center justify-center m-4">
+    <button id="openPopup" type="button" class="btn my-2  border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue">
+      Send din tilmelding
+    </button>
   </div>
-</section>
+</form>
 
 <!-- Popup -->
 <div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
-  <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 max-w-xl w-full text-[#10005E] text-center shadow-xl">
+  <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-[90%] sm:max-w-xl text-darkblue text-center shadow-xl">
     <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
-    <p class="text-start">Vi er så glade for, at du vil være med til at skabe magien på <strong class="font-semibold">Nakkefestival.</strong></p>
-    <p class="text-start">Vi vender snart tilbage på mail med info om de forskellige muligheder for at blive frivillig</p>
+    <p class="text-start">
+      Vi er så glade for, at du vil være med til at skabe magien på
+      <strong class="font-semibold">Nakkefestival.</strong>
+    </p>
+    <p class="text-start">
+      Vi vender snart tilbage på mail med info om de forskellige muligheder for at blive frivillig
+    </p>
 
-    <!-- Brug almindelig knap her i popup for at sikre det virker -->
-    <button id="closePopup" class="mt-6 bg-darkblue text-white px-6 py-2 rounded-full text-lg hover:bg-blue-900 transition">
+    <button id="closePopup" class="btn my-2  border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue">
       Luk ned
     </button>
 
@@ -115,5 +120,3 @@ import Heading from "./Heading.astro";
     }
   });
 </script>
-
-
