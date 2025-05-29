@@ -11,6 +11,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Exile&family=Kavoon&display=swap');
+
+
 /* Lokale fonts – korrekt format */
 @font-face {
   font-family: "Superfunky";
@@ -43,6 +46,7 @@
     }
   }
   --handcursor: url(/cursor.webp) 15 15, pointer;
+  
 }
 
 /* Base layer med typografi */
@@ -52,10 +56,12 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    h1 { 
-      font-family: "Kavoon", serif;
-    }
-   h2{
+  
+    h1{ 
+      font-family: "superfunky", sans-serif;
+    } 
+    
+    h2{
     font-family: "Anybody", sans-serif;
     @apply text-darkblue;
    }
@@ -71,14 +77,10 @@
     }
 
     /* a til links i header */
-a{
-  @apply text-base;
-}
-
-       p {
-      @apply mb-6;
-     
-    }
+    a{
+  @apply text-base;}
+  p {
+      @apply mb-6;}
     div {
       font-family: "Anybody", sans-serif;
       @apply text-darkblue;
