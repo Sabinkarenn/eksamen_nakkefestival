@@ -1,3 +1,4 @@
+
 ---
 import Heading from "../components/Heading.astro";
 /**
@@ -12,6 +13,8 @@ import Heading from "../components/Heading.astro";
   { id: 'lordag', name: 'Endags billet', date: 'lørdag 26/7', price: 360 },
 ];
 ---
+<!-- Sabina -->
+
 
 <!-- Ydre container for hele billettilvalg-komponenten -->
 <div class="mb-15 max-w-md mx-auto p-5 border-2 border-darkblue rounded-lg ">
@@ -19,9 +22,9 @@ import Heading from "../components/Heading.astro";
   <!-- Overskrift og info-tekst -->
     <Heading htmlheading="h2" size="medium" stylingclasses="text-start mb-1">Vælg billet</Heading>
   
-  <p class="text-sm text-start mb-4">
+  <h3 class=" text-start mb-4">
     Alle betalte billetter tillægges billetgebyr på <br> 4,94 kr
-  </p>
+  </h3>
 
   <!-- Vi looper igennem hver billet og viser dem én for én -->
   {tickets.map(ticket => (
@@ -31,7 +34,7 @@ import Heading from "../components/Heading.astro";
       <div>
         <p class="  font-bold  leading-tight">{ticket.name}</p>
         {ticket.date && <p class="text-start text-sm ">{ticket.date}</p>}
-        <p class="text-start text-sm  italic">{ticket.price} kr.</p>
+        <p class="text-start  italic">{ticket.price} kr.</p>
       </div>
 
       <!-- Højre side: minusknap, tæller og plusknap -->
@@ -55,8 +58,6 @@ import Heading from "../components/Heading.astro";
       
     </div>
   ))}
-
- 
 
 <!-- Inline JavaScript til at håndtere tællerne -->
 <script type="module" is:inline>

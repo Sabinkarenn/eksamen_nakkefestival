@@ -142,9 +142,12 @@ import Heading from "../components/Heading.astro";
     animate(".kunstnercards", { x: [-2000, 0] }, { duration: 2 });
   });
 
+  /* Login til sitet */
+
   class Login extends HTMLElement {
     constructor() {
       super();
+<<<<<<< HEAD
       this.attachShadow({
         mode: "open",
       }); //apparently slots only work with the shadow dom?
@@ -236,10 +239,78 @@ import Heading from "../components/Heading.astro";
         e.preventDefault();
         if (this.shadowRoot.querySelector("input[name=pass]").value === "kea") {
           document.querySelector("#totally-delete-me").remove();
+=======
+      this.attachShadow({ mode: "open" });
+    }
+
+    connectedCallback() {
+      this.shadowRoot.innerHTML = `
+        <style>
+          #login-modal {
+            background: black;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, sans-serif;
+          }
+          .container {
+            padding: 30px;
+            max-width: 350px;
+            background: #f7f7f7;
+            border-radius: 2px;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+            text-align: center;
+          }
+          h1 {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+          }
+          p { margin: 0.5em 0; }
+          input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            box-sizing: border-box;
+          }
+          .submit {
+            background: #4d90fe;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+          }
+          .submit:hover {
+            background: #357ae8;
+          }
+        </style>
+        <div id="login-modal">
+          <div class="container">
+            <h1>Login</h1>
+            <p>This is a school project</p>
+            <p>The password is <code>kea</code></p>
+            <form>
+              <input type="password" name="pass" placeholder="Password" required>
+              <input type="submit" class="submit" value="Login">
+            </form>
+          </div>
+        </div>
+      `;
+
+      this.shadowRoot.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+        const input = this.shadowRoot.querySelector("input[name=pass]");
+        if (input.value === "kea") {
+          document.querySelector("#totally-delete-me")?.remove();
+>>>>>>> dbfd9f2 (dd)
           localStorage.setItem("iform-totally-logged-in", true);
         }
       });
     }
+<<<<<<< HEAD
     render() {
       this.shadowRoot.innerHTML = this.html;
     }
@@ -253,6 +324,21 @@ import Heading from "../components/Heading.astro";
       div.style.height = "100vh";
       div.style.position = "fixed";
       div.style.zIndex = "9999";
+=======
+  }
+
+  customElements.define("iform-login", Login);
+
+  window.addEventListener("load", () => {
+    if (!localStorage.getItem("iform-totally-logged-in")) {
+      const wrapper = document.createElement("div");
+      wrapper.id = "totally-delete-me";
+      wrapper.style = "width:100vw;height:100vh;position:fixed;z-index:9999";
+      wrapper.innerHTML = "<iform-login></iform-login>";
+      document.body.prepend(wrapper);
+    }
+  });
+>>>>>>> dbfd9f2 (dd)
 
       div.innerHTML = "<iform-login />";
       document.body.prepend(div);

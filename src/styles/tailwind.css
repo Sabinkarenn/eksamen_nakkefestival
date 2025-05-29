@@ -8,12 +8,7 @@
 
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Exile&family=Kavoon&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 /* Lokale fonts – korrekt format */
 @font-face {
   font-family: "Superfunky";
@@ -46,7 +41,6 @@
     }
   }
   --handcursor: url(/cursor.webp) 15 15, pointer;
-  
 }
 
 /* Base layer med typografi */
@@ -56,15 +50,14 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-  
-    h1{ 
-      font-family: "superfunky";
-    } 
-    
-    h2{
-    font-family: "Anybody", sans-serif;
-    @apply text-darkblue;
-   }
+    h1 {
+      font-family: "Superfunky";
+    }
+    h2 {
+      font-family: "Anybody", sans-serif;
+      @apply text-darkblue;
+    }
+
     h3,
     h4,
     h5,
@@ -77,10 +70,13 @@
     }
 
     /* a til links i header */
-    a{
-  @apply text-base;}
-  p {
-      @apply mb-6;}
+    a {
+      @apply text-base;
+    }
+
+    p {
+      @apply mb-6;
+    }
     div {
       font-family: "Anybody", sans-serif;
       @apply text-darkblue;
@@ -95,16 +91,7 @@
     span {
       @apply text-beige;
     }
-   
-   
-    
   }
-
-
-
-
-
- 
 }
 
 /* Components og utilities */
@@ -112,7 +99,6 @@
 }
 
 @layer utilities {
-
   .rotate-center {
     animation: rotate-center 10s linear infinite both;
   }
@@ -126,4 +112,3 @@
     }
   }
 }
-
