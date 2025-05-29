@@ -9,26 +9,26 @@ const {
     cardtidspunkt = "",
     carddato = "",
 } = Astro.props;
-import Link from "./Link.astro";
+
 import Heading from "./Heading.astro";
 ---
 
-<!-- Outer container -->
+<!-- container -->
 <div
     class="relative p-4 w-full max-w-xs md:max-w-3xl mx-auto border-2 border-darkblue rounded-lg bg-center bg-no-repeat bg-cover flex flex-col md:flex-row"
     style="background-image: url('paperlong.webp');"
 >
-    <!-- Tape: top-left -->
+    <!-- Tape: top-venstre -->
     <img
         src="/tape.webp"
         alt="Tape"
-        class="absolute -top-2 -left-8 w-30 rotate-330 z-20"
+        class="absolute -top-2 -left-8 w-30 rotate-330 z-10"
     />
-    <!-- Tape: bottom-right -->
+    <!-- Tape: bottom-højre -->
     <img
         src="/tape.webp"
         alt="Tape"
-        class="absolute -bottom-2 -right-8 w-30 rotate-315 z-20"
+        class="absolute -bottom-2 -right-8 w-30 rotate-315 z-10"
     />
 
     <!-- Image section -->
@@ -62,7 +62,7 @@ import Heading from "./Heading.astro";
         >
     </div>
 
-    <!-- Vertical year -->
+    <!-- Vertikalt år -->
     <div
         class="absolute hidden right-1 bottom-40 md:flex items-center justify-end md:justify-center z-10"
     >

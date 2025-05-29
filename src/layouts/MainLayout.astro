@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
-import Hero from "../components/Hero.astro";
+
 import Link from "../components/Link.astro";
 ---
 
@@ -23,7 +23,7 @@ import Link from "../components/Link.astro";
   </head>
 
   <body class="relative min-h-screen bg-beige">
-    <header class="bg-transparent relative z-20">
+    <header class="">
       <Header />
     </header>
 
@@ -41,7 +41,7 @@ import Link from "../components/Link.astro";
         <Link href="/købbillet" size="large" variant="primary">Køb billet</Link>
       </div>
       <!-- Køb billet sticky slut -->
-      <div class="relative z-10">
+      <div>
         <slot />
       </div>
     </main>
