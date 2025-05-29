@@ -295,6 +295,7 @@ import Card from "../components/Card.astro";
 
 <script>
   /* Import af Motion One bibliotek */
+  // kort slider ind fra siden
   import { animate, inView } from "motion";
   inView(".eventcards", () => {
     animate(".eventcards", { x: [-2000, 0] }, { duration: 2 });

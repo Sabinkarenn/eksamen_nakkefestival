@@ -15,9 +15,9 @@ import Heading from "../components/Heading.astro";
             >Læs alt det vigtige her</Heading
         >
     </div>
-
+    <!-- overordnet section til info -->
     <section
-        class="relative flex flex-col md:flex-row items-center md:justify-center min-h-screen px-4 mb-20"
+        class="relative flex flex-col md:flex-row items-center md:justify-center px-4 mb-20"
         x-data="{ info: 'info1' }"
     >
         <img
@@ -30,9 +30,11 @@ import Heading from "../components/Heading.astro";
             alt="solsikke"
             class="hidden md:block absolute -bottom-10 right-3 w-80 z-10 solsikke animate__animated animate__tada"
         />
+        <!-- div der styre de forskellige muligheder af info -->
         <div
             class="flex flex-col md:flex-row w-full max-w-sm md:max-w-2xl border-2 border-darkblue rounded-lg z-10"
         >
+            <!-- om nakke section -->
             <div
                 class="bg-darkyellow items-center text-center cursor-pointer border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info1'"
@@ -44,6 +46,7 @@ import Heading from "../components/Heading.astro";
                     >Om Nakkefestival</Heading
                 >
             </div>
+            <!-- x-show forbinder til click event ovenfor og udløser åbningen af sectionen -->
             <div x-show="info === 'info1'" x-transition class="p-4">
                 <p>
                     Når man træder ind på Nakkefestivalen, så føler man sig
@@ -88,6 +91,7 @@ import Heading from "../components/Heading.astro";
                 </p>
                 <p>Nakkeånden glæder sig til at se dig &lt;3 &lt;3 &lt;3</p>
             </div>
+            <!-- praktisk info section -->
             <div
                 class="bg-yellow cursor-pointer text-center border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info2'"
@@ -161,6 +165,7 @@ import Heading from "../components/Heading.astro";
                     &lt;3 &lt;3
                 </p>
             </div>
+            <!-- find vej section -->
             <div
                 class="bg-pink cursor-pointer text-center border-2 border-darkblue p-4 md:w-16"
                 @click="info = 'info3'"
