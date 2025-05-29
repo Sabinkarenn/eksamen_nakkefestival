@@ -10,38 +10,40 @@ import Heading from "./Heading.astro";
 
 <section class="relative z-0">
   <div class="grid grid-cols-100 grid-rows-50 max-h-[60vh] lg:max-h-screen">
+    <!-- Den lille sol der roterer nede ved venstre hjørne start -->
     <div class="col-start-1 col-span-35 row-start-13">
       <Image src={lillesol} alt="lille solsikke" class="place-self-center" />
     </div>
+    <!-- Den lille sol der roterer nede ved venstre hjørne slut -->
 
+    <!-- Vores kollage billede på hero start -->
     <div class="absolute bottom-0 left-0 right-0">
       <Image src={hero} alt="hero billede" class="" />
     </div>
+    <!-- Vores kollage billede på hero slut -->
 
-    <div
-      class="col-start-25 col-span-50 row-start-1 relative -translate-y-20 lg:-translate-y-100"
-    >
-      <Image
-        src={storsol}
-        alt="stor solsikke"
-        class="w-full rotate-animation"
-      />
+    <!-- Den store sol som roterer oppe ved overskriften start -->
+    <div class="col-start-25 col-span-50 row-start-1 relative -translate-y-20 lg:-translate-y-100">
+      <Image src={storsol} alt="stor solsikke" class="w-full rotate-animation" />
     </div>
+    <!-- Den store sol som roterer oppe ved overskriften slut -->
+
+    <!-- Vores hero overskrifter som viser sidens navn og dato start -->
     <div class="col-start-25 col-span-50 row-start-4 text-center relative">
       <Heading htmlheading="h1" size="xlarge">{herotitel}</Heading>
-      <Heading htmlheading="h2" size="medium" stylingclasses="text-orange mb-6"
-        >-Hvor Musik, kunst og kærlighed forenes</Heading
-      >
-      <Heading htmlheading="h3" size="large" stylingclasses="text-orange"
-        >23-26. juli 2025</Heading
-      >
+      <Heading htmlheading="h2" size="medium" stylingclasses="text-orange mb-6">-Hvor Musik, kunst og kærlighed forenes</Heading>
+      <Heading htmlheading="h3" size="large" stylingclasses="text-orange">23-26. juli 2025</Heading>
     </div>
+    <!-- Vores hero overskrifter som viser sidens navn og dato slut -->
+
+    <!-- køb billet link som vises både på mobil og desk start -->
     <div class="lg:hidden col-start-44 col-span-50 row-start-30 relative">
       <Link href="/købbillet" variant="primary" size="small">Køb billet</Link>
     </div>
     <div class="hidden lg:block col-start-44 col-span-50 row-start-24 relative">
       <Link href="/købbillet" variant="primary" size="large">Køb billet</Link>
     </div>
+    <!-- køb billet link som vises både på mobil og desk slut -->
   </div>
 </section>
 

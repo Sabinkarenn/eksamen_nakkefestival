@@ -5,14 +5,14 @@ import Heading from "./Heading.astro";
 ---
 
 <section class="flex items-center justify-center min-h-screen">
-  <div class="">
+  <div>
+    <!-- Beskrivelsen af hvad det vil sige at være frivillig start -->
     <div class="text-center">
       <Heading htmlheading="h3" size="medium">Tilmeld dig her</Heading>
     </div>
-    <p class="text-center md:w-[60ch]">
-      Skriv lidt om dig selv og hvorfor du gerne vil være frivillig, så
-      kontakter vi dig og finder den bedste frivillig mulighed for dig!
-    </p>
+    <p class="text-center md:w-[60ch]">Skriv lidt om dig selv og hvorfor du gerne vil være frivillig, så kontakter vi dig og finder den bedste frivillig mulighed for dig!</p>
+    <!-- Beskrivelsen af hvad det vil sige at være frivillig slut -->
+
     <div class="max-w-md mx-auto">
       <div class="formstart">
         <!-- navn sektion start -->
@@ -20,11 +20,7 @@ import Heading from "./Heading.astro";
           <div class="">
             <label class="">
               <span class="">Dit navn</span><br />
-              <input
-                type="text"
-                class="border-2 border-darkblue rounded-lg focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50"
-                placeholder="Navn"
-              />
+              <input type="text" class="border-2 border-darkblue rounded-lg focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50" placeholder="Navn" />
             </label>
           </div>
         </section>
@@ -35,11 +31,7 @@ import Heading from "./Heading.astro";
           <div>
             <label class="">
               <span class="mb-2">Din email</span><br />
-              <input
-                type="email"
-                class="w-full rounded-lg border-2 border-darkblue focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50"
-                placeholder="Email"
-              />
+              <input type="email" class="w-full rounded-lg border-2 border-darkblue focus:border-orange focus:ring focus:ring-brightorange focus:ring-opacity-50" placeholder="Email" />
             </label>
           </div>
         </section>
@@ -62,61 +54,55 @@ import Heading from "./Heading.astro";
         <!-- har du været på nakke før start -->
         <form>
           <input type="radio" id="html" name="fav_language" value="HTML" />
-          <label for="html" class="text-darkblue"
-            >Ja, jeg har været på Nakkefestival før</label
-          ><br />
+          <label for="html" class="text-darkblue">Ja, jeg har været på Nakkefestival før</label><br />
           <input type="radio" id="css" name="fav_language" value="CSS" />
-          <label for="css" class="text-darkblue"
-            >Nej, det bliver min første</label
-          ><br />
+          <label for="css" class="text-darkblue">Nej, det bliver min første</label><br />
         </form>
-       <!-- har du været på nakke før slut -->
-<!-- HER starter formularen i stedet, og indeholder hele formen + knap -->
-<form id="volunteerForm">
-  <div class="flex items-center justify-center m-4">
-    <button id="openPopup" type="button" class="btn my-2  border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue">
-      Send din tilmelding
-    </button>
+        <!-- har du været på nakke før slut -->
+        <!-- HER starter formularen i stedet, og indeholder hele formen + knap -->
+        <form id="volunteerForm">
+          <div class="flex items-center justify-center m-4">
+            <button id="openPopup" type="button" class="btn my-2 border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue"> Send din tilmelding </button>
+          </div>
+        </form>
+
+        <!-- Popup -->
+        <div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
+          <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-[90%] sm:max-w-xl text-darkblue text-center shadow-xl">
+            <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
+            <p class="text-start">
+              Vi er så glade for, at du vil være med til at skabe magien på
+              <strong class="font-semibold">Nakkefestival.</strong>
+            </p>
+            <p class="text-start">Vi vender snart tilbage på mail med info om de forskellige muligheder for at blive frivillig</p>
+
+            <button id="closePopup" class="btn my-2 border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue"> Luk ned </button>
+
+            <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 left-4 w-14 h-14" />
+            <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 right-4 w-30 h-30" />
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const openBtn = document.getElementById("openPopup");
+            const popup = document.getElementById("popup");
+            const closeBtn = document.getElementById("closePopup");
+
+            if (openBtn && popup && closeBtn) {
+              openBtn.addEventListener("click", () => {
+                popup.classList.remove("hidden");
+              });
+
+              closeBtn.addEventListener("click", () => {
+                popup.classList.add("hidden");
+              });
+            } else {
+              console.warn("Popup-elementer ikke fundet!");
+            }
+          });
+        </script>
+      </div>
+    </div>
   </div>
-</form>
-
-<!-- Popup -->
-<div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
-  <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-[90%] sm:max-w-xl text-darkblue text-center shadow-xl">
-    <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
-    <p class="text-start">
-      Vi er så glade for, at du vil være med til at skabe magien på
-      <strong class="font-semibold">Nakkefestival.</strong>
-    </p>
-    <p class="text-start">
-      Vi vender snart tilbage på mail med info om de forskellige muligheder for at blive frivillig
-    </p>
-
-    <button id="closePopup" class="btn my-2  border-2 shadow-none rounded-xl bg-darkblue text-beige hover:bg-blue border-blue hover:border-darkblue">
-      Luk ned
-    </button>
-
-    <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 left-4 w-14 h-14" />
-    <img src="solsikke.webp" alt="solsikke" class="absolute bottom-4 right-4 w-30 h-30" />
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const openBtn = document.getElementById("openPopup");
-    const popup = document.getElementById("popup");
-    const closeBtn = document.getElementById("closePopup");
-
-    if (openBtn && popup && closeBtn) {
-      openBtn.addEventListener("click", () => {
-        popup.classList.remove("hidden");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        popup.classList.add("hidden");
-      });
-    } else {
-      console.warn("Popup-elementer ikke fundet!");
-    }
-  });
-</script>
+</section>
