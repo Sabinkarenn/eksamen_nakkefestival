@@ -144,7 +144,6 @@ import Heading from "../components/Heading.astro";
 
   /* Login til sitet */
 
-  <script>
   class Login extends HTMLElement {
     constructor() {
       super();
@@ -198,8 +197,8 @@ import Heading from "../components/Heading.astro";
         <div id="login-modal">
           <div class="container">
             <h1>Login</h1>
-            <p>This is a school project</p>
-            <p>The password is <code>kea</code></p>
+            <p>Super sejt site/p>
+            
             <form>
               <input type="password" name="pass" placeholder="Password" required>
               <input type="submit" class="submit" value="Login">
@@ -211,7 +210,7 @@ import Heading from "../components/Heading.astro";
       this.shadowRoot.querySelector("form").addEventListener("submit", e => {
         e.preventDefault();
         const input = this.shadowRoot.querySelector("input[name=pass]");
-        if (input.value === "kea") {
+        if (input.value === "team4") {
           document.querySelector("#totally-delete-me")?.remove();
           localStorage.setItem("iform-totally-logged-in", true);
         }
