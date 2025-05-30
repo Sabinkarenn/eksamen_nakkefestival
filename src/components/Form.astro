@@ -74,7 +74,7 @@ import Heading from "./Heading.astro";
           ><br />
         </form>
         <!-- har du været på nakke før slut -->
-        <!-- HER starter formularen i stedet, og indeholder hele formen + knap -->
+
         <form id="volunteerForm">
           <div class="flex items-center justify-center m-4">
             <button
@@ -88,13 +88,10 @@ import Heading from "./Heading.astro";
         </form>
 
         <!-- Popup -->
-        <div
-          id="popup"
-          class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50"
-        >
-          <div
-            class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-[90%] sm:max-w-xl text-darkblue text-center shadow-xl"
-          >
+        <div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
+          <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-[90%] sm:max-w-xl text-darkblue text-center shadow-xl">
+            <Heading htmlheading="h2" size="xsmall" stylingclasses="mb-6 font-bold leading-tight" />
+
             <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
             <p class="text-start">
               Vi er så glade for, at du vil være med til at skabe magien på
