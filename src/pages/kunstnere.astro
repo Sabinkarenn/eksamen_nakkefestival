@@ -4,6 +4,7 @@ import Kunstnercard from "../components/Kunstnercard.astro";
 import Heading from "../components/Heading.astro";
 import Hero from "../components/Hero.astro";
 import Arrow from "../components/Arrow.astro";
+import Link from "../components/Link.astro";
 ---
 
 <!-- Alberte -->
@@ -54,6 +55,14 @@ import Arrow from "../components/Arrow.astro";
       >
         d. 26 juli
       </button>
+    </div>
+    <div class="flex flex-col justify-center text-center">
+      <Heading htmlheading="h3" size="small">
+        Se det fylde program nederst på siden.</Heading
+      >
+      <div>
+        <Link href="#program" variant="secondary">Se fulde program</Link>
+      </div>
     </div>
     <div class="mb-20 kunstnercards">
       <!-- DAG 1 -->
@@ -304,7 +313,7 @@ import Arrow from "../components/Arrow.astro";
       </div>
     </div>
     <!-- skema -->
-    <div class="text-center">
+    <div class="text-center" id="program">
       <Heading htmlheading="h3" size="medium" stylingclasses="mb-10"
         >Program</Heading
       >
