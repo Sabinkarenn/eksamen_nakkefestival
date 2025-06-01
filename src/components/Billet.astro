@@ -30,9 +30,19 @@ import Heading from "../components/Heading.astro";
 
       <!-- Venstre side: navn, dato og pris -->
       <div>
-        <p class="font-bold  leading-tight">{ticket.name}</p>
-        {ticket.date && <p class="text-start">{ticket.date}</p>}
-        <p class="text-start italic">{ticket.price} kr.</p>
+        <Heading htmlheading="h3" size="small" stylingclasses="font-bold leading-tight">
+  {ticket.name}
+</Heading>
+
+{ticket.date && (
+  <Heading htmlheading="h3" size="xsmall" stylingclasses="text-start">
+    {ticket.date}
+  </Heading>
+)}
+
+<p class="text-start italic">
+  {ticket.price} kr.
+</p>
       </div>
 
       <!-- Højre side: minusknap, tæller og plusknap -->
