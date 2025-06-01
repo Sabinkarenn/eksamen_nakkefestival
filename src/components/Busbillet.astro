@@ -17,9 +17,18 @@ const tickets = [
     <div class="border-t-2 border-darkblue py-3 text-start flex items-center justify-between" id={ticket.id}>
       <div>
 
-        <p class="font-bold leading-tight">{ticket.name}</p>
-        {ticket.date && <p>{ticket.date}</p>}
-      </div>
+        <Heading htmlheading="h3" size="small" stylingclasses="font-bold leading-tight">
+  {ticket.name}
+</Heading>
+
+
+{ticket.date && (
+  <p>
+    {ticket.date}
+  </p>
+)}
+
+</div>
 
       <div class="flex items-center gap-2">
         <button class="text-darkblue text-4xl font-bold" onclick={`decrement('${ticket.id}')`}>−</button>
