@@ -1,7 +1,5 @@
 <!-- Sabina -->
-
- 
-  <div
+<div
   id="countdown"
   class="flex flex-col sm:grid sm:grid-flow-col gap-7 text-center auto-cols-max mt-15 justify-center"
 >
@@ -43,10 +41,7 @@
   </div>
 </div>
 
-
-
 <script>
-
   // Sæt mål-datoen (23. juli 2025 kl. 00:00) som nedtællingen tæller ned til
   const targetDate = new Date("2025-07-23T00:00:00").getTime();
 
@@ -65,16 +60,10 @@
     // Dette bruges ofte sammen med fx DaisyUI eller anden styling
     document.getElementById("days").style.setProperty("--value", days);
     document.getElementById("hours").style.setProperty("--value", hours);
-    document
-      .getElementById("minutes")
-      .style.setProperty("--value", minutes);
-    document
-      .getElementById("seconds")
-      .style.setProperty("--value", seconds);
+    document.getElementById("minutes").style.setProperty("--value", minutes);
+    document.getElementById("seconds").style.setProperty("--value", seconds);
   }
 
   updateCountdown(); // Kør funktionen én gang med det samme
   setInterval(updateCountdown, 1000); // Kør funktionen hvert sekund for at opdatere visningen løbende
 </script>
-
-</html>
