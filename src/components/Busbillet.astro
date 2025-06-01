@@ -2,41 +2,70 @@
 import Heading from "../components/Heading.astro";
 
 const tickets = [
-  { id: 'bus-kbh-nakke-23-7', name: 'Bus KBH-Nakke 23/7', date: 'Afgang kl. 12 fra DGI byen' },
-  { id: 'bus-nakke-kbh-26-7', name: 'Bus Nakke-KBH 26/7', date: 'Afgang kl. 14' },
+  {
+    id: "bus-kbh-nakke-23-7",
+    name: "Bus KBH-Nakke 23/7",
+    date: "Afgang kl. 12 fra DGI byen",
+  },
+  {
+    id: "bus-nakke-kbh-26-7",
+    name: "Bus Nakke-KBH 26/7",
+    date: "Afgang kl. 14",
+  },
 ];
 ---
-<!-- Sabina -->
 
-<div class="bg-pink mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg">
-  <Heading htmlheading="h3" size="small" stylingclasses="text-start mb-1">Pssst... tilkøb busbillet her</Heading>
-  
+<!-- Sabina -->
+<div
+  class="bg-pink mb-15 max-w-md mx-auto p-4 border-2 border-darkblue rounded-lg"
+>
+  <Heading htmlheading="h3" size="medium" stylingclasses="text-start mb-1"
+    >Pssst... tilkøb busbillet her</Heading
+  >
+
   <p class="text-start mb-7">170 kr. pr billet</p>
 
-  {tickets.map(ticket => (
-    <div class="border-t-2 border-darkblue py-3 text-start flex items-center justify-between" id={ticket.id}>
-      <div>
+  {
+    tickets.map((ticket) => (
+      <div
+        class="border-t-2 border-darkblue py-3 text-start flex items-center justify-between"
+        id={ticket.id}
+      >
+        <div>
+          <Heading
+            htmlheading="h3"
+            size="small"
+            stylingclasses="font-bold leading-tight"
+          >
+            {ticket.name}
+          </Heading>
 
-        <Heading htmlheading="h3" size="small" stylingclasses="font-bold leading-tight">
-  {ticket.name}
-</Heading>
+          {ticket.date && <p>{ticket.date}</p>}
+        </div>
 
-
-{ticket.date && (
-  <p>
-    {ticket.date}
-  </p>
-)}
-
-</div>
-
-      <div class="flex items-center gap-2">
-        <button class="text-darkblue text-4xl font-bold" onclick={`decrement('${ticket.id}')`}>−</button>
-        <span id={`count-${ticket.id}`} class="w-8 h-8 rounded-full bg-yellow text-darkblue text-center leading-8">0</span>
-        <button class="text-darkblue text-4xl font-bold" onclick={`increment('${ticket.id}')`}>+</button>
+        <div class="flex items-center gap-2">
+          <button
+            class="text-darkblue text-4xl font-bold"
+            onclick={`decrement('${ticket.id}')`}
+          >
+            −
+          </button>
+          <span
+            id={`count-${ticket.id}`}
+            class="w-8 h-8 rounded-full bg-yellow text-darkblue text-center leading-8"
+          >
+            0
+          </span>
+          <button
+            class="text-darkblue text-4xl font-bold"
+            onclick={`increment('${ticket.id}')`}
+          >
+            +
+          </button>
+        </div>
       </div>
-    </div>
-  ))}
+    ))
+  }
 </div>
 
 <script type="module" is:inline>
@@ -49,10 +78,10 @@ const tickets = [
   window.increment = (id) => {
     counts[id] = (counts[id] || 0) + 1;
     updateDisplay(id);
-  }
+  };
 
   window.decrement = (id) => {
     if (counts[id] > 0) counts[id]--;
     updateDisplay(id);
-  }
+  };
 </script>

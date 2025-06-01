@@ -88,9 +88,18 @@ import Heading from "./Heading.astro";
         </form>
 
         <!-- Popup -->
-        <div id="popup" class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50">
-          <div class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-90% sm:max-w-xl text-darkblue text-center shadow-xl">
-            <Heading htmlheading="h2" size="xsmall" stylingclasses="mb-6 font-bold leading-tight" />
+        <div
+          id="popup"
+          class="hidden fixed inset-0 bg-white/60 flex justify-center items-center z-50"
+        >
+          <div
+            class="relative bg-pink border-2 border-darkblue rounded-xl px-8 py-10 w-full max-w-90% sm:max-w-xl text-darkblue text-center shadow-xl"
+          >
+            <Heading
+              htmlheading="h2"
+              size="xsmall"
+              stylingclasses="mb-6 font-bold leading-tight"
+            />
 
             <h2 class="font-extrabold mb-6">Tak for din tilmelding!</h2>
             <p class="text-start">
@@ -101,7 +110,7 @@ import Heading from "./Heading.astro";
               Vi vender snart tilbage på mail med info om de forskellige
               muligheder for at blive frivillig
             </p>
-        <!-- knappen er lavet anderledes, for at sikre det virker med JS -->
+            <!-- knappen er lavet anderledes, for at sikre det virker med JS -->
 
             <button
               id="closePopup"
@@ -111,12 +120,12 @@ import Heading from "./Heading.astro";
             </button>
 
             <img
-              src="solsikke.webp"
+              src="/solsikke.webp"
               alt="solsikke"
               class="absolute bottom-4 left-4 w-14 h-14"
             />
             <img
-              src="solsikke.webp"
+              src="/solsikke.webp"
               alt="solsikke"
               class="absolute bottom-4 right-4 w-30 h-30"
             />
